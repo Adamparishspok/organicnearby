@@ -1,0 +1,49 @@
+
+.loginPasswordRequirements {
+	color: #f88;
+	font-weight: bold;
+}
+
+.loginGreyed {
+	color: #888;
+	font-weight: normal;
+	}
+
+.login_form {
+	width: 100%;
+	display: flex;
+	justify-content: flex-center;
+}
+.login_div {
+	border: 1px solid #AAA;
+	padding: 15px;
+	flex-grow: 1;
+}
+.login_error{
+	color: red;
+	}
+.login_table {
+	border: 0px;
+}
+.login_table td {
+	background: #fff;
+	border: 0px;
+}
+.login_col1 {
+	width: 40%;
+	text-align: right;
+}
+.login_col2 {
+	width: 20%;
+}
+.login_col3 {
+}
+.login_button_col1 {
+	text-align: left;
+}
+.login_button_col2 {
+	text-align: center;
+}
+.login_button_col3 {
+display: flex; justify-content: flex-end;
+}

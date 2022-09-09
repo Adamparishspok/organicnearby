@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+
+#searchingDiv {
+/* Position text in the middle of the page/image */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(200,200,200, 0.7); /* Black w/opacity/see-through */
+	color: #149E2D;
+  font-weight: bold;
+	font-size: 2em;
+  border: 3px solid #282;
+	border-radius: 25px;
+  position: fixed;
+/* absolute;*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+
+  backdrop-filter: blur(6px);
+}
+
+.hideme {
+	display: none;
+}
+

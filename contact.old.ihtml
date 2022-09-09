@@ -1,0 +1,136 @@
+<!-- BEGIN Prompt -->{show}
+<script>
+var formid = '{formid}';
+function pageOnLoad()
+  {
+  var h = document.createElement('input');
+  h.setAttribute('type', 'hidden');
+  h.setAttribute('name', 'required');
+  h.setAttribute('value', '{code}');
+  h.setAttribute('id', 'required');
+  var t = document.getElementById('targetHere');
+	if (!t)
+		return;
+  t.appendChild(h);
+  return true;
+  }
+
+function submitForm()
+	{
+	var s = document.getElementById('formid');
+	if (s.value  != 0 )
+		{
+		alert("This form has already been submitted.");
+		return false;
+		}
+	s.value = formid;
+	return true;
+	}
+</script>
+<style>
+.contactMessage {
+	width: 100%;
+	}
+.contactImageLogo {
+	max-width: 200px;
+	max-height: 200px;
+	float: right;
+}
+</style>
+<table>
+	<tr>
+		<td valign="top">
+<!-- BEGIN Image -->
+			<img src="{img}" class="contactImageLogo" />
+<!-- END Image -->
+			<h3> Send Contact Form </h3>
+			<p> {name}
+
+			<p><pre>{address}</pre>
+		</td>
+		<td width="25px">
+		<td valign="top" width="50%">
+			<form method="post" action="?" onsubmit="return submitForm();" id="myForm">
+			<input type="hidden" id="formid" value="0" name="formid" />
+			<div>
+
+			<div id="main">
+			<div class="contact1">
+			<p><input type="text" placeholder="your name" name="name" id="name"
+				class="commentfield" /></p> </div>
+
+			<div class="contact2">
+			<p> <input type="text" placeholder="your e-mail adress" name="email" id="email"
+				class="commentfield" /></p> </div>
+
+			<div class="contact3">
+			<p> <input type="text" placeholder="subject" name="subject" id="subject"
+				class="commentfield" /></p> </div>
+
+			<p><textarea name="message" placeholder="message" id="message"
+				rows="12" cols="5" class="contactMessage"></textarea></p>
+
+			<div class="buttonmain1">
+			<p><input type="submit"  name="action[send]"  class="buttontextmain1"
+				id="submit" value="Send"/>
+			</p></div>
+
+			<ul id="response"></ul>
+
+			</div></div>
+			<div id="targetHere"></div>
+			</form>
+		</td>
+	</tr>
+</table>
+<!-- END Prompt -->
+
+
+<!-- BEGIN Send -->
+<h3> Message has been sent!</h3>
+{show}
+<table>
+	<tr>
+		<td>
+			To:
+		</td>
+		<td>
+			{to}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			From:
+		</td>
+		<td>
+			{fromName} &lt;{fromAddr}>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Subject:
+		</td>
+		<td>
+			{subject}
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			Message
+		</td>
+		<td >
+			<i>{message}</i>
+		</td>
+	</tr>
+<!-- BEGIN Actual -->
+	<tr>
+		<td valign="top">
+			<font color="blue">What actually happened (debug only)</font>
+		</td>
+		<td >
+			<font color="blue">{debug_message}</font>
+		</td>
+	</tr>
+<!-- END Actual -->
+</table>
+<!-- END Send -->

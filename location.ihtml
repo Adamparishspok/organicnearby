@@ -1,0 +1,197 @@
+<!-- BEGIN Prompt -->
+<style>
+.locMaster {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.locMap {
+	max-width: 50%;
+	min-width: 300px;
+}
+.locSet {
+	max-width: 50%;
+	min-width: 300px;
+}
+.mapBox {
+	width: 50vw;
+	height: 400px;
+	}
+.locBox {
+	width: 100%;
+	border-radius: 10px;
+	border: solid 1px grey;
+	padding: 10px;
+	margin-bottom: 25px;
+	background-color: #ffc;
+	}
+.locBoxAddress {
+	width: 100%;
+	}
+.locBoxDisabled {
+	background-color: #ccc;
+	}
+.locRadio {
+	position: fixed;
+	opacity: 0;
+	pointer-events: none;
+}
+@media only screen and (max-width: 620px) {
+.locMaster {
+	flex-direction: column-reverse;
+	}
+	.locMap {
+		max-width: 100%;
+	}
+	.locSet {
+		max-width: 100%;
+	}
+.mapBox {
+	width: 100vw;
+	height: 400px;
+	}
+}
+</style>
+<script src="/gps/gps.js?{gps_js_ts}"></script>
+<script>
+/**
+ * This is currently not used. But, it works! Maybe when this page
+ * becomes AJAXy we can use it.
+ * @type updateLocBoxBg.Locs|NodeList
+ */
+function updateMap(lat, lon)
+	{
+	var iFrame = document.getElementById('gmap_canvas');
+	var src = "https://maps.google.com/maps?q=" + lat + "," + lon + "&t=h&z=13&ie=UTF8&iwloc=B&output=embed";
+	iFrame.src = src;
+	}
+function getLoc()
+	{
+	var Locs = document.getElementsByClassName('locRadio');
+	var Loc = null;
+	for (var i = 0; i< Locs.length; i++)
+		{
+		if (Locs[i].checked)
+			Loc = Locs[i];
+		else
+			Locs[i].parentNode.classList.add('locBoxDisabled');
+		}
+	return Loc;
+	}
+function updateLocBoxBg()
+	{
+	var Loc = getLoc();
+	if (!Loc)
+		return;
+	var locDiv = Loc.parentNode;
+	locDiv.classList.remove('locBoxDisabled');
+	}
+function checkSetLocation()
+	{
+	var Loc = getLoc();
+	if (Loc.value == 'browser')
+		{
+		// clear out lat/lon values.
+		// set with browser values
+		setLocation(null, 'lat', 'lon', submitLatLonForm, true);
+		return false;
+		}
+	}
+function submitLatLonForm()
+	{
+	var hiddenAction = document.getElementById('hiddenAction');
+	hiddenAction.value="1";
+	var Form = document.getElementById('setLocationForm');
+	// need to set the action!
+	Form.submit();
+	return true;
+	}
+function setRadioOption(option)
+	{
+	var radios = document.getElementsByClassName("locRadio");
+	for (var i=0; i<radios.length; i++)
+		{
+		if (radios[i].value == option)
+			radios[i].checked = true;
+		}
+	updateLocBoxBg();
+	}
+</script>
+<div class="locMaster">
+
+<!-- BEGIN Map -->
+	<div class="locMap">
+		<iframe class="mapBox"
+			frameborder="0"
+			scrolling="no"
+			marginheight="0"
+			marginwidth="0"
+			id="gmap_canvas"
+			origSrc="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=100%20Esplanade%20Chico+(Foobar)&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+			fixedSrc="https://maps.google.com/maps?width=520&height=400&hl=en&q=100%20Esplanade%20Chico+(Foobar)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+			addrSrc="https://maps.google.com/maps?q=2100%20Esplanade%20Chico+(Copy+Cat)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+			src="https://maps.google.com/maps?q={lat},{lon}&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+			></iframe><!-- t=h: satellite map
+										 remove t: road map. -->
+	</div>
+<!-- END Map -->
+	<table class="locSet">
+		<tr>
+			<td>
+				<h3>Set my location: </h3>
+				<form method="post" id="setLocationForm">
+					<div class="locBox {addressLocClass}">
+						<input class="locRadio" type="radio" name="locBox" value="address"
+							{addressChecked}
+							onchange="updateLocBoxBg();" /> By Address<br/>
+						<textarea name="address" class="locBoxAddress" rows="5" onfocus="setRadioOption('address');"  >{locAddress}</textarea>
+					</div>
+					<div class="locBox {geoipLocClass}" onclick="setRadioOption('geoip');" >
+						<!--
+			Yes, I am here. But when I am removed, Browser location service
+			stops working. So, I am hidden. -->
+						<input class="locRadio" type="radio" name="locBox" value="geoip"
+							{geoipChecked}
+							onchange="updateLocBoxBg();" /> By Internet Address (IP)<br/>
+							{geoip_location}
+					</div>
+					<div class="locBox {latlonLocClass} hideme">
+						<!--
+			Yes, I am here. But when I am removed, Browser location service
+			stops working. So, I am hidden. -->
+						<input class="locRadio" type="radio" name="locBox" value="latlon"
+							{latlonChecked}
+							onchange="updateLocBoxBg();" /> By Lat/Lon<br/>
+						Lat: <input type="text" id="lat" name="lat" value="{lat}" onfocus="setRadioOption('latlon');" /><br/>
+						Lon: <input type="text" id="lon" name="lon" value="{lon}" onfocus="setRadioOption('latlon');" /><br/>
+					</div>
+					<div class="locBox {browserLocClass}" onclick="setRadioOption('browser');" >
+						<input class="locRadio" type="radio" name="locBox" value="browser"
+							{browserChecked}
+							onchange="updateLocBoxBg();" /> Browser Location Service<br/>
+					</div>
+					<input type="hidden" name="action[setLocation]" id="hiddenAction" value="">
+					<center>
+						<input type="submit" name="action[setLocation]" value="Set Location"
+							onclick="return checkSetLocation();"
+									 />
+					</center>
+				</form>
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- END Prompt -->
+
+<!-- BEGIN SetLocation -->
+<style>
+.fullWidth {
+	object-fit: cover;
+	}
+</style>
+<center>
+	<img class="fullWidth" src="/images/loading.gif">{show}
+</center>
+<meta http-equiv="refresh" content="1;url=/location.php" />
+<!-- END SetLocation -->

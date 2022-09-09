@@ -1,0 +1,134 @@
+<style>
+.overridden {
+	color: #F00;
+	border: 1px solid #f00;
+}
+.lo {
+	background-color: #bcb;
+}
+.pageContentWindow {
+	padding: 5px;
+}
+.pageContents {
+	padding: 10px;
+}
+.createdLocal {
+	border: 1px solid blue;
+}
+.editedLocal {
+	border: 1px solid red;
+}
+</style>
+<script src="/gps/gps.js"></script>
+<script>
+function setMapLink()
+	{
+	}
+</script>
+<!-- BEGIN Prompt -->
+<form method="get" action="?">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>
+<!-- BEGIN LinkPrev -->
+			<a href="?offset={offset}&search={search}&lat={lat}&lon={lon}">Prev</a>
+<!-- END LinkPrev -->
+		</td>
+		<td>
+			<h4> Farmers </h4>
+		</td>
+		<td>
+			<input type=text name="search" value="{search}" placeholder="Search..." />
+			<i>{count_msg}</i>
+		</td>
+		<td>
+			<table>
+				<tr>
+					<td rowspan="2">
+						<input type="button" onclick="setLocation(null, 'lat', 'lon', setMapLink);" value="Locate">
+						<input type="submit">
+					</td>
+					<td align="right">
+						Lat:
+					</td>
+					<td>
+						<input size=8 readonly type="numeric" value="{lat}" name="lat" id='lat' >
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+						Lon:
+					</td>
+					<td>
+						<input size=8 readonly type="numeric" value="{lon}" name="lon" id='lon' >
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td>
+<!-- BEGIN LinkNext -->
+			<a href="?offset={offset}&search={search}&lat={lat}&lon={lon}">Next</a><br/>
+<!-- END LinkNext -->
+			<a href="/admin/farmer.php?table=farmers&table_id=0&new=1">Add</a>
+		</td>
+	</tr>
+</table>
+</form>
+<table width="100%">
+	<tr>
+		<td>
+			Source
+		</td>
+		<td>
+			Update
+		</td>
+		<td>
+			Name
+		</td>
+		<td>
+			Phone
+		</td>
+		<td>
+			Website
+		</td>
+		<td>
+			Email
+		</td>
+		<td>
+			Address
+		</td>
+		<td>
+			Edit
+		</td>
+	</tr>
+<!-- BEGIN Farmers -->
+	<tr class="{hilo}">
+		<td class='{sourceclass}'>
+			{source}
+		</td>
+		<td>
+			{update_str}
+		</td>
+		<td class='{nameclass}'>
+			{name}</a>
+		</td>
+		<td class='{phoneclass}'>
+			{phone}
+		</td>
+		<td class='{websiteclass}'>
+			{website}
+		</td>
+		<td class='{company_emailclass}'>
+			{company_email}
+		</td>
+		<td class='{addressclass}'>
+			{address}
+			<br><i>{distance}</i>
+		</td>
+		<td>
+			<a href="/admin/farmer.php?table={table}&table_id={table_id}">Edit</a>
+		</td>
+	</tr>
+<!-- END Farmers -->
+</table>
+<!-- END Prompt -->

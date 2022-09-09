@@ -1,0 +1,31 @@
+<!-- BEGIN Prompt -->
+		<center>
+			<p class="newsletterTitle">Stay up-to-date with our newsletter</p>
+			<form action="?">
+				<input CHECKED type="checkbox"> Show me deals <b>Davis, CA</b> <input type=submit value="Set my Location" /></br><br/>
+				<input style='width: 100%; max-width: 350px;' name="email" type='text' placeholder='Enter your email' />
+				<input class="newsletterbutton" formmethod="post" type="submit" value="Subscribe" name="action[nlsave]" />
+
+			</form>
+		</center>
+<!-- END Prompt -->
+<!-- BEGIN NlSave -->{show}
+<style>
+	.pageChild {
+		padding: 20px;
+	}
+</style>
+<div class='pageChild'>
+	<h3> Thank you for joining!</h3>
+
+	<p> We thank and appreciate your joining our effort to improve access
+		to nutritious, healthy food.
+
+	<p> Should you decide to quit at any time, look for the "unsubsribe"
+		link at the bottom of every newsletter.
+
+	<p> We'll take you back to the home page in 10 seconds..
+
+	<meta http-equiv="refresh" content="10;url=/" />
+</div>
+<!-- END NlSave -->
