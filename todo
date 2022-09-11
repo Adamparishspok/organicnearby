@@ -1,0 +1,16 @@
+products.link to purchase the product.
+Linc foods link: 
+CF: 
+https://lincfoods.localfoodmarketplace.com/Product/4943?pGuid=a9f535a8-1990-4c2e-a2e7-413c4917a583
+select externalid from sc_products where id = 3;
+
+
+2) I need to add pricetxt and price_unit fields to the products page in the scraper and in the onboarder. 
+
+3) Thiago and I would need to come up with a field at the bubble endpoint for products to have a field for the "click link" to take someone to the shopping cart page. 
+
+4) The endpoint doesn't save the value of 'scraped' for initial entries - only updates, which would delay displaying a new record until the 2nd scrape. 
+
+5) I wouldn't be surprised if pictures weren't showing in what I uploaded since I ran it directly from a private dev environment.
+
+6) As the data in the site now is largely manual entry, a big job remains to figure out what's legit and what needs to be tossed. 

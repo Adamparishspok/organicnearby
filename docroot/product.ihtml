@@ -1,0 +1,152 @@
+<div class="modal fade product-modal" role="dialog" tabindex="-1" id="modal-1">
+  <div
+    class="modal-dialog modal-xl modal-dialog-scrollable modal-fullscreen-md-down"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <img class="product-modal-image" src="assets/img/PIG.jpeg" />
+            </div>
+            <div class="col-md-6 product-modal-details">
+              <div>
+                <h1 class="fs-2">Bone-In Ham Steaks</h1>
+                <p class="fs-5 text-black-50 mb-0 product-card-price">
+                  $12 / lb
+                </p>
+                <p>
+                  <span style="color: var(--color-gray)"
+                    >Cucumbers have a mild, refreshing taste and a high water
+                    content.</span
+                  ><br />
+                </p>
+                <button class="btn btn-primary" type="button">Buy Now</button>
+                <div class="farmer-profile" style="margin: 0; margin-top: 32px">
+                  <h5
+                    class="fw-bold product-card-name"
+                    style="margin-top: 16px"
+                  >
+                    Brookford Farm Meat<br />
+                  </h5>
+                  <div class="info-row">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icon-tabler-map-pin"
+                      style="
+                        width: 24px;
+                        height: 24px;
+                        min-width: 24px;
+                        max-width: 24px;
+                        min-height: 24px;
+                        max-height: 24px;
+                      "
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <circle cx="12" cy="11" r="3"></circle>
+                      <path
+                        d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+                      ></path>
+                    </svg>
+                    <p>15.2 mi - 20005 E Trent Ave, Otis Orchards, WA 99027</p>
+                  </div>
+                  <div class="info-row">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="icon icon-tabler icon-tabler-phone"
+                      style="width: 24px; height: 24px"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                      ></path>
+                    </svg>
+                    <p>509-555-5555</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <iframe
+            class="border rounded"
+            allowfullscreen=""
+            frameborder="0"
+            src="https://cdn.bootstrapstudio.io/placeholders/map.html"
+            width="100%"
+            height="400"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BEGIN Prompt -->
+<div class="prodBlock">
+	<div class="imagesDiv" >
+		<img class="prodImage" src="/img.php/{image}" />
+<!-- BEGIN Edit -->
+		<form action="/account.php/farmers/{farmers_id}/{urlname}">
+			<input type="hidden" name="table" value="{table}" />
+			<input type="hidden" name="table_id" value="{table_id}" />
+			<input type="submit" name="action[add]" Value="Edit This"/>
+		</form>
+<!-- END Edit -->
+<!-- BEGIN LinkCart -->
+		<br/><a class="prodLinkcart" href="/product.php/{table}/{table_id}?action[purchase]=1"><img class="prodCart" src="/assets/img/shoppingCart.png"><br/>
+			Click to Purchase</a>
+<!-- END LinkCart -->
+	</div>
+	<h3> {name} </h3>
+	<p class="prodDescription">{description}</p>
+	<table class="prodTable">
+<!-- BEGIN FValues -->
+		<tr>
+			<td class="descItem">{field}</td>
+			<td>{value}</td>
+		</tr>
+<!-- END FValues -->
+	</table>
+			<a href="/farmer.php/{farmer_table}/{farmer_table_id}/{farmer_urlify}?action[farm]=1"<p class="farmerName"> {farmer} </p></a>
+<!-- BEGIN Map -->
+<iframe class="mapBox"
+	frameborder="0"
+	scrolling="no"
+	marginheight="0"
+	marginwidth="0"
+	id="gmap_canvas"
+	origSrc="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=100%20Esplanade%20Chico+(Foobar)&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+	fixedSrc="https://maps.google.com/maps?width=520&height=400&hl=en&q=100%20Esplanade%20Chico+(Foobar)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+	addrSrc="https://maps.google.com/maps?q=2100%20Esplanade%20Chico+(Copy+Cat)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+	src="https://maps.google.com/maps?q={lat},{lon}&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+	></iframe><!-- t=h: satellite map
+								 remove t: road map. -->
+<!-- END Map -->
+
+</div>
+<!-- END Prompt -->

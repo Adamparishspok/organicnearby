@@ -1,0 +1,11 @@
+0) In a shell, run site.php 
+
+### GET THE DATA FROM GOOGLE ###
+1) Install chrome extension SEOquake
+2) Google "site:localfoodmarketplace.com" 
+3) Click "Export CSV" in SEOQuake 
+	3a) Watch script rename the file "sitelocalfoodmarketplace.com.csv" to sitelocalfoodmarketplace.com.csv.1" 
+4) Click "2" at the bottom of Google to view page 2. 
+5) Repeat 3 and 4 until google offers no more pages. 
+
+### extract the data ### 

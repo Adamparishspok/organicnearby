@@ -1,0 +1,13 @@
+1) Move scraping to in-sb4 shell process so that location and location_addr
+	get updated by the IncludeOrmCrud models. 
+
+2) Multiple Product Pricing Records instead of a price field.
+
+3) Right now, last update time is being ignored and everything is showing
+	for the public search.
+
+4) Ability to set an alternate location
+
+
+Notes:
+	A) email tools

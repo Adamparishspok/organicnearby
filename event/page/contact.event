@@ -1,0 +1,66 @@
+<?php
+
+namespace sb;
+class EventPageContact202 extends PageContact
+{
+
+public static function on_Init($Page)
+	{
+	die("post init called");
+	}
+
+public static function on_displayRecipient(\sb\IncludePage $Page)
+	{
+	self::getTableAndId($Page);
+	// Rest of this from organicNearby's original contact.php page. 
+	if (!$table = $Page->req('text', 'table'))
+		return true;
+	if (!$table_id = $Page->req('int', 'table_id'))
+		return true;
+	$dis = &$Page->dis['Prompt'];
+	unset($dis['Image']);
+	$ok = ['farmers', 'sc_farmers'] ;
+	if (!in_array($table, $ok))
+		return $Page->error("Invalid access attempt");
+	if (!$F = $Page->DB->Find($table, $table_id, true))
+		return true;
+	$dis['name'] = $F->Get('name');
+	$dis['address'] = $F->Get('address');
+	if ($image = $F->Get('image'))
+		$dis['Image']['img'] = "/img.php/$image";
+	return true;
+	}
+
+/**
+ * Contact.php is NOT in organic nearby so we have to create an instance
+ * of IncludePageOrganicnearby to suss out the table and table_id params.
+ * @param type $Page
+ * @return boolean
+ */
+private static function getTableAndId($Page)
+	{
+	$ON = new IncludePageOrganicnearby($Page->env);
+	$ON->getTableAndId();
+	$Page->request['table'] = $ON->req('text', 'table');
+	$Page->request['table_id'] = $ON->req('int', 'table_id');
+	return true;
+	}
+
+public static function on_getRecipient(\sb\IncludePage $Page, $pass)
+	{
+	self::getTableAndId($Page);
+	if (!$table = $Page->req('text', 'table'))
+		return true;
+	if (!$table_id = $Page->req('int', 'table_id'))
+		return true;
+	if (!$T = $Page->DB->Find($table, $table_id, true))
+		return true;
+	if (!$T->Get('company_email'))
+		return $Page->error("Recipient address not found");
+	$site_owners_email = $T->Get('company_email');
+	$site_owners_name = $T->Get('name');
+	$pass[0] = $site_owners_email;
+	$pass[1] = $site_owners_name;
+	return true;
+	}
+}

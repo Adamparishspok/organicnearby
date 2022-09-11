@@ -1,0 +1,6 @@
+Original site
+Lean Practitioner
+ 1002  history | grep curl >> howto 
+
+#curl https://lincfoods.localfoodmarketplace.com/Products > linc.html
+

@@ -1,0 +1,11 @@
+--2022-03-08 21:26:44--  https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1605742360491x551696302923345700%2FOrganicNearby%2520logo-03.png?w=256
+Resolving d1muf25xaso8hp.cloudfront.net (d1muf25xaso8hp.cloudfront.net)... 52.84.160.203, 52.84.160.69, 52.84.160.136, ...
+Connecting to d1muf25xaso8hp.cloudfront.net (d1muf25xaso8hp.cloudfront.net)|52.84.160.203|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5673 (5.5K) [image/png]
+Saving to: ‘https:%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1605742360491x551696302923345700%2FOrganicNearby logo-03.png?w=256’
+
+              https:%2F%2Fs   0%[                                         ]       0  --.-KB/s               https:%2F%2Fs3.amazonaws.co 100%[========================================>]   5.54K  --.-KB/s    in 0s      
+
+2022-03-08 21:26:45 (32.6 MB/s) - ‘https:%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1605742360491x551696302923345700%2FOrganicNearby logo-03.png?w=256’ saved [5673/5673]
+

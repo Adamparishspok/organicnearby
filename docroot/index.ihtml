@@ -1,0 +1,155 @@
+<!-- BEGIN Prompt -->
+<script src="/gps/gps.js?{gps_js_ts}"></script>
+<script>
+  function lookForFood() {
+    searchingDivHide(false);
+    setLocation(null, "lat", "lon", doSearch, true);
+    var lat = document.getElementById("lat");
+    return false;
+  }
+  function doSearch() {
+    var searchText = document.getElementById("search").value;
+    var lat = document.getElementById("lat").value;
+    var lon = document.getElementById("lon").value;
+    var url =
+      "/index.php?action[search]&lat=" +
+      lat +
+      "&lon=" +
+      lon +
+      "&search=" +
+      searchText;
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      var x = document.getElementById("index_pageintro");
+      x.classList.add("hideme");
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("putFood").innerHTML = this.responseText;
+        var docTitle = searchText;
+        if (searchText == "") docTitle = "Products";
+        document.title = searchText;
+        history.pushState(
+          window.url,
+          "",
+          "?lat=" + lat + "&lon=" + lon + "&search=" + searchText
+        );
+        searchingDivHide(true);
+      }
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+    return true;
+  }
+
+  function handlePopstate(e) {
+    location.reload();
+    return;
+  }
+</script>
+
+<div
+  class="carousel slide"
+  data-bs-ride="carousel"
+  data-bs-pause="false"
+  data-bs-keyboard="false"
+  id="carousel-1"
+  style="height: 480px"
+>
+  <div class="carousel-inner h-100" style="max-height: 480px">
+    <div class="carousel-item active h-100" style="max-height: 480px">
+      <img
+        class="w-100 d-block position-absolute h-100 fit-cover"
+        src="assets/img/CleanShot%202022-07-31%20at%2022.18.42@2x.png"
+        alt="Slide Image"
+        style="z-index: -1"
+      />
+      <div
+        class="container-fluid d-flex flex-column justify-content-center h-100"
+        style="padding: 48px"
+      >
+        <h1
+          class="fw-bold text-white"
+          style="max-width: 580px; margin-bottom: 16px; width: 100%"
+        >
+          Local produce and products near
+          <a href="/location.php">{locAddress}</a>
+        </h1>
+        <div class="text-white" style="max-width: 500px; width: 100%">
+          <form id="lookForFood" onsubmit="return lookForFood();">
+            <div class="searchDiv" id="searchDiv">
+              <input type="hidden" name="lat" id="lat" />
+              <input type="hidden" name="lon" id="lon" />
+              <input
+                class="searchInput"
+                id="search"
+                name="search"
+                type="text"
+                placeholder="Products"
+                value="{search}"
+              />
+              <!-- input type="submit" onclick="return lookForFood();" value="Browse" class="searchButton" name="action[search]"/ -->
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
+  </ol>
+</div>
+
+<section class="py-4 py-xl-5 search-section">
+  <div class="homepage-row">
+    <!-- END Prompt -->
+    <!-- BEGIN Search -->
+    <div
+      class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3 prodDivs"
+      style="margin-bottom: 0"
+    >
+      <!-- BEGIN Products -->
+      <div class="col-lg-3 col-xxl-2 prodDiv">
+        <a
+          class="card border-light border-1 shadow-sm product-card"
+          href="/product.php/{source}/{id}/{linkDescription}"
+          style="border-radius: 16px"
+        >
+          <img
+            class="card-img-top w-100 d-block fit-cover"
+            style="height: 200px"
+            src="/img.php/{image}"
+          />
+
+          <div class="card-body p-4">
+            <h5 class="fw-bold card-title product-card-name">
+              <span style="color: rgb(0, 0, 0)">{name}</span>
+            </h5>
+            <p class="fs-6 text-black-50 mb-0 product-card-price">{price}</p>
+            <p class="card-text"></p>
+            <div class="d-flex">
+              <div>
+                <p class="fw-normal mb-0 product-card-farmer">{farmername}</p>
+                <p class="text-black-50 mb-0 product-card-farmer-location">
+                  <a
+                    title="{distance_title}"
+                    target="_blank"
+                    href="https://www.google.com/maps/place/{lat},{lon}"
+                    >{distance}</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- END Products -->
+
+      <!-- BEGIN NoProducts -->
+      <div class="prodDivs">
+        <h3>No Products Found Matching Search</h3>
+      </div>
+      <!-- END NoProducts -->
+    </div>
+
+    <!-- END Search -->
+  </div>
+</section>

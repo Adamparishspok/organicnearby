@@ -1,0 +1,148 @@
+<?php
+# sites/organicnearby.com/event/page/login.event
+namespace sb;
+class EventPageLogin202 extends PageLogin
+{
+
+public static function on_PreRun(PageLogin $Page)
+	{
+	$Page->env->dis['role_active'] = 'active';
+	return true;
+	}
+
+/**
+ * Look for the case that the user successfully signed up
+ * and send them home
+ * @param type $Page
+ * @return boolean
+ */
+public static function on_postRunSignup(IncludePage $Page, $eventData)
+	{
+	// user isn't logged in.
+	if (!$Page->SEC->Get('login'))
+		return true;
+	// check to see if they have a Farmer account yet?
+	$find = [ 'authlogins_id' => $Page->SEC->Get('id') ];
+	$Farmers = $Page->DB->find('farmers', $find);
+	if (!$Farmers->NumRows())
+		self::matchFarmerRecords($Page, $Farmers);
+	if (!$Farmers->NumRows())
+		$Farmers = $Page->DB->create('farmers', $find);
+
+	while ($Farmer = $Farmers->Fetch())
+		{
+		if ($Farmer->Get('externalid'))
+			{
+			/**
+			 * no name setting if it's backed by a scraped record - the
+			 * scraped record name will show by default.
+			 */
+			}
+		elseif ((!$Farmer->Get('name')) && ($name = retval($eventData, 'name')) )
+			{
+			/**
+			 * Using the name from Gmail (or other signup methods)
+			 */
+			$Farmer->Set('name', $name);
+			}
+		else
+			{
+			/**
+			 * Making up a "Friendly" name
+			 */
+			$e = explode('@', $Page->SEC->Get('login'));
+			$Farmer->Set('name',  $e[0]. "'s farm");
+			}
+
+		// do we need to grab a picture? Only if the sc_farmer record doesn't
+		// already have one
+		$getImage = true;
+		$SF = null;
+		if ($Farmer->get('externalid'))
+			{
+			$find = [ 'externalid' => $Farmer->Get('externalid') ];
+			$SF = $Page->DB->Find('sc_farmers', $find, 1);
+			if ($SF->Get('image'))
+				$getImage = false;
+			}
+		if (!$getImage)
+			{}
+		elseif (!$pictureUrl = retval($eventData, 'picture'))
+			{}
+		elseif (!$Image = self::makeImage($Page, $pictureUrl))
+			{}
+		elseif (!$Image->Save())
+			{}
+		else
+			{
+			$fdata = $Image->GetFdata(true);
+			$Farmer->set('image', $fdata['tmp_name']);
+			}
+		if (!$SF)
+			$Farmer->Set('deleted_ts', time());
+		$Farmer->save();
+		}
+	Header("Location: /account.php");
+	return true;
+	}
+
+protected static function matchFarmerRecords($Page, &$Farmers)
+	{
+	// MATCH RECORDS BY EMAIL ADDRESS.
+	$sql="SELECT 
+			sc_farmers.name,
+			sc_farmers.externalid,
+			sc_farmers.deleted_ts,
+			sc_farmers.sc_sources_id,
+			farmers.id AS farmers_id
+		FROM sc_farmers
+		LEFT OUTER JOIN farmers ON
+			(
+			sc_farmers.externalid = farmers.externalid
+			AND sc_farmers.sc_sources_id = farmers.sc_sources_id
+			)
+		WHERE
+			(
+			lower(sc_farmers.company_email) = [sc_farmers.company_email]
+			)";
+	$todb = ['sc_farmers.company_email' => $Page->SEC->Get('login') ];
+	if (!$res = $Page->DB->SrQ($sql, $todb))
+		return $Page->Error("Unable to run farmer record match query");
+	/**
+	 * So, because of the table similarity, we're taking sc_farmers DB
+	 * result but rendering them as farmer records.
+	 */
+	$Farmers = IncludeOrmFactory::resToOrmFactoryResult($res, 'farmers');
+	while ($Farmer = $Farmers->Fetch())
+	 if (!$Farmer->Get('farmers_id'))
+		{
+		// just gonna fill up the first one found I guess? 
+//		$Farmer->Set('externalid', $row['externalid']);
+//		$Farmer->Set('sc_sources_id', $row['sc_sources_id']);
+		$Farmer->Set('authlogins_id', $Page->SEC->Get('id'));
+		}
+	$Farmers->reset();
+	return true;
+	}
+
+public static function makeImage($Page, $pictureUrl)
+	{
+	if (!$fp = fopen($pictureUrl, 'r'))
+		return [];
+	$ofile = tempnam(null, 'LoginEventOrganicNearby');
+	if (!$ofp = fopen($ofile, 'w'))
+		return [];
+	$bytes = 0;
+	while ($line = fgets($fp, 65535))
+		{
+		$bytes += fwrite($ofp, $line);
+		}
+	if (!$bytes)
+		return [];
+	$Image = $Page->DB->create('images', [], true);
+	$fdata = $Image->makeFData($ofile);
+	$Image->set($fdata);
+	return $Image;
+
+	}
+}
