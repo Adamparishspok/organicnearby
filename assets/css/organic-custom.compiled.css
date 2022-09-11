@@ -72,7 +72,9 @@ body {
   border: 1px solid var(--bs-primary) !important;
 }
 
-.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
   background: #1aa374;
   border-color: #1aa374;
 }
@@ -80,7 +82,9 @@ body {
 .btn-login {
   color: var(--bs-primary);
 }
-.btn-login:hover, .btn-login:active, .btn-login:focus {
+.btn-login:hover,
+.btn-login:active,
+.btn-login:focus {
   background: var(--bs-primary);
 }
 
@@ -93,11 +97,21 @@ body {
 }
 
 .carousel-item {
-  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.55) 100%, rgba(0, 0, 0, 0.55) 100%);
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.55) 100%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
 }
 @media screen and (max-width: 959px) {
   .carousel-item {
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 50%, rgba(0, 0, 0, 0.55) 100%);
+    background: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.55) 50%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
   }
 }
 
@@ -178,4 +192,30 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+#searchingDiv {
+  /* Position text in the middle of the page/image */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(200, 200, 200, 0.7); /* Black w/opacity/see-through */
+  color: #149e2d;
+  font-weight: bold;
+  font-size: 2em;
+  border: 3px solid #282;
+  border-radius: 25px;
+  position: fixed;
+  /* absolute;*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+
+  backdrop-filter: blur(6px);
+}
+
+.hideme {
+  display: none;
 }

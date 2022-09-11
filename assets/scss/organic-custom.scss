@@ -280,27 +280,27 @@ body {
 }
 
 .user-location {
-    display: flex;
-    align-items: center;
-    padding: 0 12px 0 0;
-        flex-shrink: 4;
-    min-width: 200px;
-    max-width: 100%;
-    
-    svg {
-        color: var(--bs-gray-500);
-        width: 24px;
-        height: 24px;
-    }
-    
-    p {
-        margin: 0;
-        margin-left: 8px;
-        font-weight: 600;
-        font-size: 14px;
-      flex-shrink: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 12px 0 0;
+  flex-shrink: 4;
+  min-width: 200px;
+  max-width: 100%;
+
+  svg {
+    color: var(--bs-gray-500);
+    width: 24px;
+    height: 24px;
+  }
+
+  p {
+    margin: 0;
+    margin-left: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    flex-shrink: 1;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    }
+  }
 }

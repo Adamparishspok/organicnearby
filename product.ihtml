@@ -61,7 +61,7 @@
 		</form>
 <!-- END Edit -->
 <!-- BEGIN LinkCart -->
-		<br/><a class="prodLinkcart" href="/product.php/{table}/{table_id}?action[purchase]=1"><img class="prodCart" src="/images/shoppingCart.png"><br/>
+		<br/><a class="prodLinkcart" href="/product.php/{table}/{table_id}?action[purchase]=1"><img class="prodCart" src="/assets/img/shoppingCart.png"><br/>
 			Click to Purchase</a>
 <!-- END LinkCart -->
 	</div>

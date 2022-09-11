@@ -31,7 +31,7 @@ class PageImg extends \sb\IncludePage
 			$relpath = str_replace('images/', 'sc_images/', $u['path']);
 			}
 		elseif ($images_id == 'upload.png')
-			return $this->blankImg("upload image detected", "/images/upload.png");
+			return $this->blankImg("upload image detected", "/assets/img/upload.png");
 		if (!$relpath)
 			return $this->blankImg("No relative path!");
 		if (!$context = $this->env->get('settings', 'dfscontext'))
@@ -70,7 +70,7 @@ class PageImg extends \sb\IncludePage
 		die();
 		}
 
-	function blankImg($msg, $relpath="/images/broken.png")
+	function blankImg($msg, $relpath="/assets/img/broken.png")
 		{
 
 		if ($file = $this->env->which($relpath))

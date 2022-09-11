@@ -145,7 +145,7 @@ function page_Edit()
 	if (!$this->isMe($Farmer))
 		if (!$this->SEC->getRoles('page', 'admin'))
 			return $this->error("Permission denied");
-	return $this->displayFarmer($dis, $Farmer, "/images/upload.png");
+	return $this->displayFarmer($dis, $Farmer, "/assets/img/upload.png");
 	}
 
 

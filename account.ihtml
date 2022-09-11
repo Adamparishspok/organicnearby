@@ -1,0 +1,925 @@
+<script src="/assets/js/files.js"></script>
+<script>
+function submitImageProduct(e)
+	{
+	if (!fileValidation(e, 6))
+		return false;
+	e.form.submit();
+	}
+function updateShortAddress(e, domain)
+	{
+	var content = "https://" + domain + "/" + e.value;
+	var f = document.getElementById('shortAddress');
+	f.innerHTML =	content;
+	}
+</script>
+<!-- BEGIN Prompt -->
+<a class="addFarm" href="/account.php?action[edit]=1">Add Farm</a>
+<h3> My Farms </h3>
+<table>
+<!-- BEGIN Farms -->
+	<tr>
+		<td>
+			{id}
+		</td>
+		<td>
+			<a href="/account.php/{table}/{id}/{urlname}?action[farm]=1">{name}</a>
+		</td>
+		<td>
+			{visibility}
+		</td>
+	</tr>
+<!-- END Farms -->
+</table><a class="addFarm" href="/account.php?action[edit]=1">Add Farm</a>
+<h3>My Farms</h3>
+<table>
+	<!-- BEGIN Farms -->
+	<tr>
+		<td>{id}</td>
+		<td>
+			<a href="/account.php/{table}/{id}/{urlname}?action[farm]=1">{name}</a>
+		</td>
+		<td>{visibility}</td>
+	</tr><!-- END Farms -->
+</table><!-- END Prompt -->
+<!-- BEGIN Farm -->
+{show}
+<table class="contactRecord">
+	<tr>
+		<td class="farLeftColumn"></td>
+		<td>
+			<h3>{page_title}</h3>
+		</td>
+		<td><!-- BEGIN Disabled -->
+		<span class="disabledAccount">Disabled {date}</span> <!-- END Disabled --></td>
+	</tr><!-- BEGIN Fields -->
+	<tr>
+		<td class="ftitle">{ftitle}</td>
+		<td>{value}</td><!-- BEGIN FirstRow -->
+		<td rowspan="{rowspan}" width="25%">
+			<img class="companyLogo" src="/img.php/{image}">
+			<form action="/contact.php/sc_farmers/{sc_farmers_id}/{urlify}">
+				<input class="firstrowButton" type="submit" value="Contact Business">
+			</form><br>
+			<!-- BEGIN Claim -->
+			<form action="{PAGE_NAME}?">
+				<input name="table" type="hidden" value="sc_farmers"> <input name="table_id" type="hidden" value="{sc_farmers_id}"> <input class="firstrowButton" name="action[claim]" type="submit" value="Claim Business">
+			</form><!-- END Claim -->
+			<!-- BEGIN AdminEdit -->
+			<form action="/admin/farmer.php" target="_blank"></form><input name='table' type="hidden" value="{table}"> <input name='table_id' type="hidden" value="{table_id}"> <input class="firstrowButton" type="submit" value="Admin Edit"> <!-- END AdminEdit -->
+		</td><!-- END FirstRow -->
+	</tr><!-- END Fields -->
+	<tr>
+		<td class="ftitle">Address</td>
+		<td>{address_str}</td>
+	</tr>
+	<tr>
+		<td class="ftitle">General Info</td>
+		<td>{general_info}</td>
+	</tr><!-- BEGIN ShortAddress -->
+	<tr>
+		<td>Vanity Address</td>
+		<td>
+			<a href="https://{domain}/{url}" target="_blank_">https://{domain}/{url}</a>
+		</td>
+	</tr><!-- END ShortAddress -->
+	<tr>
+		<!-- BEGIN Edit -->
+	</tr>
+	<tr>
+		<td></td>
+		<td colspan="2">
+			<form action="?">
+				<input name='action[edit]' type='submit' value='Edit'>
+			</form>
+		</td>
+	</tr><!-- END Edit -->
+</table><!-- BEGIN Products -->
+{show} {show}
+<table>
+	<!-- BEGIN Add -->
+	<tr>
+		<td>
+			<form action="?">
+				<input name="action[add]" type="submit" value="Add Product">
+			</form>
+		</td>
+	</tr><!-- END Add -->
+	<!-- BEGIN Product -->
+	<tr>
+		<td><img class="productImage" src="/img.php/{image}"></td>
+		<td>
+			<a href="/product.php/{table}/{table_id}/{urlName}">{name}</a>
+		</td>
+		<td>{price}</td>
+		<td>{description}</td><!-- BEGIN Edit -->
+		<td>
+			<form action="?">
+				<input name="table" type="hidden" value="{table}"> <input name="table_id" type="hidden" value="{table_id}"> <input name="action[add]" type="submit" value="Edit">
+			</form><!-- BEGIN Deleted -->
+			<span class="deletedProduct">Deleted<br>
+			{date}</span> <!-- END Deleted -->
+		</td><!-- END Edit -->
+	</tr><!-- END Product -->
+</table><!-- END Products -->
+<!-- BEGIN Map -->
+<iframe addrsrc="https://maps.google.com/maps?q=2100%20Esplanade%20Chico+(Copy+Cat)&t=h&z=13&ie=UTF8&iwloc=B&output=embed" class="mapBox" fixedsrc="https://maps.google.com/maps?width=520&height=400&hl=en&q=100%20Esplanade%20Chico+(Foobar)&t=h&z=13&ie=UTF8&iwloc=B&output=embed" frameborder="0" id="gmap_canvas" marginheight="0" marginwidth="0" name="gmap_canvas" origsrc="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=100%20Esplanade%20Chico+(Foobar)&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" scrolling="no" src="https://maps.google.com/maps?q={lat},{lon}&t=h&z=13&ie=UTF8&iwloc=B&output=embed"></iframe><!-- t=h: satellite map
+                                 remove t: road map. -->
+<!-- END Map -->
+<!-- END Farm -->
+ <!-- BEGIN Edit -->{show} 
+<script src="/editFields.js">
+</script>
+<form action='?'>
+	<table>
+		<tr>
+			<td></td>
+			<td class="{scraped_display}"></td>
+			<td colspan="3">
+				<h3>Manage Farmer Account</h3>
+			</td>
+		</tr>
+		<tr>
+			<td class="ftitle">Field</td>
+			<td class="{scraped_display}">Scraped</td>
+			<td class="editCkBoxCol"></td>
+			<td class="{scraped_display}">Edit</td>
+		</tr><!-- BEGIN Fields -->
+		<tr>
+			<td class="ftitle">{ftitle}</td>
+			<td class="{scraped_display}">{sc_value}</td>
+			<td class="editCkBoxCol"><input class="editCkbox {scraped_display}" name="active[{field}]" onchange="toggleActive(this, '{field}')" type="checkbox" value="1"></td>
+			<td><input class="finput" id="textArea{field}" name="{field}" style="width: 90%;" type="text" value="{value}"></td><!-- BEGIN FirstRow -->
+			<td rowspan="{rowspan}" width="25%">
+				<a href="?action[image]"><img class="companyLogo" src="/img.php/{image}"></a>
+			</td><!-- END FirstRow -->
+		</tr><!-- END Fields -->
+		<tr>
+			<td class="ftitle">Address</td>
+			<td class="{scraped_display}">{sc_address}</td>
+			<td class="editCkBoxCol"><input class="editCkbox {scraped_display}" name="active[address]" onchange="toggleActive(this, 'address')" type="checkbox" value="1"></td>
+			<td>
+			<textarea class="generalInfo" id="textAreaaddress" name='address' rows='4'>{address}</textarea></td>
+		</tr>
+		<tr>
+			<td class="ftitle">General Info</td>
+			<td class="{scraped_display}">{sc_general_info}</td>
+			<td class="editCkBoxCol"><input class="editCkbox {scraped_display}" name="active[general_info]" onchange="toggleActive(this, 'general_info')" type="checkbox" value="1"></td>
+			<td>
+			<textarea class="generalInfo" id="textAreageneral_info" name='general_info' rows='8'>{general_info}</textarea></td>
+		</tr>
+		<tr>
+			<td class="ftitle">Delete/Hide Account</td>
+			<td class="{scraped_display}"></td>
+			<td class="editCkBoxCol"></td>
+			<td><input name="deleted" type="checkbox" value="1"></td>
+		</tr>
+		<tr>
+			<td class="ftitle">Vanity Address<br></td>
+			<td class="{scraped_display}"></td>
+			<td class="editCkBoxCol"></td>
+			<td><input name="url" onchange="updateShortAddress(this, '{domain}');" onkeyup="updateShortAddress(this, '{domain}');" pattern="[a-zA-Z0-9]*" type="text" value="{url}"></td>
+			<td colspan="1"><span id="shortAddress">https://{domain}/{url}</span></td>
+		</tr>
+		<tr>
+			<td><input formmethod='post' name='action[Cancel]' type='submit' value='Cancel'></td>
+			<td></td>
+			<td></td>
+			<td><input formmethod='post' name='action[save]' type='submit' value='Save'></td>
+		</tr>
+	</table>
+</form><!-- END Edit -->
+<!-- BEGIN Save -->
+<h3>Farmers Record Saved</h3>{show}
+<meta content='1;url=/account.php/{table}/{table_id}/ignored?action[farm]' http-equiv='refresh'><!-- END Save -->
+<!-- BEGIN Image -->
+<script>
+function submitImage(e)
+    {
+    if (!fileValidation(e))
+        return false;
+    if (!e.value)
+        return false;
+    var form = document.getElementById('submitImage');
+    form.submit();
+    }
+</script> <img class="companyLogo" src="/img.php/{image}" style="float: left; margin-right: 25px;">
+<form action="?" enctype="multipart/form-data" id="submitImage" method="post" name="submitImage">
+	<h3>Change Image</h3>File on disk: <input accept="image/*" name="disk" onchange="return submitImage(this);" type="file"><br>
+	<br>
+	Camera: <input accept="image/*" capture="camera" name="camera" onchange="return submitImage(this);" type="file"> <input name="action[imgsave]" type="hidden" value="1">
+</form><!-- END Image -->
+<!-- BEGIN ImgSave -->{show}
+<h3>Image has been saved.</h3><img class="companyLogo" src="/img.php/{image}" style="float: right;">
+<meta content="3;url=/account.php/{table}/{table_id}/unspecified?action[farm]" http-equiv="refresh"><!-- END ImgSave -->
+<!-- BEGIN Add -->
+<form action="?" enctype="multipart/form-data" id="submitImageProduct" method="post" name="submitImageProduct">
+	<input name='table' type="hidden" value='{table}'> <input name='table_id' type="hidden" value='{table_id}'> 
+	<script src="/editFields.js">
+	</script>
+	<table class="altTable">
+		<tr>
+			<td>Field</td>
+			<td class="{scraped_display}">Scraped</td>
+			<td>Entered</td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td class="{scraped_display}" valign='top'>{fval_name}</td>
+			<td><input name="monitor[name]" type="hidden" value="1"> <input class="editCkbox {scraped_display}" name="active[name]" onchange="toggleActive(this, 'name')" type="checkbox" value="1"> <input id="textAreaname" name='name' size="40" type="text" value="{eval_name}"></td>
+		</tr>
+		<tr>
+			<td>Price</td>
+			<td class="{scraped_display}" valign='top'>{fval_price}</td>
+			<td><input name="monitor[price]" type="hidden" value="1"> <input class="editCkbox {scraped_display}" name="active[price]" onchange="toggleActive(this, 'price')" type="checkbox" value="1"> <input id="textAreaprice" max="1000000" min="0" name='price' step="0.01" type="number" value="{eval_price}"></td>
+		</tr>
+		<tr>
+			<td>Price Text</td>
+			<td class="{scraped_display}" valign='top'>{fval_pricetxt}</td>
+			<td><input name="monitor[pricetxt]" type="hidden" value="1"> <input class="editCkbox {scraped_display}" name="active[pricetxt]" onchange="toggleActive(this, 'pricetxt')" type="checkbox" value="1"> 
+			<textarea cols="40" id="textAreapricetxt" name='pricetxt' rows="5">{eval_pricetxt}</textarea></td>
+		</tr>
+		<tr>
+			<td>Price Unit</td>
+			<td class="{scraped_display}" valign='top'>{fval_price_unit}</td>
+			<td><input name="monitor[price_unit]" type="hidden" value="1"> <input class="editCkbox {scraped_display}" name="active[price_unit]" onchange="toggleActive(this, 'price_unit')" type="checkbox" value="1"> 
+			<textarea cols="40" id="textAreaprice_unit" name='price_unit' rows="5">{eval_price_unit}</textarea></td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td class="{scraped_display}" valign='top'>
+				<pre>{fval_address}</pre>
+			</td>
+			<td><input name="monitor[address]" type="hidden" value="1"> <input class="editCkbox {scraped_display}" name="active[address]" onchange="toggleActive(this, 'address')" type="checkbox" value="1"> 
+			<textarea cols="40" id="textAreaaddress" name='address' rows="5">{eval_address}</textarea></td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td class="{scraped_display}" valign='top'>{fval_description}</td>
+			<td><input name="monitor[description]" type="hidden" value="1"> <input class="editCkbox {scraped_display}" name="active[description]" onchange="toggleActive(this, 'description')" type="checkbox" value="1"> 
+			<textarea cols="40" id="textAreadescription" name='description' rows="5">{eval_description}</textarea></td>
+		</tr>
+		<tr>
+			<td>Stock</td>
+			<td class="{scraped_display}" valign='top'>{fval_stock}</td>
+			<td><input name="monitor[stock]" type="hidden" value="1"> <input class="editCkbox {scraped_display}" name="active[stock]" onchange="toggleActive(this, 'stock')" type="checkbox" value="1"> <input id="textAreastock" max="1000000" min="0" name='stock' type="number" value="{eval_stock}"></td>
+		</tr>
+		<tr>
+			<td>Buy Link</td>
+			<td colspan="2" valign='top'>
+				<div class="{scraped_display}">
+					{fval_linkcart}<br>
+					<br>
+				</div><input name="monitor[linkcart]" type="hidden" value="1"> <input class="editCkbox {scraped_display}" name="active[linkcart]" onchange="toggleActive(this, 'linkcart')" type="checkbox" value="1"> <input id="textArealinkcart" name='linkcart' size="80" type="text" value="{eval_linkcart}">
+			</td>
+		</tr>
+		<tr>
+			<td>Delete / Hide Product</td>
+			<td colspan="2" valign='top'><input name="deleted" type="checkbox" value="1"></td>
+		</tr><!-- BEGIN Fields -->
+		<tr>
+			<td>{field}</td>
+			<td valign='top'>{fval}</td>
+			<td><input name="monitor[{field}]" type="hidden" value="1"> <input class="editCkbox" name="active[{field}]" onchange="toggleActive(this, '{field}')" type="checkbox" value="1"> 
+			<textarea cols="40" id="textArea{field}" name='{field}' rows="5">{eval}</textarea></td>
+		</tr><!-- END Fields -->
+	</table>
+	<table width="100%">
+		<tr>
+			<td>
+				<h4>Current Image</h4>
+			</td>
+			<td colspan="2"></td>
+			<td>
+				<h4>Replace Image From</h4>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2" valign="top" width="1"></td>
+			<td>&nbsp;</td>
+			<td align="right" valign="top" width="25%">File on disk:</td>
+			<td><input accept="image/*" name="disk" onchange="submitImageProduct(this);" type="file"></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td align="right">Camera:</td>
+			<td><input accept="image/*" capture="camera" name="camera" onchange="submitImageProduct(this);" type="file"></td>
+		</tr>
+	</table><input name="action[saveProduct]" type="hidden" value="Save"> <input formmethod="post" type="submit" value="Save">
+</form><!-- END Add -->
+<!-- BEGIN SaveProduct -->
+<h3>Product Saved</h3>{show}
+<meta content="2;url=/account.php/{table}/{table_id}/{urlname}?action[farm]" http-equiv="refresh"><!-- END SaveProduct -->
+
+
+
+<!-- BEGIN Claim -->
+<h3>Claim this Account</h3>
+<p>To claim this account:</p>
+<ol>
+	<li>Create an account with the email address associated with this account. It will be something like: <i>{munged}</i>.
+		<ul>
+			<!-- BEGIN NotLoggedIn -->
+			<li>
+				<a href='/account.php'>Click here to do this.</a>{show} <!-- END NotLoggedIn -->
+				<!-- BEGIN LoggedIn -->
+			</li>
+			<li>You are logged in as "<b>{authlogins_login}</b>". <!-- END LoggedIn -->
+			<!-- BEGIN FarmerLinked --></li>
+			<li>Your login is already linked to "<b>{farmer_name}</b>". <!-- END FarmerLinked --></li>
+		</ul>
+	</li>
+	<li>Come back to this page by pressing "Claim this business" on the associated account. That's it!</li>
+</ol><!-- END Claim -->
+
+
+
+
+
+
+
+
+<section class="position-relative py-4 py-xl-5" style="margin-top: 80px">
+	<div class="container">
+		<div class="row mb-5">
+			<div class="col-md-8 col-xl-6 text-center mx-auto">
+				<h2>Sign up and start adding your local products for free</h2>
+				<p class="w-lg-50">The #1 place for local merchants, creators, and farmers to list their products and goods for free.</p>
+			</div>
+		</div>
+		<div class="row d-flex justify-content-center">
+			<div class="col-md-6 col-xl-4">
+				<form class="text-center d-flex flex-column" method="post">
+					<div class="mb-3">
+						<input class="form-control" name="business name" placeholder="Business Name" type="email">
+					</div>
+					<div class="mb-3">
+						<input class="form-control" name="email" placeholder="Email" type="password">
+					</div>
+					<div class="mb-3">
+						<input class="form-control" name="password" placeholder="Password" type="email">
+					</div>
+					<div class="mb-3"></div>
+					<div class="mb-3"></div>
+					<div class="mb-3">
+						<button class="btn btn-primary d-block w-100" type="submit">Sign up</button>
+					</div><a href="login.html"><span style="color: rgb(78, 93, 120)">Already have an account? Log in</span></a>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="position-relative py-4 py-xl-5" style="margin-top: 80px">
+	<div class="container">
+		<div class="row mb-5">
+			<div class="col-md-8 col-xl-6 text-center mx-auto">
+				<h2>Log in to OrganicNearby</h2><a href="createaccount.html"><span style="color: rgb(78, 93, 120)">Don't have an account?</span>&nbsp;Sign up</a>
+				<p class="w-lg-50"></p>
+			</div>
+		</div>
+		<div class="row d-flex justify-content-center">
+			<div class="col-md-6 col-xl-4">
+				<form class="text-center d-flex flex-column" method="post">
+					<div class="mb-3">
+						<input class="form-control" name="email" placeholder="Email" type="password">
+					</div>
+					<div class="mb-3">
+						<input class="form-control" name="password" placeholder="Password" type="email">
+					</div>
+					<div class="mb-3"></div>
+					<div class="mb-3"></div>
+					<div class="mb-3">
+						<button class="btn btn-primary d-block w-100" type="submit">Create Account</button>
+					</div><a href="forgotpassword.html">Forgot your password</a>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+<!-- END Prompt -->
+<!-- BEGIN Farm -->
+	<table class="contactRecord">
+		<tr>
+			<td class="farLeftColumn"></td>
+			<td>
+				<h3>{page_title}</h3>
+			</td>
+			<td>
+<!-- BEGIN Disabled -->
+				<span class="disabledAccount">Disabled {date}</span>
+<!-- END Disabled -->
+			</td>
+		</tr>
+<!-- BEGIN Fields -->
+		<tr>
+			<td class="ftitle">
+				{ftitle}
+			</td>
+			<td>
+				{value}
+			</td>
+<!-- BEGIN FirstRow -->
+			<td rowspan="{rowspan}" width="25%">
+				<img src="/img.php/{image}" class="companyLogo" >
+				<form action="/contact.php/sc_farmers/{sc_farmers_id}/{urlify}">
+					<input type="submit" value="Contact Business"
+								 class="firstrowButton"/>
+				</form>
+				<br/>
+<!-- BEGIN Claim -->
+				<form action="{PAGE_NAME}?">
+					<input type="hidden" name="table" value="sc_farmers" />
+					<input type="hidden" name="table_id" value="{sc_farmers_id}" />
+					<input type="submit" name="action[claim]" value="Claim Business"
+								 class="firstrowButton"/>
+				</form>
+<!-- END Claim -->
+<!-- BEGIN AdminEdit -->
+			<form action="/admin/farmer.php" target="_blank" />
+			<input type="hidden" name='table' value="{table}" />
+			<input type="hidden" name='table_id' value="{table_id}" />
+			<input type="submit" value="Admin Edit" class="firstrowButton">
+			</form>
+<!-- END AdminEdit -->
+			</td>
+<!-- END FirstRow -->
+		</tr>
+<!-- END Fields -->
+		<tr>
+			<td class="ftitle">
+				Address
+			</td>
+			<td>
+				{address_str}
+			</td>
+		</tr>
+		<tr>
+			<td class="ftitle">
+				General Info
+			</td>
+			<td>
+				{general_info}
+			</td>
+		</tr>
+<!-- BEGIN ShortAddress -->
+		<tr>
+			<td>
+				Vanity Address
+			</td>
+			<td>
+				<a href="https://{domain}/{url}" target="_blank_">https://{domain}/{url}</a>
+			</td>
+		</tr>
+<!-- END ShortAddress -->
+		<tr>
+<!-- BEGIN Edit -->
+		<tr>{show}
+			<td></td>
+			<td colspan="2">
+				<form action="?">
+					<input type='submit' name='action[edit]' value='Edit' />
+				</form>
+			</td>
+		</tr>
+<!-- END Edit -->
+	</table>
+<!-- BEGIN Products -->
+<table>{show}
+<!-- BEGIN Add -->
+	<tr>{show}
+		<td>
+			<form action="?">
+				<input type="submit" name="action[add]" value="Add Product" />
+			</form>
+		</td>
+	</tr>
+<!-- END Add -->
+<!-- BEGIN Product -->
+	<tr>
+		<td>
+			<img class="productImage" src="/img.php/{image}" />
+		</td>
+		<td>
+			<a href="/product.php/{table}/{table_id}/{urlName}">
+				{name}
+			</a>
+		</td>
+		<td>
+			{price}
+		</td>
+		<td>
+			{description}
+		</td>
+<!-- BEGIN Edit -->
+		<td>
+			<form action="?">
+				<input type="hidden" name="table" value="{table}" />
+				<input type="hidden" name="table_id" value="{table_id}" />
+				<input type="submit" name="action[add]" Value="Edit" />
+			</form>
+<!-- BEGIN Deleted -->
+			<span class="deletedProduct">Deleted<br/>{date}</span>
+<!-- END Deleted -->
+		</td>
+<!-- END Edit -->
+	</tr>
+<!-- END Product -->
+</table>
+<!-- END Products -->
+<!-- BEGIN Map -->
+<iframe class="mapBox"
+	frameborder="0"
+	scrolling="no"
+	marginheight="0"
+	marginwidth="0"
+	id="gmap_canvas"
+	origSrc="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=100%20Esplanade%20Chico+(Foobar)&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+	fixedSrc="https://maps.google.com/maps?width=520&height=400&hl=en&q=100%20Esplanade%20Chico+(Foobar)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+	addrSrc="https://maps.google.com/maps?q=2100%20Esplanade%20Chico+(Copy+Cat)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+	src="https://maps.google.com/maps?q={lat},{lon}&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+	></iframe><!-- t=h: satellite map
+								 remove t: road map. -->
+<!-- END Map -->
+<!-- END Farm -->
+
+<!-- BEGIN Edit -->{show}
+<script src="/editFields.js"></script>
+<form action='?'>
+	<table>
+		<tr>
+			<td></td>
+			<td class="{scraped_display}">
+			<td colspan="3">
+				<h3> Manage Farmer Account </h3>
+			</td>
+		</tr>
+		<tr>
+			<td class="ftitle">
+				Field
+			</td>
+			<td class="{scraped_display}">
+				Scraped
+			</td>
+			<td class="editCkBoxCol">
+				
+			</td>
+			<td class="{scraped_display}">
+				Edit
+			</td>
+		</tr>
+<!-- BEGIN Fields -->
+		<tr>
+			<td class="ftitle">
+				{ftitle}
+			</td>
+			<td class="{scraped_display}">
+				{sc_value}
+			</td>
+			<td class="editCkBoxCol">
+				<input {checked} name="active[{field}]"
+					class="editCkbox {scraped_display}" type="checkbox"
+					onchange="toggleActive(this, '{field}')" value="1" />
+			</td>
+			<td>
+					<input class="finput" type="text" name="{field}" {disabled}
+						id="textArea{field}" value="{value}" style="width: 90%;" />
+			</td>
+<!-- BEGIN FirstRow -->
+			<td rowspan="{rowspan}" width="25%">
+				<a href="?action[image]" ><img src="/img.php/{image}" class="companyLogo" ></a>
+			</td>
+<!-- END FirstRow -->
+		</tr>
+<!-- END Fields -->
+		<tr>
+			<td class="ftitle">
+				Address
+			</td>
+			<td class="{scraped_display}">
+				{sc_address}
+			</td>
+			<td class="editCkBoxCol">
+				<input {checked_address} name="active[address]"
+					class="editCkbox {scraped_display}" type="checkbox"
+					onchange="toggleActive(this, 'address')" value="1" />
+			</td>
+			<td>
+				<textarea class="generalInfo" name='address' {disabled_address}
+					id="textAreaaddress" rows='4' >{address}</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class="ftitle">
+				General Info
+			</td>
+			<td class="{scraped_display}">
+				{sc_general_info}
+			</td>
+			<td class="editCkBoxCol">
+				<input {checked_general_info} name="active[general_info]"
+					class="editCkbox {scraped_display}" type="checkbox"
+					onchange="toggleActive(this, 'general_info')" value="1" />
+			</td>
+			<td>
+				<textarea class="generalInfo" name='general_info' {disabled_general_info}
+					id="textAreageneral_info" rows='8' >{general_info}</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class="ftitle">
+				Delete/Hide Account
+			</td>
+			<td class="{scraped_display}">
+			</td>
+			<td class="editCkBoxCol">
+			<td>
+				<input type="checkbox" name="deleted" value="1" {deleted_checked} />
+			</td>
+		</tr>
+		<tr>
+			<td class="ftitle">
+				Vanity Address<br/>
+			</td>
+			<td class="{scraped_display}">
+			</td>
+			<td class="editCkBoxCol"></td>
+			<td>
+				<input type="text" name="url" value="{url}" onkeyup="updateShortAddress(this, '{domain}');" onchange="updateShortAddress(this, '{domain}');"
+							 pattern="[a-zA-Z0-9]*" />
+			</td>
+			<td colspan="1">
+				<span id="shortAddress">https://{domain}/{url}</span>
+			</td>
+		</tr>
+		<tr>
+			<td >
+				<input type='submit' formmethod='post' name='action[Cancel]' value='Cancel' />
+			</td>
+			<td></td>
+			<td></td>
+			<td>
+				<input type='submit' formmethod='post' name='action[save]' value='Save' />
+			</td>
+		</tr>
+	</table>
+</form>
+<!-- END Edit -->
+
+
+<!-- BEGIN Save -->
+<h3> Farmers Record Saved</h3>{show}
+<meta http-equiv='refresh' content='1;url=/account.php/{table}/{table_id}/ignored?action[farm]' />
+<!-- END Save -->
+
+<!-- BEGIN Image -->
+<script>
+function submitImage(e)
+	{
+	if (!fileValidation(e))
+		return false;
+	if (!e.value)
+		return false;
+	var form = document.getElementById('submitImage');
+	form.submit();
+	}
+</script>
+
+<img src="/img.php/{image}" class="companyLogo" style="float: left; margin-right: 25px;">
+<form enctype="multipart/form-data" id="submitImage" method="post" action="?">
+	<h3> Change Image </h3>
+	File on disk:
+	<input type="file" name="disk" accept="image/*" onchange="return submitImage(this);"/>
+	<br/><br/>
+	Camera:
+	<input type="file" name="camera" accept="image/*" onchange="return submitImage(this);" capture="camera"/>
+	<input type="hidden" name="action[imgsave]" value="1" />
+</form>
+<!-- END Image -->
+
+<!-- BEGIN ImgSave -->{show}
+<h3> Image has been saved. </h3>
+<img src="/img.php/{image}" class="companyLogo" style="float: right;"/>
+<meta http-equiv="refresh" content="3;url=/account.php/{table}/{table_id}/unspecified?action[farm]" />
+<!-- END ImgSave -->
+
+<!-- BEGIN Add -->
+<form enctype="multipart/form-data" id="submitImageProduct" method="post" action="?">
+<input type="hidden" name='table' value='{table}' />
+<input type="hidden" name='table_id' value='{table_id}' />
+<script src="/editFields.js"></script>
+<table class="altTable">
+	<tr>
+		<td>
+			Field
+		</td>
+		<td class="{scraped_display}">
+			Scraped
+		</td>
+		<td>
+			Entered
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Name
+		</td>
+		<td valign='top' class="{scraped_display}">
+			{fval_name}
+		</td>
+		<td>
+			<input type="hidden" name="monitor[name]" value="1" />
+			<input {checked_name} name="active[name]" class="editCkbox {scraped_display}" type="checkbox" onchange="toggleActive(this, 'name')" value="1" />
+			<input type="text" {disabled_name} id="textAreaname" name='name' size="40" value="{eval_name}" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Price
+		</td>
+		<td valign='top' class="{scraped_display}">
+			{fval_price}
+		</td>
+		<td>
+			<input type="hidden" name="monitor[price]" value="1" />
+			<input {checked_price} name="active[price]" class="editCkbox {scraped_display}" type="checkbox" onchange="toggleActive(this, 'price')" value="1" />
+			<input type="number" {disabled_price} id="textAreaprice" name='price' min="0" max="1000000" step="0.01" value="{eval_price}" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Price Text
+		</td>
+		<td valign='top' class="{scraped_display}">
+			{fval_pricetxt}
+		</td>
+		<td>
+			<input type="hidden" name="monitor[pricetxt]" value="1" />
+			<input {checked_pricetxt} name="active[pricetxt]" class="editCkbox {scraped_display}" type="checkbox" onchange="toggleActive(this, 'pricetxt')" value="1" />
+			<textarea {disabled_pricetxt} id="textAreapricetxt" name='pricetxt' rows="5" cols="40">{eval_pricetxt}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Price Unit
+		</td>
+		<td valign='top' class="{scraped_display}">
+			{fval_price_unit}
+		</td>
+		<td>
+			<input type="hidden" name="monitor[price_unit]" value="1" />
+			<input {checked_price_unit} name="active[price_unit]" class="editCkbox {scraped_display}" type="checkbox" onchange="toggleActive(this, 'price_unit')" value="1" />
+			<textarea {disabled_price_unit} id="textAreaprice_unit" name='price_unit' rows="5" cols="40">{eval_price_unit}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Address
+		</td>
+		<td valign='top' class="{scraped_display}">
+			<pre>{fval_address}</pre>
+		</td>
+		<td>
+			<input type="hidden" name="monitor[address]" value="1" />
+			<input {checked_address} name="active[address]" class="editCkbox {scraped_display}" type="checkbox" onchange="toggleActive(this, 'address')" value="1" />
+			<textarea {disabled_address} id="textAreaaddress" name='address' rows="5" cols="40">{eval_address}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Description
+		</td>
+		<td valign='top' class="{scraped_display}">
+			{fval_description}
+		</td>
+		<td>
+			<input type="hidden" name="monitor[description]" value="1" />
+			<input {checked_description} name="active[description]" class="editCkbox {scraped_display}" type="checkbox" onchange="toggleActive(this, 'description')" value="1" />
+			<textarea {disabled_description} id="textAreadescription" name='description' rows="5" cols="40">{eval_description}</textarea>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Stock
+		</td>
+		<td valign='top' class="{scraped_display}">
+			{fval_stock}
+		</td>
+		<td>
+			<input type="hidden" name="monitor[stock]" value="1" />
+			<input {checked_stock} name="active[stock]" class="editCkbox {scraped_display}" type="checkbox" onchange="toggleActive(this, 'stock')" value="1" />
+			<input type="number" {disabled_stock} id="textAreastock" name='stock' min="0" max="1000000" value="{eval_stock}" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Buy Link
+		</td>
+		<td valign='top' colspan="2">
+			<div 	class="{scraped_display}">
+				{fval_linkcart}<br/><br/>
+			</div>
+			<input type="hidden" name="monitor[linkcart]" value="1" />
+			<input {checked_linkcart} name="active[linkcart]" class="editCkbox {scraped_display}" type="checkbox" onchange="toggleActive(this, 'linkcart')" value="1" />
+			<input type="text" {disabled_linkcart} id="textArealinkcart" name='linkcart' size="80" value="{eval_linkcart}" />
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Delete / Hide Product
+		</td>
+		<td valign='top' colspan="2">
+			<input type="checkbox" value="1" name="deleted" {deleted_checked} />
+		</td>
+	</tr>
+<!-- BEGIN Fields -->
+	<tr>
+		<td>
+			{field}
+		</td>
+		<td valign='top'>
+			{fval}
+		</td>
+		<td>
+			<input type="hidden" name="monitor[{field}]" value="1" />
+			<input {checked} name="active[{field}]" class="editCkbox" type="checkbox" onchange="toggleActive(this, '{field}')" value="1" />
+			<textarea {disabled} id="textArea{field}" name='{field}' rows="5" cols="40">{eval}</textarea>
+		</td>
+	</tr>
+<!-- END Fields -->
+</table>
+
+<table width="100%" >
+	<tr>
+		<td>
+			<h4> Current Image</h4>
+		</td>
+		<td colspan="2"></td>
+		<td>
+			<h4> Replace Image From</h4>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" rowspan="2" width="1">
+			<image src='/img.php/{image}' class='productImage' />
+		</td>
+		<td>
+			&nbsp;
+		</td>
+		<td valign="top" width="25%" align="right">
+			File on disk:
+		</td>
+		<td>
+			<input type="file" name="disk" accept="image/*" onchange="submitImageProduct(this);"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			&nbsp;
+		</td>
+		<td align="right">
+			Camera:
+		</td>
+		<td>
+			<input type="file" name="camera" accept="image/*" onchange="submitImageProduct(this);" capture="camera"/>
+		</td>
+	</tr>
+</table>
+<input type="hidden" name="action[saveProduct]" value="Save" />
+<input type="submit" formmethod="post" value="Save" />
+</form>
+<!-- END Add -->
+
+<!-- BEGIN SaveProduct -->
+<h3> Product Saved</h3>{show}
+<meta http-equiv="refresh" content="2;url=/account.php/{table}/{table_id}/{urlname}?action[farm]" />
+<!-- END SaveProduct -->
+
+<!-- BEGIN Claim -->
+<h3> Claim this Account </h3>
+
+<p>To claim this account:
+
+<ol>
+	<li> Create an account with the email address associated with this account.
+		It will be something like: <i>{munged}</i>. 
+		<ul>
+<!-- BEGIN NotLoggedIn -->
+			<li><a href='/account.php'> Click here to do this.</a>{show}
+<!-- END NotLoggedIn -->
+<!-- BEGIN LoggedIn -->
+			<li>You are logged in as "<b>{authlogins_login}</b>".
+<!-- END LoggedIn -->
+<!-- BEGIN FarmerLinked -->
+			<li> Your login is already linked to "<b>{farmer_name}</b>".
+<!-- END FarmerLinked -->
+		</ul>
+
+	<li> Come back to this page by pressing "Claim this business" on the associated
+		account. That's it!
+</ol>
+<!-- END Claim -->
