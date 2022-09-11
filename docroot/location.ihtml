@@ -59,101 +59,101 @@
 
 <!-- BEGIN Map -->
 <iframe
+  addrsrc="https://maps.google.com/maps?q=2100%20Esplanade%20Chico+(Copy+Cat)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+  fixedsrc="https://maps.google.com/maps?width=520&height=400&hl=en&q=100%20Esplanade%20Chico+(Foobar)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
   frameborder="0"
-  scrolling="no"
+  id="gmap_canvas"
   marginheight="0"
   marginwidth="0"
-  id="gmap_canvas"
-  origSrc="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=100%20Esplanade%20Chico+(Foobar)&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-  fixedSrc="https://maps.google.com/maps?width=520&height=400&hl=en&q=100%20Esplanade%20Chico+(Foobar)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
-  addrSrc="https://maps.google.com/maps?q=2100%20Esplanade%20Chico+(Copy+Cat)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+  name="gmap_canvas"
+  origsrc="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=100%20Esplanade%20Chico+(Foobar)&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+  scrolling="no"
   src="https://maps.google.com/maps?q={lat},{lon}&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
-></iframe
-><!-- t=h: satellite map
-										 remove t: road map. -->
-
+></iframe>
+<!-- t=h: satellite map
+                                         remove t: road map. -->
 <!-- END Map -->
-<form method="post" id="setLocationForm">
+
+<form id="setLocationForm" method="post" name="setLocationForm">
   <div class="locBox {addressLocClass}">
     <input
       class="locRadio"
-      type="radio"
       name="locBox"
-      value="address"
-      {addressChecked}
       onchange="updateLocBoxBg();"
+      type="radio"
+      value="address"
     />
     <input
-      name="address"
       class="locBoxAddress"
+      name="address"
       onfocus="setRadioOption('address');"
-    >
-{locAddress}</input
-    >
+    />
+    {locAddress}
   </div>
+
   <div class="locBox {geoipLocClass}" onclick="setRadioOption('geoip');">
     <!--
-			Yes, I am here. But when I am removed, Browser location service
-			stops working. So, I am hidden. -->
+            Yes, I am here. But when I am removed, Browser location service
+            stops working. So, I am hidden. -->
     <input
       class="locRadio"
-      type="radio"
       name="locBox"
-      value="geoip"
-      {geoipChecked}
       onchange="updateLocBoxBg();"
+      type="radio"
+      value="geoip"
     />
     By Internet Address (IP)<br />
     {geoip_location}
   </div>
+
   <div class="locBox {latlonLocClass} hideme">
     <!--
-			Yes, I am here. But when I am removed, Browser location service
-			stops working. So, I am hidden. -->
+            Yes, I am here. But when I am removed, Browser location service
+            stops working. So, I am hidden. -->
     <input
       class="locRadio"
-      type="radio"
       name="locBox"
-      value="latlon"
-      {latlonChecked}
       onchange="updateLocBoxBg();"
+      type="radio"
+      value="latlon"
     />
     <input
-      type="text"
       id="lat"
       name="lat"
-      value="{lat}"
       onfocus="setRadioOption('latlon');"
+      type="text"
+      value="{lat}"
     />
     <input
-      type="text"
       id="lon"
       name="lon"
-      value="{lon}"
       onfocus="setRadioOption('latlon');"
+      type="text"
+      value="{lon}"
     />
   </div>
+
   <div class="locBox {browserLocClass}" onclick="setRadioOption('browser');">
     <input
       class="locRadio"
-      type="radio"
       name="locBox"
-      value="browser"
-      {browserChecked}
       onchange="updateLocBoxBg();"
+      type="radio"
+      value="browser"
     />
   </div>
-  <input type="hidden" name="action[setLocation]" id="hiddenAction" value="" />
-    <input
-      type="submit"
-      name="action[setLocation]"
-      value="Set Location"
-      onclick="return checkSetLocation();"
-    />
+  <input id="hiddenAction" name="action[setLocation]" type="hidden" value="" />
+  <input
+    name="action[setLocation]"
+    onclick="return checkSetLocation();"
+    type="submit"
+    value="Set Location"
+  />
 </form>
 <!-- END Prompt -->
-
 <!-- BEGIN SetLocation -->
 <img src="/assets/img/loading.gif" />{show}
-<meta http-equiv="refresh" content="1;url=/location.php" />
-<!-- END SetLocation -->
+<meta
+  content="1;url=/location.php"
+  http-equiv="refresh"
+/><!-- END SetLocation -->

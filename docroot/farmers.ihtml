@@ -1,81 +1,55 @@
 <!-- BEGIN Prompt -->
-<script src="/gps/gps.js?{gps_js_ts}"></script>
-<script>
-  function updateFarmers() {
-    var e = $("input[name=order]:checked", "#orderbyForm");
-    if (e.val() == "distance")
-      setLocation(null, "lat", "lon", doUpdateFarmers, true);
-    else doUpdateFarmers();
-  }
-  function doUpdateFarmers() {
-    searchingDivHide(false);
-    var orderbyForm = document.getElementById("orderbyForm");
-    orderbyForm.submit();
-  }
-</script>
-
-<form action="?" id="orderbyForm">
+<form action="?" id="orderbyForm" name="orderbyForm">
   <h3>Farmers List</h3>
   {show}
-
   <input
     name="search"
-    value="{search}"
-    placeholder="Search Farmers ..."
     onblur="doUpdateFarmers();"
+    placeholder="Search Farmers ..."
+    value="{search}"
   />
-
   <input
+    id="orderName"
+    name="order"
     onchange="updateFarmers(this);"
     type="radio"
-    name="order"
-    {orderCheckedName}
-    id="orderName"
     value="name"
   /><label for="orderName">Name</label>
   <input
+    id="orderDistance"
+    name="order"
     onchange="updateFarmers(this);"
     type="radio"
-    name="order"
-    {orderCheckedDistance}
-    id="orderDistance"
     value="distance"
   /><label for="orderDistance">Distance</label>
-  <input type="hidden" name="lat" id="lat" value="null" />
-  <input type="hidden" name="lon" id="lon" value="null" />
+  <input id="lat" name="lat" type="hidden" value="null" />
+  <input id="lon" name="lon" type="hidden" value="null" />
   <!-- BEGIN Sources -->
-
   <select name="sc_sources_id" onchange="updateFarmers(this);">
     <option value="">--All--</option>
     <!-- BEGIN Source -->
-    <option {selected} value="{id}">{count} : {source}</option>
+
+    <option value="{id}">{count} : {source}</option>
     <!-- END Source -->
   </select>
   <!-- END Sources -->
 </form>
-
 <!-- BEGIN NextLink -->
-<a style="float: right" href="?{vars}">Next {perPage} >>></a>
+<a href="?{vars}" style="float: right">Next {perPage} &gt;&gt;&gt;</a>
 <!-- END NextLink -->
 <!-- BEGIN PrevLink -->
-<a href="?{vars}"> Prev {perPage}</a>
+<a href="?{vars}">Prev {perPage}</a>
 <!-- END PrevLink -->
 Showing {start} to {count} of {numRows}
-
 <!-- BEGIN Companies -->
-{count}
-<img src="/img.php/{image}" />
+{count} <img src="/img.php/{image}" />
 <a href="/farmer.php/{table}/{table_id}/{urlname}?action[farm]=1">{name}</a>
-
 <!-- BEGIN MapLink -->
-<a target="_blank" href="https://www.google.com/maps/place/{lat},{lon}">
-  <!-- END MapLink -->
-  {address}
-  <i>{distance}</i>
-
-  <a href="/contact.php/{table}/{table_id}/{urlname}">Contact Farmer</a>
-  {sanitized_email}
-
-  <!-- END Companies -->
-  <!-- END Prompt -->
-</a>
+<a href="https://www.google.com/maps/place/{lat},{lon}" target="_blank"
+  ><!-- END MapLink -->
+  {address} <i>{distance}</i></a
+>
+<a href="/contact.php/{table}/{table_id}/{urlname}">Contact Farmer</a>
+{sanitized_email}
+<!-- END Companies -->
+<!-- END Prompt -->

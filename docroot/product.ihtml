@@ -9,11 +9,12 @@
       <div>
         <h1 class="fs-2">{name}</h1>
         <!-- BEGIN FValues -->
+
         <p class="fs-5 text-black-50 mb-0 product-card-price">
           {field} {value}
         </p>
-
         <!-- END FValues -->
+
         <p><span style="color: var(--color-gray)">{description}</span><br /></p>
         <!-- BEGIN LinkCart -->
         <a
@@ -23,6 +24,7 @@
           >Learn more</a
         >
         <!-- END LinkCart -->
+
         <div class="farmer-profile" style="margin: 0; margin-top: 32px">
           <h5 class="fw-bold product-card-name" style="margin-top: 16px">
             <a
@@ -31,18 +33,16 @@
               <p>{farmer}</p></a
             >
           </h5>
+
           <div class="info-row">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
+              class="icon icon-tabler icon-tabler-map-pin"
               fill="none"
+              height="1em"
+              stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="icon icon-tabler icon-tabler-map-pin"
+              stroke-width="2"
               style="
                 width: 24px;
                 height: 24px;
@@ -51,68 +51,76 @@
                 min-height: 24px;
                 max-height: 24px;
               "
+              viewbox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+
               <circle cx="12" cy="11" r="3"></circle>
+
               <path
                 d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
               ></path>
             </svg>
+
             <p>15.2 mi - 20005 E Trent Ave, Otis Orchards, WA 99027</p>
           </div>
+
           <div class="info-row">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
+              class="icon icon-tabler icon-tabler-phone"
               fill="none"
+              height="1em"
+              stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="icon icon-tabler icon-tabler-phone"
+              stroke-width="2"
               style="width: 24px; height: 24px"
+              viewbox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M0 0h24v24H0z" fill="none" stroke="none"></path>
+
               <path
                 d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
               ></path>
             </svg>
+
             <p>509-555-5555</p>
           </div>
         </div>
       </div>
     </div>
-
     <!-- BEGIN Edit -->
+
     <form action="/account.php/farmers/{farmers_id}/{urlname}">
-      <input type="hidden" name="table" value="{table}" />
-      <input type="hidden" name="table_id" value="{table_id}" />
-      <input type="submit" name="action[add]" Value="Edit This" />
+      <input name="table" type="hidden" value="{table}" />
+      <input name="table_id" type="hidden" value="{table_id}" />
+      <input name="action[add]" type="submit" value="Edit This" />
     </form>
     <!-- END Edit -->
   </div>
-
   <!-- BEGIN Map -->
   <iframe
+    addrsrc="https://maps.google.com/maps?q=2100%20Esplanade%20Chico+(Copy+Cat)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+    allowfullscreen
     class="border rounded"
-    allowfullscreen=""
+    fixedsrc="https://maps.google.com/maps?width=520&height=400&hl=en&q=100%20Esplanade%20Chico+(Foobar)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
     frameborder="0"
-    width="100%"
     height="400"
-    frameborder="0"
-    scrolling="no"
+    id="gmap_canvas"
     marginheight="0"
     marginwidth="0"
-    id="gmap_canvas"
-    origSrc="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=100%20Esplanade%20Chico+(Foobar)&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-    fixedSrc="https://maps.google.com/maps?width=520&height=400&hl=en&q=100%20Esplanade%20Chico+(Foobar)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
-    addrSrc="https://maps.google.com/maps?q=2100%20Esplanade%20Chico+(Copy+Cat)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+    name="gmap_canvas"
+    origsrc="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=100%20Esplanade%20Chico+(Foobar)&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+    scrolling="no"
     src="https://maps.google.com/maps?q={lat},{lon}&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+    width="100%"
   ></iframe
   ><!-- t=h: satellite map
-								 remove t: road map. -->
+                                 remove t: road map. -->
   <!-- END Map -->
 </div>
 <!-- END Prompt -->
