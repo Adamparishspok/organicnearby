@@ -16,41 +16,35 @@ function updateShortAddress(e, domain)
 </script>
 
 <!-- BEGIN Prompt -->
-<a class="addFarm" href="/account.php?action[edit]=1&authlogins_id={authlogins_id}">Add Farm</a>
+<a href="/account.php?action[edit]=1&authlogins_id={authlogins_id}">Add Farm</a>
 <h3> Profile {login} </h3>
 <!-- BEGIN FindUser -->
 <form action="?" class="searchUsers">
-	<a style="float: right;" href="?action[adduser]">Add New User</a><br/>
+	<a href="?action[adduser]">Add New User</a>
 	User Admin<input type="text" name="user" value="{user}" />
-	<ol>
+	
 <!-- BEGIN FoundUsers -->
-		<li><a href="?authlogins_id={id}&user={user}">{login}</a>
+		<a href="?authlogins_id={id}&user={user}">{login}</a>
 <!-- END FoundUsers -->
-	</ol>
+	
 </form>
 <!-- END FindUser -->
-<table>
+
 <!-- BEGIN Farms -->
-	<tr>
-		<td>
+	
 			{id}
-		</td>
-		<td>
 			<a href="/account.php/{table}/{id}/{urlname}?action[farm]=1">[Edit] {name}</a>
-		</td>
-		<td>
+
 			{visibility}
-		</td>
-	</tr>
 <!-- END Farms -->
-</table>
+
 <!-- END Prompt -->
 
 <!-- BEGIN AddUser -->
 <h3> Admin - Add User </h3>
 
 <form action="?">
-	Login Email: <input type="email" value="{login}" name="login" />
+	<input type="email" value="{login}" name="login" />
 	<input type="submit" name="action[saveuser]" value="Save User" />
 </form>
 <!-- END AddUser -->
@@ -61,123 +55,78 @@ function updateShortAddress(e, domain)
 <!-- END SaveUser -->
 
 <!-- BEGIN Farm -->
-	<table class="contactRecord">
-		<tr>
-			<td class="farLeftColumn"></td>
-			<td>
-				<h3>{page_title}</h3>
-			</td>
-			<td>
+	{page_title}
 <!-- BEGIN Disabled -->
-				<span class="disabledAccount">Disabled {date}</span>
+				Disabled {date}
 <!-- END Disabled -->
-			</td>
-		</tr>
+			
 <!-- BEGIN Fields -->
-		<tr>
-			<td class="ftitle">
-				{ftitle}
-			</td>
-			<td>
+		{ftitle}
 <!-- BEGIN Atag -->
 				<a target="_blank" href="{value}">
 <!-- END Atag -->
 				{value}</a>
-			</td>
 <!-- BEGIN FirstRow -->
-			<td rowspan="{rowspan}" width="25%">
-				<img src="/img.php/{image}" class="companyLogo" >
+				<img src="/img.php/{image}"   >
 				<form action="/contact.php/sc_farmers/{sc_farmers_id}/{urlify}">
 					<input type="submit" value="Contact Business"
-								 class="firstrowButton"/>
+								  />
 				</form>
-				<br/>
 <!-- BEGIN Claim -->
 				<form action="{PAGE_NAME}?">
 					<input type="hidden" name="table" value="sc_farmers" />
 					<input type="hidden" name="table_id" value="{sc_farmers_id}" />
 					<input type="submit" name="action[claim]" value="Claim Business"
-								 class="firstrowButton"/>
+								  />
 				</form>
 <!-- END Claim -->
 <!-- BEGIN AdminEdit -->
-			<form action="/admin/farmer.php" target="_blank" />
+			<form action="/admin/farmer.php" target="_blank" >
 			<input type="hidden" name='table' value="{table}" />
 			<input type="hidden" name='table_id' value="{table_id}" />
-			<input type="submit" value="Admin Edit" class="firstrowButton">
+			<input type="submit" value="Admin Edit">
 			</form>
 <!-- END AdminEdit -->
-			</td>
+			
 <!-- END FirstRow -->
-		</tr>
+		
 <!-- END Fields -->
-		<tr>
-			<td class="ftitle">
-				Address
-			</td>
-			<td>
-				{address_str}
-			</td>
-		</tr>
-		<tr>
-			<td class="ftitle">
-				General Info
-			</td>
-			<td>
-				{general_info}
-			</td>
-		</tr>
+		{general_info}
+		{address_str}
 <!-- BEGIN ShortAddress -->
-		<tr>
-			<td>
-				Vanity Address
-			</td>
-			<td>
-				<a href="https://{domain}/{url}" target="_blank_">https://{domain}/{url}</a>
-			</td>
-		</tr>
+		<a href="https://{domain}/{url}" target="_blank_">https://{domain}/{url}</a>
 <!-- END ShortAddress -->
-		<tr>
+		
 <!-- BEGIN Edit -->
-		<tr>{show}
-			<td></td>
-			<td colspan="2">
+		{show}
 				<form action="/account.php/{table}/{table_id}/{urlify}?">
 					<input type='submit' name='action[edit]' value='Edit' />
 				</form>
-			</td>
-		</tr>
+		
 <!-- END Edit -->
-	</table>
+	
 <!-- BEGIN Products -->
-<table>{show}
+{show}
 <!-- BEGIN Add -->
-	<tr>{show}
-		<td>
+	{show}
+		
 			<form action="/account.php/{table}/{table_id}/{urlify}?">
 				<input type="submit" name="action[add]" value="Add Product" />
 			</form>
-		</td>
-	</tr>
 <!-- END Add -->
 <!-- BEGIN Product -->
-	<tr>
-		<td>
-			<img class="productImage" src="/img.php/{image}" />
-		</td>
-		<td>
+	
+		<img class="productImage" src="/img.php/{image}" />
+		
 			<a href="/product.php/{table}/{table_id}/{urlName}">
 				{name}
 			</a>
-		</td>
-		<td>
+		
 			{price}
-		</td>
-		<td>
+		
 			{description}
-		</td>
+		
 <!-- BEGIN Edit -->
-		<td>
 			<form action="?">
 				<input type="hidden" name="table" value="{table}" />
 				<input type="hidden" name="table_id" value="{table_id}" />
@@ -186,14 +135,14 @@ function updateShortAddress(e, domain)
 <!-- BEGIN Deleted -->
 			<span class="deletedProduct">Deleted<br/>{date}</span>
 <!-- END Deleted -->
-		</td>
+	
 <!-- END Edit -->
-	</tr>
+	
 <!-- END Product -->
-</table>
+
 <!-- END Products -->
 <!-- BEGIN Map -->
-<iframe class="mapBox"
+<iframe
 	frameborder="0"
 	scrolling="no"
 	marginheight="0"
@@ -211,123 +160,97 @@ function updateShortAddress(e, domain)
 <!-- BEGIN Edit -->{show}
 <script src="/editFields.js"></script>
 <form action='?'>
-	<table>
-		<tr>
-			<td></td>
-			<td class="{scraped_display}">
-			<td colspan="3">
+	
+		
+			<div class="{scraped_display}">
+			
 				<h3> Manage Farmer Account </h3>
-			</td>
-		</tr>
-		<tr>
-			<td class="ftitle">
+			</div>
+		
+		
+			 
 				Field
-			</td>
+			 
 			<td class="{scraped_display}">
 				Scraped
-			</td>
+			 
 			<td class="editCkBoxCol">
 				
-			</td>
+			 
 			<td class="{scraped_display}">
 				Edit
-			</td>
-		</tr>
+			 
+		
 <!-- BEGIN Fields -->
-		<tr>
-			<td class="ftitle">
+		 
+			 
 				{ftitle}
-			</td>
+			 
 			<td class="{scraped_display}">
 				{sc_value}
-			</td>
+			 
 			<td class="editCkBoxCol">
 				<input {checked} name="active[{field}]"
 					class="editCkbox {scraped_display}" type="checkbox"
 					onchange="toggleActive(this, '{field}')" value="1" />
-			</td>
-			<td>
+			 
+			 
 					<input class="finput" type="text" name="{field}" {disabled}
 						id="textArea{field}" value="{value}" style="width: 90%;" />
-			</td>
+			 
 <!-- BEGIN FirstRow -->
-			<td rowspan="{rowspan}" width="25%">
-				<a href="?action[image]" ><img src="/img.php/{image}" class="companyLogo" ></a>
-			</td>
+			 
+				<a href="?action[image]" ><img src="/img.php/{image}"   ></a>
+			 
 <!-- END FirstRow -->
-		</tr>
+		 
 <!-- END Fields -->
-		<tr>
-			<td class="ftitle">
+		 
+			 
 				Address
-			</td>
+			 
 			<td class="{scraped_display}">
 				{sc_address}
-			</td>
+			
 			<td class="editCkBoxCol">
 				<input {checked_address} name="active[address]"
 					class="editCkbox {scraped_display}" type="checkbox"
 					onchange="toggleActive(this, 'address')" value="1" />
-			</td>
-			<td>
+			
 				<textarea class="generalInfo" name='address' {disabled_address}
 					id="textAreaaddress" rows='4' >{address}</textarea>
-			</td>
-		</tr>
-		<tr>
-			<td class="ftitle">
-				General Info
-			</td>
-			<td class="{scraped_display}">
+		 
+			<div class="{scraped_display}">
 				{sc_general_info}
-			</td>
-			<td class="editCkBoxCol">
+			</div>
+			
 				<input {checked_general_info} name="active[general_info]"
 					class="editCkbox {scraped_display}" type="checkbox"
 					onchange="toggleActive(this, 'general_info')" value="1" />
-			</td>
-			<td>
 				<textarea class="generalInfo" name='general_info' {disabled_general_info}
 					id="textAreageneral_info" rows='8' >{general_info}</textarea>
-			</td>
-		</tr>
-		<tr>
-			<td class="ftitle">
-				Delete/Hide Account
-			</td>
-			<td class="{scraped_display}">
-			</td>
-			<td class="editCkBoxCol">
-			<td>
+					
+			<div class="{scraped_display}">
+			</div>
+			
+			
 				<input type="checkbox" name="deleted" value="1" {deleted_checked} />
-			</td>
-		</tr>
-		<tr>
-			<td class="ftitle">
-				Vanity Address<br/>
-			</td>
-			<td class="{scraped_display}">
-			</td>
-			<td class="editCkBoxCol"></td>
-			<td>
+			
+			<div class="{scraped_display}"></div>
+			
+			
+			
 				<input type="text" name="url" value="{url}" onkeyup="updateShortAddress(this, '{domain}');" onchange="updateShortAddress(this, '{domain}');"
 							 pattern="[a-zA-Z0-9]*" />
-			</td>
-			<td colspan="1">
+			
+			
 				<span id="shortAddress">https://{domain}/{url}</span>
-			</td>
-		</tr>
-		<tr>
-			<td >
+			
 				<input type='submit' formmethod='post' name='action[Cancel]' value='Cancel' />
-			</td>
-			<td></td>
-			<td></td>
-			<td>
+			
 				<input type='submit' formmethod='post' name='action[save]' value='Save' />
-			</td>
-		</tr>
-	</table>
+			
+	
 <input type="hidden" name="authlogins_id" value="{authlogins_id}" />
 </form>
 <!-- END Edit -->
@@ -360,7 +283,7 @@ function uploadSuccess(e)
 	console.log(e);
 }
 </script>
-<img src="/img.php/{image}" class="companyLogo" style="float: left; margin-right: 25px;">
+<img src="/img.php/{image}"   style="float: left; margin-right: 25px;">
 
 <h3> Change Image </h3>
 File on disk: 
@@ -392,7 +315,7 @@ Camera:
 
 <!-- BEGIN ImgSave -->{show}
 <h3> Image has been saved. </h3>
-<img src="/img.php/{image}" class="companyLogo" style="float: right;"/>
+<img src="/img.php/{image}"   style="float: right;"/>
 <meta http-equiv="refresh" content="3;url=/account.php/{table}/{table_id}/unspecified?action[farm]" />
 <!-- END ImgSave -->
 
@@ -401,186 +324,145 @@ Camera:
 <input type="hidden" name='table' value='{table}' />
 <input type="hidden" name='table_id' value='{table_id}' />
 <script src="/editFields.js"></script>
-<table class="altTable">
-	<tr>
-		<td>
+
+	 
+		 
 			Field
-		</td>
+		 
 		<td class="{scraped_display}">
 			Scraped
-		</td>
-		<td>
+		 
+		 
 			Entered
-		</td>
-	</tr>
-	<tr>
-		<td>
+		 
+	 
+	 
+		 
 			Name
-		</td>
+		 
 		<td valign='top' class="{scraped_display}">
 			{fval_name}
-		</td>
-		<td>
+		 
+		 
 			<input type="hidden" name="monitor[name]" value="1" />
 			<input {checked_name} name="active[name]" class="editCkbox {scraped_display}" type="checkbox" onchange="toggleActive(this, 'name')" value="1" />
 			<input type="text" {disabled_name} id="textAreaname" name='name' size="40" value="{eval_name}" />
-		</td>
-	</tr>
-	<tr>
-		<td>
+		 
+	 
+	 
+		 
 			Price
-		</td>
+		 
 		<td valign='top' class="{scraped_display}">
 			{fval_price}
-		</td>
-		<td>
+		 
+		 
 			<input type="hidden" name="monitor[price]" value="1" />
 			<input {checked_price} name="active[price]" class="editCkbox {scraped_display}" type="checkbox" onchange="toggleActive(this, 'price')" value="1" />
 			<input type="number" {disabled_price} id="textAreaprice" name='price' min="0" max="1000000" step="0.01" value="{eval_price}" />
-		</td>
-	</tr>
-	<tr>
-		<td>
+		 
+	 
+	 
+		 
 			Price Text
-		</td>
+		 
 		<td valign='top' class="{scraped_display}">
 			{fval_pricetxt}
-		</td>
-		<td>
+		 
+		 
 			<input type="hidden" name="monitor[pricetxt]" value="1" />
 			<input {checked_pricetxt} name="active[pricetxt]" class="editCkbox {scraped_display}" type="checkbox" onchange="toggleActive(this, 'pricetxt')" value="1" />
 			<textarea {disabled_pricetxt} id="textAreapricetxt" name='pricetxt' rows="5" cols="40">{eval_pricetxt}</textarea>
-		</td>
-	</tr>
-	<tr>
-		<td>
+		 
+	 
+	 
+		 
 			Price Unit
-		</td>
+		 
 		<td valign='top' class="{scraped_display}">
 			{fval_price_unit}
-		</td>
-		<td>
+		 
+		 
 			<input type="hidden" name="monitor[price_unit]" value="1" />
 			<input {checked_price_unit} name="active[price_unit]" class="editCkbox {scraped_display}" type="checkbox" onchange="toggleActive(this, 'price_unit')" value="1" />
 			<textarea {disabled_price_unit} id="textAreaprice_unit" name='price_unit' rows="5" cols="40">{eval_price_unit}</textarea>
-		</td>
-	</tr>
-	<tr>
-		<td>
+		 
+	 
+	 
+		 
 			Address
-		</td>
+		 
 		<td valign='top' class="{scraped_display}">
 			<pre>{fval_address}</pre>
-		</td>
-		<td>
+		 
+		 
 			<input type="hidden" name="monitor[address]" value="1" />
 			<input {checked_address} name="active[address]" class="editCkbox {scraped_display}" type="checkbox" onchange="toggleActive(this, 'address')" value="1" />
 			<textarea {disabled_address} id="textAreaaddress" name='address' rows="5" cols="40">{eval_address}</textarea>
-		</td>
-	</tr>
-	<tr>
-		<td>
+		 
+	 
+	 
+		 
 			Description
-		</td>
+		 
 		<td valign='top' class="{scraped_display}">
 			{fval_description}
-		</td>
-		<td>
+		 
+		 
 			<input type="hidden" name="monitor[description]" value="1" />
 			<input {checked_description} name="active[description]" class="editCkbox {scraped_display}" type="checkbox" onchange="toggleActive(this, 'description')" value="1" />
 			<textarea {disabled_description} id="textAreadescription" name='description' rows="5" cols="40">{eval_description}</textarea>
-		</td>
-	</tr>
-	<tr>
-		<td>
+		 
+	 
+	 
+		 
 			Stock
-		</td>
+		
 		<td valign='top' class="{scraped_display}">
 			{fval_stock}
-		</td>
-		<td>
+		
 			<input type="hidden" name="monitor[stock]" value="1" />
 			<input {checked_stock} name="active[stock]" class="editCkbox {scraped_display}" type="checkbox" onchange="toggleActive(this, 'stock')" value="1" />
 			<input type="number" {disabled_stock} id="textAreastock" name='stock' min="0" max="1000000" value="{eval_stock}" />
-		</td>
-	</tr>
-	<tr>
-		<td>
-			Buy Link
-		</td>
-		<td valign='top' colspan="2">
+		
+		
 			<div 	class="{scraped_display}">
 				{fval_linkcart}<br/><br/>
 			</div>
 			<input type="hidden" name="monitor[linkcart]" value="1" />
 			<input {checked_linkcart} name="active[linkcart]" class="editCkbox {scraped_display}" type="checkbox" onchange="toggleActive(this, 'linkcart')" value="1" />
 			<input type="text" {disabled_linkcart} id="textArealinkcart" name='linkcart' size="80" value="{eval_linkcart}" />
-		</td>
-	</tr>
-	<tr>
-		<td>
+		
 			Delete / Hide Product
-		</td>
-		<td valign='top' colspan="2">
+		
 			<input type="checkbox" value="1" name="deleted" {deleted_checked} />
-		</td>
-	</tr>
+		
 <!-- BEGIN Fields -->
-	<tr>
-		<td>
+	
+		
 			{field}
-		</td>
-		<td valign='top'>
 			{fval}
-		</td>
-		<td>
+		
 			<input type="hidden" name="monitor[{field}]" value="1" />
 			<input {checked} name="active[{field}]" class="editCkbox" type="checkbox" onchange="toggleActive(this, '{field}')" value="1" />
 			<textarea {disabled} id="textArea{field}" name='{field}' rows="5" cols="40">{eval}</textarea>
-		</td>
-	</tr>
+		
 <!-- END Fields -->
-</table>
 
-<table width="100%" >
-	<tr>
-		<td>
-			<h4> Current Image</h4>
-		</td>
-		<td colspan="2"></td>
-		<td>
-			<h4> Replace Image From</h4>
-		</td>
-	</tr>
-	<tr>
-		<td valign="top" rowspan="2" width="1">
+	
+		
 			<image src='/img.php/{image}' class='productImage' />
-		</td>
-		<td>
-			&nbsp;
-		</td>
-		<td valign="top" width="25%" align="right">
-			File on disk:
-		</td>
-		<td>
+		
 			<input type="file" name="disk" accept="image/*" onchange="submitImageProduct(this);"/>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			&nbsp;
-		</td>
-		<td align="right">
-			Camera:
-		</td>
-		<td>
+		
+			
+		
 			<input type="file" name="camera" accept="image/*" onchange="submitImageProduct(this);" capture="camera"/>
-		</td>
-	</tr>
-</table>
-<div style="float: right;">
+		
+
+
 	<input type="submit" formmethod="post" name=action[saveProduct] value="Save" />
-</div>
+
 <input type="submit" name="action[cancel]" value="Cancel" />
 <input type="hidden" name="action[saveProduct]" value="Save" />
 </form>

@@ -13,10 +13,10 @@ Does nothing if the node has no parent (root node);
 $html = str_get_html(<<<EOD
 <html>
 <body>
-<table>
-	<tr><th>Title</th></tr>
-	<tr><td>Row 1</td></tr>
-</table>
+
+	  Title
+	  Row 1
+
 </body>
 </html>
 EOD
@@ -36,4 +36,4 @@ echo $html;
 
 **Remarks**
 
-* Whitespace immediately **before** the removed node will remain in the DOM.
+- Whitespace immediately **before** the removed node will remain in the DOM.

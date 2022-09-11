@@ -8,13 +8,13 @@ example for that.
 **Remarks**
 
 - It is not possible to create nodes via `->outertext`, `->innertext`, or
-`->plaintext`. These properties only change the text representation of a node
-and will return undesired results if used incorrectly.
+  `->plaintext`. These properties only change the text representation of a node
+  and will return undesired results if used incorrectly.
 - Use [`$html->createElement`](/api/simple_html_dom/createElement) and
-[`$html->createTextNode`](/api/simple_html_dom/createTextNode) to create
-new nodes.
+  [`$html->createTextNode`](/api/simple_html_dom/createTextNode) to create
+  new nodes.
 - Use [`$node->appendChild`](/api/simple_html_dom_node/appendChild) to add a
-node as child to another node.
+  node as child to another node.
 - Nodes can be combined in any order.
 
 **Example**
@@ -107,15 +107,15 @@ echo $html . PHP_EOL;
  * </head>
  * <body>
  *   <h1>Volumes of the World's Oceans</h1>
- *   <table>
- *     <tr><th>Ocean</th><th>Volume (km^3)</th></tr>
- *     <tr><td>Arctic Ocean</td><td volume="18750000">18,750,000</td></tr>
- *     <tr><td>Atlantic Ocean</td><td volume="310410900">310,410,900</td></tr>
- *     <tr><td>Indian Ocean</td><td volume="264000000">264,000,000</td></tr>
- *     <tr><td>Pacific Ocean</td><td volume="660000000">660,000,000</td></tr>
- *     <tr><td>Souce China Sea</td><td volume="9880000">9,880,000</td></tr>
- *     <tr><td>Southern Ocean</td><td volume="71800000">71,800,000</td></tr>
- *   </table>
+ *
+ *       Ocean  Volume (km^3)
+ *       Arctic Ocean <td volume="18750000">18,750,000
+ *       Atlantic Ocean <td volume="310410900">310,410,900
+ *       Indian Ocean <td volume="264000000">264,000,000
+ *       Pacific Ocean <td volume="660000000">660,000,000
+ *       Souce China Sea <td volume="9880000">9,880,000
+ *       Southern Ocean <td volume="71800000">71,800,000
+ *
  * </body>
  * </html>
  */

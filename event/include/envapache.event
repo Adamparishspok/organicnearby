@@ -45,7 +45,7 @@ public static function on_preRenderShell($env)
 		$env->dis['AdminLinks']['show']='';
 	if (!$login = $env->SEC->Get('login'))
 		{
-		$env->dis['role_title'] = 'Farmer Login / Register';
+		$env->dis['role_title'] = 'Farmer Login';
 		$env->dis['.role_link'] = "/account.php";
 		}
 	else

@@ -142,24 +142,18 @@
               <p>5227 N Greenwood Blvd</p>
             </a>
           </div>
-          <a
-            class="btn btn-primary text-nowrap btn-login"
-            role="button"
-            href="/account.php"
-            >Login</a
-          ><a
-            class="btn btn-primary text-nowrap border-primary"
-            role="button"
-            href="/account.php"
-            >Sign up</a
-          >
           <!-- BEGIN AdminLinks -->{show}
           <a href="/admin/todo.php">To-Do</a>
           <a href="/admin/farmers.php">Farmers</a>
           <a href="/admin/products.php">Products</a>
           <!-- END AdminLinks -->
           <div class="{role_active}">
-            <a class="drop" href="{role_link}">{role_title}</a>
+            <a
+              class="btn btn-primary text-nowrap border-primary"
+              role="button"
+              href="{role_link}"
+              >{role_title}</a
+            >
             <!-- BEGIN HasRole -->
             {show}
             <a href="/account.php">Profile</a>

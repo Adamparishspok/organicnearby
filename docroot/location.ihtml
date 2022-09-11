@@ -56,138 +56,104 @@
     updateLocBoxBg();
   }
 </script>
-<div class="locMaster">
-  <!-- BEGIN Map -->
-  <div class="locMap">
-    <iframe
-      class="mapBox"
-      frameborder="0"
-      scrolling="no"
-      marginheight="0"
-      marginwidth="0"
-      id="gmap_canvas"
-      origSrc="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=100%20Esplanade%20Chico+(Foobar)&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-      fixedSrc="https://maps.google.com/maps?width=520&height=400&hl=en&q=100%20Esplanade%20Chico+(Foobar)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
-      addrSrc="https://maps.google.com/maps?q=2100%20Esplanade%20Chico+(Copy+Cat)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
-      src="https://maps.google.com/maps?q={lat},{lon}&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
-    ></iframe
-    ><!-- t=h: satellite map
+
+<!-- BEGIN Map -->
+<iframe
+  frameborder="0"
+  scrolling="no"
+  marginheight="0"
+  marginwidth="0"
+  id="gmap_canvas"
+  origSrc="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=100%20Esplanade%20Chico+(Foobar)&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+  fixedSrc="https://maps.google.com/maps?width=520&height=400&hl=en&q=100%20Esplanade%20Chico+(Foobar)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+  addrSrc="https://maps.google.com/maps?q=2100%20Esplanade%20Chico+(Copy+Cat)&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+  src="https://maps.google.com/maps?q={lat},{lon}&t=h&z=13&ie=UTF8&iwloc=B&output=embed"
+></iframe
+><!-- t=h: satellite map
 										 remove t: road map. -->
+
+<!-- END Map -->
+<form method="post" id="setLocationForm">
+  <div class="locBox {addressLocClass}">
+    <input
+      class="locRadio"
+      type="radio"
+      name="locBox"
+      value="address"
+      {addressChecked}
+      onchange="updateLocBoxBg();"
+    />
+    <input
+      name="address"
+      class="locBoxAddress"
+      onfocus="setRadioOption('address');"
+    >
+{locAddress}</input
+    >
   </div>
-  <!-- END Map -->
-  <table class="locSet">
-    <tr>
-      <td>
-        <h3>Set my location:</h3>
-        <form method="post" id="setLocationForm">
-          <div class="locBox {addressLocClass}">
-            <input
-              class="locRadio"
-              type="radio"
-              name="locBox"
-              value="address"
-              {addressChecked}
-              onchange="updateLocBoxBg();"
-            />
-            By Address<br />
-            <textarea
-              name="address"
-              class="locBoxAddress"
-              rows="5"
-              onfocus="setRadioOption('address');"
-            >
-{locAddress}</textarea
-            >
-          </div>
-          <div
-            class="locBox {geoipLocClass}"
-            onclick="setRadioOption('geoip');"
-          >
-            <!--
+  <div class="locBox {geoipLocClass}" onclick="setRadioOption('geoip');">
+    <!--
 			Yes, I am here. But when I am removed, Browser location service
 			stops working. So, I am hidden. -->
-            <input
-              class="locRadio"
-              type="radio"
-              name="locBox"
-              value="geoip"
-              {geoipChecked}
-              onchange="updateLocBoxBg();"
-            />
-            By Internet Address (IP)<br />
-            {geoip_location}
-          </div>
-          <div class="locBox {latlonLocClass} hideme">
-            <!--
+    <input
+      class="locRadio"
+      type="radio"
+      name="locBox"
+      value="geoip"
+      {geoipChecked}
+      onchange="updateLocBoxBg();"
+    />
+    By Internet Address (IP)<br />
+    {geoip_location}
+  </div>
+  <div class="locBox {latlonLocClass} hideme">
+    <!--
 			Yes, I am here. But when I am removed, Browser location service
 			stops working. So, I am hidden. -->
-            <input
-              class="locRadio"
-              type="radio"
-              name="locBox"
-              value="latlon"
-              {latlonChecked}
-              onchange="updateLocBoxBg();"
-            />
-            By Lat/Lon<br />
-            Lat:
-            <input
-              type="text"
-              id="lat"
-              name="lat"
-              value="{lat}"
-              onfocus="setRadioOption('latlon');"
-            /><br />
-            Lon:
-            <input
-              type="text"
-              id="lon"
-              name="lon"
-              value="{lon}"
-              onfocus="setRadioOption('latlon');"
-            /><br />
-          </div>
-          <div
-            class="locBox {browserLocClass}"
-            onclick="setRadioOption('browser');"
-          >
-            <input
-              class="locRadio"
-              type="radio"
-              name="locBox"
-              value="browser"
-              {browserChecked}
-              onchange="updateLocBoxBg();"
-            />
-            Browser Location Service<br />
-          </div>
-          <input
-            type="hidden"
-            name="action[setLocation]"
-            id="hiddenAction"
-            value=""
-          />
-          <center>
-            <input
-              type="submit"
-              name="action[setLocation]"
-              value="Set Location"
-              onclick="return checkSetLocation();"
-            />
-          </center>
-        </form>
-      </td>
-    </tr>
-  </table>
-</div>
+    <input
+      class="locRadio"
+      type="radio"
+      name="locBox"
+      value="latlon"
+      {latlonChecked}
+      onchange="updateLocBoxBg();"
+    />
+    <input
+      type="text"
+      id="lat"
+      name="lat"
+      value="{lat}"
+      onfocus="setRadioOption('latlon');"
+    />
+    <input
+      type="text"
+      id="lon"
+      name="lon"
+      value="{lon}"
+      onfocus="setRadioOption('latlon');"
+    />
+  </div>
+  <div class="locBox {browserLocClass}" onclick="setRadioOption('browser');">
+    <input
+      class="locRadio"
+      type="radio"
+      name="locBox"
+      value="browser"
+      {browserChecked}
+      onchange="updateLocBoxBg();"
+    />
+  </div>
+  <input type="hidden" name="action[setLocation]" id="hiddenAction" value="" />
+    <input
+      type="submit"
+      name="action[setLocation]"
+      value="Set Location"
+      onclick="return checkSetLocation();"
+    />
+</form>
 <!-- END Prompt -->
 
 <!-- BEGIN SetLocation -->
-<style>
-  .fullWidth {
-    object-fit: cover;
-  }
-</style>
-<center><img class="fullWidth" src="/assets/img/loading.gif" />{show}</center>
+<img src="/assets/img/loading.gif" />{show}
 <meta http-equiv="refresh" content="1;url=/location.php" />
 <!-- END SetLocation -->

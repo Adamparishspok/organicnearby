@@ -1,0 +1,236 @@
+<script language="javascript">
+  function smsCode(e) {
+    var code = document.getElementById("smscode");
+    if (!code) return;
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", "/login.php?action[sms]=1&muser=" + e.value, false);
+    xmlhttp.send();
+    var o = document.getElementById("output");
+    o.innerHTML = e.value;
+  }
+</script>
+<script src="/login.js"></script>
+<link href="/login.css" rel="stylesheet" type="text/css" media="all" />
+<div class="wrapper row3">
+  <main class="hoc container clear">
+    <!-- main body -->
+    <div class="content three_quarter">
+      <!-- BEGIN Prompt -->
+      <script>
+        function pageOnload() {
+          setSystemTimezone();
+        }
+      </script>
+      <form method="post" action="{original_request_uri}" class="login_form">
+        <div class="login_div">
+          <h3 class="login_heading">Login</h3>
+          <p class="login_error">{show}</p>
+
+          <input
+            type="text"
+            value="{login}"
+            name="_login_"
+            placeholder="login"
+            <!--
+            END
+            CallSmsCode
+            -->
+          onchange="smsCode(this);"{show}
+          <!-- END CallSmsCode -->
+          tabindex='1' class="login_input login_input_login" />
+            <input
+              type="password"
+              name="_password_"
+              placeholder="password"
+              tabindex="2"
+              class="login_input login_input_password"
+            />
+
+            <!-- BEGIN SMSBlock -->
+
+            {show}
+          </td>
+
+            <input
+              id="smscode"
+              type="text"
+              name="_code_"
+              class="login_input login_input_smscode /"
+            />
+            <div id="output"></div>
+
+            <!-- END SMSBlock -->
+            <!-- BEGIN RememberMe -->
+
+            {show}
+          </td>
+
+            <input
+              type="checkbox"
+              name="_remember_"
+              value="1"
+              class="login_input login_input_remember"
+            />
+
+            <!-- END RememberMe -->
+            <!-- BEGIN Timezone -->
+
+            {show}
+          </td>
+
+            <span
+              id="browserTz"
+              class="initiallyHidden login_span_browsertz"
+            ></span>
+
+            <!-- END Timezone -->
+            <input type="hidden" id="systemTz" name="_systemTz" />
+            
+              
+                <input type="submit" value="Login" />
+              
+
+              
+                <!-- BEGIN ResetButton -->
+                <input
+                  type="submit"
+                  value="Reset"
+                  name="action[signup]"
+                />{show}
+                <!-- END ResetButton -->
+              
+
+              
+                <!-- BEGIN SignupButton -->
+                <input
+                  type="submit"
+                  value="Sign Up"
+                  name="action[signup]"
+                />{show}
+                <!-- END SignupButton -->
+
+                <!-- BEGIN ThirdPartyAuth -->
+                {html}
+                <!-- END ThirdPartyAuth -->
+              
+        </div>
+
+        <input type="hidden" name="_page_" value="login" />
+      </form>
+      <!-- END Prompt -->
+
+      <!-- BEGIN Logout -->
+      <h3>You have been logged out</h3>
+      {show}
+      <!-- END Logout -->
+
+      <!-- BEGIN Signup -->
+      <script>
+        function pageOnload() {
+          checkPasswordRules();
+        }
+      </script>
+      <h3>Sign Up / Password (Re)Set</h3>
+
+      <!-- BEGIN EnterAddress -->
+      <p>
+        In order to start this process, we need a valid email address.{show}
+        <!-- END EnterAddress -->
+        <!-- BEGIN CodeSent -->
+      </p>
+
+      <p>
+        A code was sent to your email address {ago}. Please type the code below,
+        or click on the link in your email.
+      </p>
+
+      <p><b>Don't forget to check your SPAM folder!</b></p>
+      <!-- END CodeSent -->
+
+      <form method="post" action="{original_request_uri}">
+        <center>
+          Login:
+
+          <input
+            type="text"
+            value="{login}"
+            name="_login_"
+            placeholder="login"
+          />
+
+          <!-- BEGIN EnterCode -->
+
+          Code:
+
+          <input
+            type="text"
+            value="{pwreset}"
+            name="pwreset"
+            placeholder="Enter code"
+          />
+
+          Password:
+
+          <input
+            type="password"
+            name="password1"
+            placeholder="password"
+            id="password1"
+            onkeyup="checkPasswordRules()"
+            onchange="checkPasswordRules();"
+          />
+
+          Password (Again):
+
+          <input
+            type="password"
+            name="password2"
+            placeholder="password"
+            id="password2"
+            onkeyup="checkPasswordRules()"
+            onchange="checkPasswordRules();"
+          />
+
+          {show}
+
+          <input type="checkbox" onchange="togglePwVisible(this);" /> Make
+          passwords visible Passwords must meet the following rules:
+          <ol class="loginPasswordRequirements">
+            <li><span id="req1">At least 8 letters long.</span></li>
+            <li>
+              <span id="req2">At least 1 upper case character.</span>
+            </li>
+            <li>
+              <span id="req3">At least 1 lower case character.</span>
+            </li>
+            <li><span id="req4">At least 1 number.</span></li>
+            <li><span id="req5">Entered the same way twice.</span></li>
+          </ol>
+
+          <!-- END EnterCode -->
+
+          
+          
+            <input
+              type="submit"
+              value="Next"
+              name="action[signup]"
+              id="savePwButton"
+            />
+          
+        
+
+        <input type="hidden" name="_page_" value="login" />
+      </form>
+      <!-- END Signup -->
+
+      <!-- BEGIN Signedup -->
+      <h3>Password Has Been Saved.</h3>
+      {show}
+
+      <!-- Events can inject additional code here -->
+      {additional}
+      <!-- END Signedup -->
+    </div>
+  </main>
+</div>

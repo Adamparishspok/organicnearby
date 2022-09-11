@@ -1,97 +1,112 @@
 <style>
-.editCkbox {
-	float: left;
-}
-.commentBlock {
-	border: 1px dashed #444;
-	padding: 5px;
-}
-.commentSpan {
-	font-weight: bold;
-}
-.pageContentWindow {
-	padding: 5px;
-}
-.pageContents {
-	padding: 10px;
-}
-
+  .editCkbox {
+    float: left;
+  }
+  .commentBlock {
+    border: 1px dashed #444;
+    padding: 5px;
+  }
+  .commentSpan {
+    font-weight: bold;
+  }
+  .pageContentWindow {
+    padding: 5px;
+  }
+  .pageContents {
+    padding: 10px;
+  }
 </style>
 <script src="/editFields.js"></script>
 <!-- BEGIN Prompt -->
-<form method="post" action="?" >
-<input type="hidden" name="table" value="{table}" />
-<input type="hidden" name="table_id" value="{table_id}" />
-{show}
-<a href="/admin/products.php?table={table}&table_id={table_id}">See their products</a>
-<table width="100%" border="1" cellpadding="3" cellspacing="0">
-	<tr>
-		<td>
-			Field
-		</td>
-		<td colspan=1 width="40%">
-			Scraped
-		</td>
-		<td colspan=1 width="40%">
-			Edit
-		</td>
-	</tr>
-<!-- BEGIN NewAuthlogin -->
-	<tr>{show}
-		<td>
-			Login Email
-		</td>
-		<td></td>
-		<td>
-			<input CHECKED class="editCkbox" type="checkbox"  />
-			<input type="text" name="authlogins_email" value="{authlogins_email}" />
-		</td>
-	</tr>
-<!-- END NewAuthlogin -->
-<!-- BEGIN Fields -->
-	<tr>
-		<td>
-			{field}
-		</td>
-		<td valign='top'>
-			{scraped}
-		</td>
-		<td>
-			<input type="hidden" name="monitor[{field}]" value="1" />
-			<input {checked} name="active[{field}]" class="editCkbox" type="checkbox" onchange="toggleActive(this, '{field}')" value="1" />
-			<textarea {disabled} id="textArea{field}" name='{field}' rows="5" cols="40">{eval}</textarea>
-		</td>
-	</tr>
-<!-- END Fields -->
-</table>
-<table width="100%">
-	<tr>
-		<td colspan="2">
-			<h4> Comments</h4>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<textarea name="comments" rows="5" cols="40"></textarea>
-		</td>
-		<td>
-<!-- BEGIN Comments -->
-			<div class="commentBlock">{date} {login} <br /><span class="commentSpan">{comments}</span></div>
-<!-- END Comments -->
-		</td>
-	</tr>
-</table>
-<input type="submit" name="action[save]" value="Save" />
+<form method="post" action="?">
+  <input type="hidden" name="table" value="{table}" />
+  <input type="hidden" name="table_id" value="{table_id}" />
+  {show}
+  <a href="/admin/products.php?table={table}&table_id={table_id}"
+    >See their products</a
+  >
+  
+     
+       Field 
+
+      Scraped 
+
+      Edit 
+    
+
+    <!-- BEGIN NewAuthlogin -->
+     
+      {show}
+       Login Email 
+
+        
+       
+        <input CHECKED class="editCkbox" type="checkbox" />
+        <input type="text" name="authlogins_email" value="{authlogins_email}" />
+       
+    
+
+    <!-- END NewAuthlogin -->
+    <!-- BEGIN Fields -->
+     
+       {field} 
+
+      {scraped} 
+
+       
+        <input type="hidden" name="monitor[{field}]" value="1" />
+        <input
+          {checked}
+          name="active[{field}]"
+          class="editCkbox"
+          type="checkbox"
+          onchange="toggleActive(this, '{field}')"
+          value="1"
+        />
+        <textarea
+          {disabled}
+          id="textArea{field}"
+          name="{field}"
+          rows="5"
+          cols="40"
+        >
+{eval}</textarea
+        >
+       
+    
+
+    <!-- END Fields -->
+   
+  
+     
+        <h4>Comments</h4>
+       
+    
+
+     
+       
+        <textarea name="comments" rows="5" cols="40"></textarea>
+       
+
+       
+        <!-- BEGIN Comments -->
+        <div class="commentBlock">
+          {date} {login} <br /><span class="commentSpan">{comments}</span>
+        </div>
+        <!-- END Comments -->
+       
+    
+   
+  <input type="submit" name="action[save]" value="Save" />
 </form>
 <!-- END Prompt -->
-
 
 <!-- BEGIN Save -->
 <h3>Saved</h3>
 <!-- BEGIN Fields -->
 <h4>{field}</h4>
 {value}
-<br/><br/>
+<br /><br />
 <!-- END Fields -->
-<meta http-equiv='refresh' content='2,url=/admin/farmers.php' />
+<meta http-equiv="refresh" content="2,url=/admin/farmers.php" />
 <!-- END Save -->

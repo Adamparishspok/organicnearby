@@ -48,15 +48,15 @@ $ret = $html->find('*[id]');
 
 Supports these operators in attribute selectors:
 
-Filter | Description |
------|-----------|
-`[attribute]` | Matches elements that **have** the specified attribute.
-`[!attribute]` | Matches elements that **don't have** the specified attribute.
-`[attribute=value]` | Matches elements that have the specified attribute with a **certain value**.
-`[attribute!=value]` | Matches elements that **don't have** the specified attribute with a certain value.
-`[attribute^=value]` | Matches elements that have the specified attribute and it **starts** with a certain value.
-`[attribute$=value]` | Matches elements that have the specified attribute and it **ends** with a certain value.
-`[attribute*=value]` | Matches elements that have the specified attribute and it **contains** a certain value.
+| Filter               | Description                                                                                |
+| -------------------- | ------------------------------------------------------------------------------------------ |
+| `[attribute]`        | Matches elements that **have** the specified attribute.                                    |
+| `[!attribute]`       | Matches elements that **don't have** the specified attribute.                              |
+| `[attribute=value]`  | Matches elements that have the specified attribute with a **certain value**.               |
+| `[attribute!=value]` | Matches elements that **don't have** the specified attribute with a certain value.         |
+| `[attribute^=value]` | Matches elements that have the specified attribute and it **starts** with a certain value. |
+| `[attribute$=value]` | Matches elements that have the specified attribute and it **ends** with a certain value.   |
+| `[attribute*=value]` | Matches elements that have the specified attribute and it **contains** a certain value.    |
 
 # Finding descendants
 
@@ -67,7 +67,7 @@ $es = $html->find('ul li');
 // Find Nested <div> tags
 $es = $html->find('div div div');
 
-// Find all <td> in <table> which class=hello
+// Find all   in   which class=hello
 $es = $html->find('table.hello td');
 
 // Find all td tags with attribite align=center in table tags
