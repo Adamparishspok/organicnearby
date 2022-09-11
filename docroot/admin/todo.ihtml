@@ -1,10 +1,7 @@
-<style>
-	.todo {
-	width: 100%;
-	height: 90vh;
-	}
-</style>
 <!-- BEGIN Prompt -->
-<iframe class="todo" {show}
-	src="https://docs.google.com/document/d/1slYZdUomRgijrkI1f5HF19cXhTfvnNDDgJYCyb6Lpwo/edit"></iframe>
+<iframe
+  class="todo"
+  {show}
+  src="https://docs.google.com/document/d/1slYZdUomRgijrkI1f5HF19cXhTfvnNDDgJYCyb6Lpwo/edit"
+></iframe>
 <!-- END Prompt -->

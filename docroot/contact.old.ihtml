@@ -23,120 +23,98 @@
     return true;
   }
 </script>
-<style>
-  .contactMessage {
-    width: 100%;
-  }
-  .contactImageLogo {
-    max-width: 200px;
-    max-height: 200px;
-    float: right;
-  }
-</style>
 
-<td valign="top">
-  <!-- BEGIN Image -->
-  <img src="{img}" class="contactImageLogo" />
-  <!-- END Image -->
-  <h3>Send Contact Form</h3>
-  <p>{name}</p>
+<!-- BEGIN Image -->
+<img src="{img}" class="contactImageLogo" />
+<!-- END Image -->
+<h3>Send Contact Form</h3>
+<p>{name}</p>
 
-  <p></p>
-  <pre>{address}</pre>
-</td>
+<pre>{address}</pre>
 
-<td width="25px"></td>
-<td valign="top" width="50%">
-  <form method="post" action="?" onsubmit="return submitForm();" id="myForm">
-    <input type="hidden" id="formid" value="0" name="formid" />
-    <div>
-      <div id="main">
-        <div class="contact1">
-          <p>
-            <input
-              type="text"
-              placeholder="your name"
-              name="name"
-              id="name"
-              class="commentfield"
-            />
-          </p>
-        </div>
-
-        <div class="contact2">
-          <p>
-            <input
-              type="text"
-              placeholder="your e-mail adress"
-              name="email"
-              id="email"
-              class="commentfield"
-            />
-          </p>
-        </div>
-
-        <div class="contact3">
-          <p>
-            <input
-              type="text"
-              placeholder="subject"
-              name="subject"
-              id="subject"
-              class="commentfield"
-            />
-          </p>
-        </div>
-
+<form method="post" action="?" onsubmit="return submitForm();" id="myForm">
+  <input type="hidden" id="formid" value="0" name="formid" />
+  <div>
+    <div id="main">
+      <div class="contact1">
         <p>
-          <textarea
-            name="message"
-            placeholder="message"
-            id="message"
-            rows="12"
-            cols="5"
-            class="contactMessage"
-          ></textarea>
+          <input
+            type="text"
+            placeholder="your name"
+            name="name"
+            id="name"
+            class="commentfield"
+          />
         </p>
-
-        <div class="buttonmain1">
-          <p>
-            <input
-              type="submit"
-              name="action[send]"
-              class="buttontextmain1"
-              id="submit"
-              value="Send"
-            />
-          </p>
-        </div>
-
-        <ul id="response"></ul>
       </div>
+
+      <div class="contact2">
+        <p>
+          <input
+            type="text"
+            placeholder="your e-mail adress"
+            name="email"
+            id="email"
+            class="commentfield"
+          />
+        </p>
+      </div>
+
+      <div class="contact3">
+        <p>
+          <input
+            type="text"
+            placeholder="subject"
+            name="subject"
+            id="subject"
+            class="commentfield"
+          />
+        </p>
+      </div>
+
+      <p>
+        <textarea
+          name="message"
+          placeholder="message"
+          id="message"
+          rows="12"
+          cols="5"
+          class="contactMessage"
+        ></textarea>
+      </p>
+
+      <div class="buttonmain1">
+        <p>
+          <input
+            type="submit"
+            name="action[send]"
+            class="buttontextmain1"
+            id="submit"
+            value="Send"
+          />
+        </p>
+      </div>
+
+      <ul id="response"></ul>
     </div>
-    <div id="targetHere"></div>
-  </form>
+  </div>
+  <div id="targetHere"></div>
+</form>
 
-  <!-- END Prompt -->
+<!-- END Prompt -->
 
-  <!-- BEGIN Send -->
-  <h3>Message has been sent!</h3>
-  {show} To: {to} From: {fromName} &lt;{fromAddr}> Subject: {subject}
-</td>
+<!-- BEGIN Send -->
+<h3>Message has been sent!</h3>
+{show} To: {to} From: {fromName} &lt;{fromAddr}> Subject: {subject} Message
 
-<td valign="top">
-  Message
+<i>{message}</i>
 
-  <i>{message}</i>
+<!-- BEGIN Actual -->
 
-  <!-- BEGIN Actual -->
-</td>
+<font color="blue">What actually happened (debug only)</font>
 
-<td valign="top">
-  <font color="blue">What actually happened (debug only)</font>
+<font color="blue">{debug_message}</font>
 
-  <font color="blue">{debug_message}</font>
+<!-- END Actual -->
 
-  <!-- END Actual -->
-
-  <!-- END Send -->
-</td>
+<!-- END Send -->

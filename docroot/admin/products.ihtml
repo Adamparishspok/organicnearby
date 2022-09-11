@@ -1,506 +1,313 @@
-<style>
-  .farmerInfo {
-    border: 1px solid #0a8;
-  }
-  #companyName {
-    font-size: +2;
-  }
-  .imgMax {
-    max-width: 150px;
-    max-height: 125px;
-    border: 1px solid #444;
-    overflow: hidden;
-  }
-  .scraped {
-    color: #000;
-  }
-  .overridden {
-    color: #f00;
-    border: 1px solid #f00;
-  }
-  .editCkbox {
-    float: left;
-  }
-  .pageContentWindow {
-    padding: 5px;
-  }
-  .pageContents {
-    padding: 10px;
-  }
-</style>
 <script src="/gps/gps.js"></script>
 <script>
   function setMapLink() {}
 </script>
 <!-- BEGIN Prompt -->
 <form method="get" action="?">
-  
-     
-       
-        <!-- BEGIN LinkPrev -->
-        <a href="?offset={offset}&search={search}">Prev</a>
-        <!-- END LinkPrev -->
-       
+  <!-- BEGIN LinkPrev -->
+  <a href="?offset={offset}&search={search}">Prev</a>
+  <!-- END LinkPrev -->
 
-       
-        <h4>Products</h4>
-       
+  <h4>Products</h4>
 
-       
-        <input
-          type="text"
-          name="search"
-          value="{search}"
-          placeholder="Search..."
-        />
-        <i>{count_msg}</i>
-       
+  <input type="text" name="search" value="{search}" placeholder="Search..." />
+  <i>{count_msg}</i>
 
-       
-         
-           
-            <td rowspan="2">
-              <input
-                type="button"
-                onclick="setLocation(null, 'lat', 'lon', setMapLink);"
-                value="Locate"
-              />
-              <input type="submit" />
-             
+  <input
+    type="button"
+    onclick="setLocation(null, 'lat', 'lon', setMapLink);"
+    value="Locate"
+  />
+  <input type="submit" />
 
-             Lat: 
+  Lat:
 
-             
-              <input
-                size="8"
-                readonly
-                type="numeric"
-                value="{lat}"
-                name="lat"
-                id="lat"
-              />
-             
-          
+  <input size="8" readonly type="numeric" value="{lat}" name="lat" id="lat" />
 
-           
-             Lon: 
+  Lon:
 
-             
-              <input
-                size="8"
-                readonly
-                type="numeric"
-                value="{lon}"
-                name="lon"
-                id="lon"
-              />
-             
-          
-         
-       
+  <input size="8" readonly type="numeric" value="{lon}" name="lon" id="lon" />
 
-       
-        <!-- BEGIN LinkNext -->
-        <a href="?offset={offset}&search={search}">Next</a>
-        <!-- END LinkNext -->
-       
-    
-   
+  <!-- BEGIN LinkNext -->
+  <a href="?offset={offset}&search={search}">Next</a>
+  <!-- END LinkNext -->
 </form>
 <!-- BEGIN Farmer -->
 <h4>Farmer</h4>
- 
-   
-    <td colspan="1">
-      <span id="companyName" class="{nameClass}">{name}</span>
-     
 
-     
-      <a href="/admin/farmer.php?table={table}&table_id={table_id}">Edit</a>
-     
-  
+<span id="companyName" class="{nameClass}">{name}</span>
 
-   
-     
-      <a href="http://{website}"
-        ><span class="{websiteClass}">{website}</span></a
-      >
-     
+<a href="/admin/farmer.php?table={table}&table_id={table_id}">Edit</a>
 
-     
-      <span class="{phoneClass}">{phone}</span>
-     
-  
+<a href="http://{website}"><span class="{websiteClass}">{website}</span></a>
 
-   
-     
-      <a href="mailto:{company_email}"
-        ><span class="{company_emailClass}">{company_email}</span></a
-      >
-     
+<span class="{phoneClass}">{phone}</span>
 
-      
-  
- 
+<a href="mailto:{company_email}"
+  ><span class="{company_emailClass}">{company_email}</span></a
+>
+
 <!-- END Farmer -->
 <h4>Products</h4>
- 
-   
-     Name 
 
-     Price 
+Name Price Stock Address Img Edit
+<!-- a href="?action[edit]&table_id=&table={table}&search={search}&offset={offset}">Add</a -->
 
-     Stock 
+<!-- BEGIN Products -->
 
-     Address 
+<div class="{nameClass}">{name}</td>
 
-     Img 
+<div class="{priceClass}">{price}</td>
 
-     
-      Edit
-      <!-- a href="?action[edit]&table_id=&table={table}&search={search}&offset={offset}">Add</a -->
-     
-  
+<div class="{stockClass}">{stock}</td>
 
-  <!-- BEGIN Products -->
-   
-    <td class="{nameClass}">{name} 
+<div class="{addressClass}">
+  {address}<br />
+  <i>{distance} miles away</i>
 
-    <td class="{priceClass}">{price} 
+  <!-- BEGIN Image -->
+  <div class="imgMax">
+    <img src="/img.php/{image}" />
+  </div>
+  <!-- END Image -->
+  {imagena}
 
-    <td class="{stockClass}">{stock} 
-
-    <td class="{addressClass}">
-      {address}<br />
-      <i>{distance} miles away</i>
-     
-
-     
-      <!-- BEGIN Image -->
-      <div class="imgMax">
-        <img src="/img.php/{image}" />
-      </div>
-      <!-- END Image -->
-      {imagena}
-     
-
-     
-      <a
-        href="?action[edit]&table_id={table_id}&table={table}&search={search}&offset={offset}"
-        >Edit</a
-      >
-     
-  
+  <a
+    href="?action[edit]&table_id={table_id}&table={table}&search={search}&offset={offset}"
+    >Edit</a
+  >
 
   <!-- END Products -->
-   
-    <td colspan="6">
-      <!-- BEGIN LinkPrevBottom -->
-      <a href="?offset={offset}&search={search}" style="float: left">Prev</a>
-      <!-- END LinkPrevBottom -->
-      <!-- BEGIN LinkNextBottom -->
-      <a href="?offset={offset}&search={search}" style="float: right">Next</a>
-      <!-- END LinkNextBottom -->
-     
-  
- 
-<!-- END Prompt -->
 
-<!-- BEGIN Edit -->
-<form method="post" action="?">
-  <input type="hidden" name="table_id" value="{table_id}" />
-  <input type="hidden" name="table" value="{table}" />
-  <script src="/editFields.js"></script>
-  <!-- BEGIN Farmer -->
-  <h4>Farmer</h4>
-   
-     
-      <td colspan="1">
-        <span id="companyName" class="{nameClass}">{name}</span>
-       
+  <!-- BEGIN LinkPrevBottom -->
+  <a href="?offset={offset}&search={search}" style="float: left">Prev</a>
+  <!-- END LinkPrevBottom -->
+  <!-- BEGIN LinkNextBottom -->
+  <a href="?offset={offset}&search={search}" style="float: right">Next</a>
+  <!-- END LinkNextBottom -->
 
-       
-        <a href="/admin/farmer.php?table={table}&table_id={table_id}">Edit</a>
-       
-    
+  <!-- END Prompt -->
 
-     
-       
-        <span class="{websiteClass}">{website}</span>
-       
+  <!-- BEGIN Edit -->
+  <form method="post" action="?">
+    <input type="hidden" name="table_id" value="{table_id}" />
+    <input type="hidden" name="table" value="{table}" />
+    <script src="/editFields.js"></script>
+    <!-- BEGIN Farmer -->
+    <h4>Farmer</h4>
 
-       
-        <span class="{phoneClass}">{phone}</span>
-       
-    
+    <span id="companyName" class="{nameClass}">{name}</span>
 
-     
-       
-        <span class="{company_emailClass}"
-          ><a href="mailto:{company_email}">{company_email}</a></span
-        >
-       
+    <a href="/admin/farmer.php?table={table}&table_id={table_id}">Edit</a>
 
-        
-    
-   
-  <!-- END Farmer -->
-   
-     
-       Name 
+    <span class="{websiteClass}">{website}</span>
 
-      <td valign="top">{fval_name} 
+    <span class="{phoneClass}">{phone}</span>
 
-       
-        <input type="hidden" name="monitor[name]" value="1" />
-        <input
-          {checked_name}
-          name="active[name]"
-          class="editCkbox"
-          type="checkbox"
-          onchange="toggleActive(this, 'name')"
-          value="1"
-        />
-        <input
-          type="text"
-          {disabled_name}
-          id="textAreaname"
-          name="name"
-          size="40"
-          value="{eval_name}"
-        />
-       
-    
+    <span class="{company_emailClass}"
+      ><a href="mailto:{company_email}">{company_email}</a></span
+    >
 
-     
-       Price 
+    <!-- END Farmer -->
 
-      <td valign="top">{fval_price} 
+    Name {fval_name}
 
-       
-        <input type="hidden" name="monitor[price]" value="1" />
-        <input
-          {checked_price}
-          name="active[price]"
-          class="editCkbox"
-          type="checkbox"
-          onchange="toggleActive(this, 'price')"
-          value="1"
-        />
-        <input
-          type="numeric"
-          {disabled_price}
-          id="textAreaprice"
-          name="price"
-          size="8"
-          value="{eval_price}"
-        />
-       
-    
+    <input type="hidden" name="monitor[name]" value="1" />
+    <input
+      {checked_name}
+      name="active[name]"
+      class="editCkbox"
+      type="checkbox"
+      onchange="toggleActive(this, 'name')"
+      value="1"
+    />
+    <input
+      type="text"
+      {disabled_name}
+      id="textAreaname"
+      name="name"
+      size="40"
+      value="{eval_name}"
+    />
 
-     
-       Price Text 
+    Price {fval_price}
 
-      <td valign="top">{fval_pricetxt} 
+    <input type="hidden" name="monitor[price]" value="1" />
+    <input
+      {checked_price}
+      name="active[price]"
+      class="editCkbox"
+      type="checkbox"
+      onchange="toggleActive(this, 'price')"
+      value="1"
+    />
+    <input
+      type="numeric"
+      {disabled_price}
+      id="textAreaprice"
+      name="price"
+      size="8"
+      value="{eval_price}"
+    />
 
-       
-        <input type="hidden" name="monitor[pricetxt]" value="1" />
-        <input
-          {checked_pricetxt}
-          name="active[pricetxt]"
-          class="editCkbox"
-          type="checkbox"
-          onchange="toggleActive(this, 'pricetxt')"
-          value="1"
-        />
-        <textarea
-          {disabled_pricetxt}
-          id="textAreapricetxt"
-          name="pricetxt"
-          rows="5"
-          cols="40"
-        >
+    Price Text {fval_pricetxt}
+
+    <input type="hidden" name="monitor[pricetxt]" value="1" />
+    <input
+      {checked_pricetxt}
+      name="active[pricetxt]"
+      class="editCkbox"
+      type="checkbox"
+      onchange="toggleActive(this, 'pricetxt')"
+      value="1"
+    />
+    <textarea
+      {disabled_pricetxt}
+      id="textAreapricetxt"
+      name="pricetxt"
+      rows="5"
+      cols="40"
+    >
 {eval_pricetxt}</textarea
-        >
-       
-    
+    >
 
-     
-       Price Unit 
+    Price Unit {fval_price_unit}
 
-      <td valign="top">{fval_price_unit} 
-
-       
-        <input type="hidden" name="monitor[price_unit]" value="1" />
-        <input
-          {checked_price_unit}
-          name="active[price_unit]"
-          class="editCkbox"
-          type="checkbox"
-          onchange="toggleActive(this, 'price_unit')"
-          value="1"
-        />
-        <textarea
-          {disabled_price_unit}
-          id="textAreaprice_unit"
-          name="price_unit"
-          rows="5"
-          cols="40"
-        >
+    <input type="hidden" name="monitor[price_unit]" value="1" />
+    <input
+      {checked_price_unit}
+      name="active[price_unit]"
+      class="editCkbox"
+      type="checkbox"
+      onchange="toggleActive(this, 'price_unit')"
+      value="1"
+    />
+    <textarea
+      {disabled_price_unit}
+      id="textAreaprice_unit"
+      name="price_unit"
+      rows="5"
+      cols="40"
+    >
 {eval_price_unit}</textarea
-        >
-       
-    
+    >
 
-     
-       Address 
+    Address
 
-      <td valign="top">
-        <pre>{fval_address}</pre>
-       
+    <pre>{fval_address}</pre>
 
-       
-        <input type="hidden" name="monitor[address]" value="1" />
-        <input
-          {checked_address}
-          name="active[address]"
-          class="editCkbox"
-          type="checkbox"
-          onchange="toggleActive(this, 'address')"
-          value="1"
-        />
-        <textarea
-          {disabled_address}
-          id="textAreaaddress"
-          name="address"
-          rows="5"
-          cols="40"
-        >
+    <input type="hidden" name="monitor[address]" value="1" />
+    <input
+      {checked_address}
+      name="active[address]"
+      class="editCkbox"
+      type="checkbox"
+      onchange="toggleActive(this, 'address')"
+      value="1"
+    />
+    <textarea
+      {disabled_address}
+      id="textAreaaddress"
+      name="address"
+      rows="5"
+      cols="40"
+    >
 {eval_address}</textarea
-        >
-       
-    
+    >
 
-     
-       Description 
+    Description {fval_description}
 
-      <td valign="top">{fval_description} 
-
-       
-        <input type="hidden" name="monitor[description]" value="1" />
-        <input
-          {checked_description}
-          name="active[description]"
-          class="editCkbox"
-          type="checkbox"
-          onchange="toggleActive(this, 'description')"
-          value="1"
-        />
-        <textarea
-          {disabled_description}
-          id="textAreadescription"
-          name="description"
-          rows="5"
-          cols="40"
-        >
+    <input type="hidden" name="monitor[description]" value="1" />
+    <input
+      {checked_description}
+      name="active[description]"
+      class="editCkbox"
+      type="checkbox"
+      onchange="toggleActive(this, 'description')"
+      value="1"
+    />
+    <textarea
+      {disabled_description}
+      id="textAreadescription"
+      name="description"
+      rows="5"
+      cols="40"
+    >
 {eval_description}</textarea
-        >
-       
-    
+    >
 
-     
-       Stock 
+    Stock {fval_stock}
 
-      <td valign="top">{fval_stock} 
+    <input type="hidden" name="monitor[stock]" value="1" />
+    <input
+      {checked_stock}
+      name="active[stock]"
+      class="editCkbox"
+      type="checkbox"
+      onchange="toggleActive(this, 'stock')"
+      value="1"
+    />
+    <input
+      type="number"
+      {disabled_stock}
+      id="textAreastock"
+      name="stock"
+      min="0"
+      max="1000000"
+      value="{eval_stock}"
+    />
 
-       
-        <input type="hidden" name="monitor[stock]" value="1" />
-        <input
-          {checked_stock}
-          name="active[stock]"
-          class="editCkbox"
-          type="checkbox"
-          onchange="toggleActive(this, 'stock')"
-          value="1"
-        />
-        <input
-          type="number"
-          {disabled_stock}
-          id="textAreastock"
-          name="stock"
-          min="0"
-          max="1000000"
-          value="{eval_stock}"
-        />
-       
-    
-
-     
-       Buy Link 
-
-      <td valign="top" colspan="2">
-        {fval_linkcart}<br /><br />
-        <input type="hidden" name="monitor[linkcart]" value="1" />
-        <input
-          {checked_linkcart}
-          name="active[linkcart]"
-          class="editCkbox"
-          type="checkbox"
-          onchange="toggleActive(this, 'linkcart')"
-          value="1"
-        />
-        <input
-          type="text"
-          {disabled_linkcart}
-          id="textArealinkcart"
-          name="linkcart"
-          size="80"
-          value="{eval_linkcart}"
-        />
-       
-    
+    Buy Link {fval_linkcart}<br /><br />
+    <input type="hidden" name="monitor[linkcart]" value="1" />
+    <input
+      {checked_linkcart}
+      name="active[linkcart]"
+      class="editCkbox"
+      type="checkbox"
+      onchange="toggleActive(this, 'linkcart')"
+      value="1"
+    />
+    <input
+      type="text"
+      {disabled_linkcart}
+      id="textArealinkcart"
+      name="linkcart"
+      size="80"
+      value="{eval_linkcart}"
+    />
 
     <!-- BEGIN Fields -->
-     
-       {field} 
 
-      <td valign="top">{fval} 
+    {field} {fval}
 
-       
-        <input type="hidden" name="monitor[{field}]" value="1" />
-        <input
-          {checked}
-          name="active[{field}]"
-          class="editCkbox"
-          type="checkbox"
-          onchange="toggleActive(this, '{field}')"
-          value="1"
-        />
-        <textarea
-          {disabled}
-          id="textArea{field}"
-          name="{field}"
-          rows="5"
-          cols="40"
-        >
+    <input type="hidden" name="monitor[{field}]" value="1" />
+    <input
+      {checked}
+      name="active[{field}]"
+      class="editCkbox"
+      type="checkbox"
+      onchange="toggleActive(this, '{field}')"
+      value="1"
+    />
+    <textarea {disabled} id="textArea{field}" name="{field}" rows="5" cols="40">
 {eval}</textarea
-        >
-       
-    
+    >
 
     <!-- END Fields -->
-   
-  <input type="hidden" name="search" value="{search}" />
-  <input type="hidden" name="offset" value="{offset}" />
-  <input type="submit" name="action[save]" value="Save" />
-</form>
-<!-- END Edit -->
 
-<!-- BEGIN Save -->
-<h3>Product Saved</h3>
-{show}
-<meta
-  http-equiv="refresh"
-  content="2;url=/admin/products.php?search={search}&offset={offset}"
-/>
-<!-- END Save -->
+    <input type="hidden" name="search" value="{search}" />
+    <input type="hidden" name="offset" value="{offset}" />
+    <input type="submit" name="action[save]" value="Save" />
+  </form>
+
+  <!-- END Edit -->
+
+  <!-- BEGIN Save -->
+  <h3>Product Saved</h3>
+  {show}
+  <meta
+    http-equiv="refresh"
+    content="2;url=/admin/products.php?search={search}&offset={offset}"
+  />
+  <!-- END Save -->
+</div>

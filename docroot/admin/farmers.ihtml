@@ -1,24 +1,3 @@
-<style>
-.overridden {
-	color: #F00;
-	border: 1px solid #f00;
-}
-.lo {
-	background-color: #bcb;
-}
-.pageContentWindow {
-	padding: 5px;
-}
-.pageContents {
-	padding: 10px;
-}
-.createdLocal {
-	border: 1px solid blue;
-}
-.editedLocal {
-	border: 1px solid red;
-}
-</style>
 <script src="/gps/gps.js"></script>
 <script>
 function setMapLink()
@@ -44,7 +23,7 @@ function setMapLink()
 		 
 			 
 				 
-					<td rowspan="2">
+					 
 						<input type="button" onclick="setLocation(null, 'lat', 'lon', setMapLink);" value="Locate">
 						<input type="submit">
 					 
@@ -102,26 +81,25 @@ function setMapLink()
 		 
 	 
 <!-- BEGIN Farmers -->
-	<tr class="{hilo}">
-		<td class='{sourceclass}'>
+	<div class="{hilo}">
+		<div class='{sourceclass}'>
 			{source}
-		 
 		 
 			{update_str}
 		 
-		<td class='{nameclass}'>
+		<div class='{nameclass}'>
 			{name}</a>
 		 
-		<td class='{phoneclass}'>
+		<div class='{phoneclass}'>
 			{phone}
 		 
-		<td class='{websiteclass}'>
+		<div class='{websiteclass}'>
 			{website}
 		 
-		<td class='{company_emailclass}'>
+		<div class='{company_emailclass}'>
 			{company_email}
 		 
-		<td class='{addressclass}'>
+		<div class='{addressclass}'>
 			{address}
 			<br><i>{distance}</i>
 		 

@@ -1,21 +1,3 @@
-<style>
-  .editCkbox {
-    float: left;
-  }
-  .commentBlock {
-    border: 1px dashed #444;
-    padding: 5px;
-  }
-  .commentSpan {
-    font-weight: bold;
-  }
-  .pageContentWindow {
-    padding: 5px;
-  }
-  .pageContents {
-    padding: 10px;
-  }
-</style>
 <script src="/editFields.js"></script>
 <!-- BEGIN Prompt -->
 <form method="post" action="?">
@@ -25,78 +7,46 @@
   <a href="/admin/products.php?table={table}&table_id={table_id}"
     >See their products</a
   >
-  
-     
-       Field 
 
-      Scraped 
+  Field Scraped Edit
 
-      Edit 
-    
+  <!-- BEGIN NewAuthlogin -->
 
-    <!-- BEGIN NewAuthlogin -->
-     
-      {show}
-       Login Email 
+  {show} Login Email
 
-        
-       
-        <input CHECKED class="editCkbox" type="checkbox" />
-        <input type="text" name="authlogins_email" value="{authlogins_email}" />
-       
-    
+  <input CHECKED class="editCkbox" type="checkbox" />
+  <input type="text" name="authlogins_email" value="{authlogins_email}" />
 
-    <!-- END NewAuthlogin -->
-    <!-- BEGIN Fields -->
-     
-       {field} 
+  <!-- END NewAuthlogin -->
+  <!-- BEGIN Fields -->
 
-      {scraped} 
+  {field} {scraped}
 
-       
-        <input type="hidden" name="monitor[{field}]" value="1" />
-        <input
-          {checked}
-          name="active[{field}]"
-          class="editCkbox"
-          type="checkbox"
-          onchange="toggleActive(this, '{field}')"
-          value="1"
-        />
-        <textarea
-          {disabled}
-          id="textArea{field}"
-          name="{field}"
-          rows="5"
-          cols="40"
-        >
+  <input type="hidden" name="monitor[{field}]" value="1" />
+  <input
+    {checked}
+    name="active[{field}]"
+    class="editCkbox"
+    type="checkbox"
+    onchange="toggleActive(this, '{field}')"
+    value="1"
+  />
+  <textarea {disabled} id="textArea{field}" name="{field}" rows="5" cols="40">
 {eval}</textarea
-        >
-       
-    
+  >
 
-    <!-- END Fields -->
-   
-  
-     
-        <h4>Comments</h4>
-       
-    
+  <!-- END Fields -->
 
-     
-       
-        <textarea name="comments" rows="5" cols="40"></textarea>
-       
+  <h4>Comments</h4>
 
-       
-        <!-- BEGIN Comments -->
-        <div class="commentBlock">
-          {date} {login} <br /><span class="commentSpan">{comments}</span>
-        </div>
-        <!-- END Comments -->
-       
-    
-   
+  <textarea name="comments" rows="5" cols="40"></textarea>
+
+  <!-- BEGIN Comments -->
+  <div class="commentBlock">
+    {date} {login} <br /><span class="commentSpan">{comments}</span>
+  </div>
+  <!-- END Comments -->
+
   <input type="submit" name="action[save]" value="Save" />
 </form>
 <!-- END Prompt -->

@@ -171,13 +171,13 @@ function updateShortAddress(e, domain)
 			 
 				Field
 			 
-			<td class="{scraped_display}">
+			<div class="{scraped_display}">
 				Scraped
 			 
-			<td class="editCkBoxCol">
+			 
 				
 			 
-			<td class="{scraped_display}">
+			<div class="{scraped_display}">
 				Edit
 			 
 		
@@ -186,10 +186,10 @@ function updateShortAddress(e, domain)
 			 
 				{ftitle}
 			 
-			<td class="{scraped_display}">
+			<div class="{scraped_display}">
 				{sc_value}
 			 
-			<td class="editCkBoxCol">
+			 
 				<input {checked} name="active[{field}]"
 					class="editCkbox {scraped_display}" type="checkbox"
 					onchange="toggleActive(this, '{field}')" value="1" />
@@ -209,10 +209,10 @@ function updateShortAddress(e, domain)
 			 
 				Address
 			 
-			<td class="{scraped_display}">
+			<div class="{scraped_display}">
 				{sc_address}
 			
-			<td class="editCkBoxCol">
+			 
 				<input {checked_address} name="active[address]"
 					class="editCkbox {scraped_display}" type="checkbox"
 					onchange="toggleActive(this, 'address')" value="1" />
@@ -329,7 +329,7 @@ Camera:
 		 
 			Field
 		 
-		<td class="{scraped_display}">
+		<div class="{scraped_display}">
 			Scraped
 		 
 		 
@@ -340,7 +340,7 @@ Camera:
 		 
 			Name
 		 
-		<td valign='top' class="{scraped_display}">
+		<div class="{scraped_display}">
 			{fval_name}
 		 
 		 
@@ -353,7 +353,7 @@ Camera:
 		 
 			Price
 		 
-		<td valign='top' class="{scraped_display}">
+		<div class="{scraped_display}">
 			{fval_price}
 		 
 		 
@@ -366,7 +366,7 @@ Camera:
 		 
 			Price Text
 		 
-		<td valign='top' class="{scraped_display}">
+		<div class="{scraped_display}">
 			{fval_pricetxt}
 		 
 		 
@@ -379,7 +379,7 @@ Camera:
 		 
 			Price Unit
 		 
-		<td valign='top' class="{scraped_display}">
+		<div class="{scraped_display}">
 			{fval_price_unit}
 		 
 		 
@@ -392,7 +392,7 @@ Camera:
 		 
 			Address
 		 
-		<td valign='top' class="{scraped_display}">
+		<div class="{scraped_display}">
 			<pre>{fval_address}</pre>
 		 
 		 
@@ -405,7 +405,7 @@ Camera:
 		 
 			Description
 		 
-		<td valign='top' class="{scraped_display}">
+		<div class="{scraped_display}">
 			{fval_description}
 		 
 		 
@@ -418,7 +418,7 @@ Camera:
 		 
 			Stock
 		
-		<td valign='top' class="{scraped_display}">
+		<div class="{scraped_display}">
 			{fval_stock}
 		
 			<input type="hidden" name="monitor[stock]" value="1" />

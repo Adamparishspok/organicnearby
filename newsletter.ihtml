@@ -7,11 +7,6 @@
 </form>
 <!-- END Prompt -->
 <!-- BEGIN NlSave -->{show}
-<style>
-	.pageChild {
-		padding: 20px;
-	}
-</style>
 <div class='pageChild'>
 	<h3> Thank you for joining!</h3>
 

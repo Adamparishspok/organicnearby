@@ -131,21 +131,20 @@ function updateShortAddress(e, domain)
 	 
 		 
 			  
-			<td class="{scraped_display}"> 
-			<td colspan="3">
+			<div class="{scraped_display}"> 
+			
 				<h3>Manage Farmer Account</h3>
 			 
 		 
 		 
 			 Field 
-			<td class="{scraped_display}">Scraped 
-			<td class="editCkBoxCol"> 
-			<td class="{scraped_display}">Edit 
+			<div class="{scraped_display}">Scraped 
+			<div class="{scraped_display}">Edit 
 		 <!-- BEGIN Fields -->
 		 
 			 {ftitle} 
-			<td class="{scraped_display}">{sc_value} 
-			<td class="editCkBoxCol"><input class="editCkbox {scraped_display}" name="active[{field}]" onchange="toggleActive(this, '{field}')" type="checkbox" value="1"> 
+			<div class="{scraped_display}">{sc_value} 
+			 <input class="editCkbox {scraped_display}" name="active[{field}]" onchange="toggleActive(this, '{field}')" type="checkbox" value="1"> 
 			 <input class="finput" id="textArea{field}" name="{field}" style="width: 90%;" type="text" value="{value}"> <!-- BEGIN FirstRow -->
 			 
 				<a href="?action[image]"><img   src="/img.php/{image}"></a>
@@ -153,30 +152,30 @@ function updateShortAddress(e, domain)
 		 <!-- END Fields -->
 		 
 			 Address 
-			<td class="{scraped_display}">{sc_address} 
-			<td class="editCkBoxCol"><input class="editCkbox {scraped_display}" name="active[address]" onchange="toggleActive(this, 'address')" type="checkbox" value="1"> 
+			<div class="{scraped_display}">{sc_address} 
+			 <input class="editCkbox {scraped_display}" name="active[address]" onchange="toggleActive(this, 'address')" type="checkbox" value="1"> 
 			 
 			<textarea class="generalInfo" id="textAreaaddress" name='address' rows='4'>{address}</textarea> 
 		 
 		 
 			 General Info 
-			<td class="{scraped_display}">{sc_general_info} 
-			<td class="editCkBoxCol"><input class="editCkbox {scraped_display}" name="active[general_info]" onchange="toggleActive(this, 'general_info')" type="checkbox" value="1"> 
+			<div class="{scraped_display}">{sc_general_info} 
+			<input class="editCkbox {scraped_display}" name="active[general_info]" onchange="toggleActive(this, 'general_info')" type="checkbox" value="1"> 
 			 
 			<textarea class="generalInfo" id="textAreageneral_info" name='general_info' rows='8'>{general_info}</textarea> 
 		 
 		 
 			 Delete/Hide Account 
-			<td class="{scraped_display}"> 
-			<td class="editCkBoxCol"> 
+			<div class="{scraped_display}"> 
+			
 			 <input name="deleted" type="checkbox" value="1"> 
 		 
 		 
 			 Vanity Address<br> 
-			<td class="{scraped_display}"> 
-			<td class="editCkBoxCol"> 
+			<div class="{scraped_display}"> 
+			
 			 <input name="url" onchange="updateShortAddress(this, '{domain}');" onkeyup="updateShortAddress(this, '{domain}');" pattern="[a-zA-Z0-9]*" type="text" value="{url}"> 
-			<td colspan="1"><span id="shortAddress">https://{domain}/{url}</span> 
+			 <span id="shortAddress">https://{domain}/{url}</span> 
 		 
 		 
 			 <input formmethod='post' name='action[Cancel]' type='submit' value='Cancel'> 
@@ -217,34 +216,34 @@ function submitImage(e)
 	
 		 
 			 Field 
-			<td class="{scraped_display}">Scraped 
+			<div class="{scraped_display}">Scraped 
 			 Entered 
 		 
 		 
 			 Name 
-			<td class="{scraped_display}" valign='top'>{fval_name} 
+			<div class="{scraped_display}"  >{fval_name} 
 			 <input name="monitor[name]" type="hidden" value="1"> <input class="editCkbox {scraped_display}" name="active[name]" onchange="toggleActive(this, 'name')" type="checkbox" value="1"> <input id="textAreaname" name='name' size="40" type="text" value="{eval_name}"> 
 		 
 		 
 			 Price 
-			<td class="{scraped_display}" valign='top'>{fval_price} 
+			<div class="{scraped_display}"  >{fval_price} 
 			 <input name="monitor[price]" type="hidden" value="1"> <input class="editCkbox {scraped_display}" name="active[price]" onchange="toggleActive(this, 'price')" type="checkbox" value="1"> <input id="textAreaprice" max="1000000" min="0" name='price' step="0.01" type="number" value="{eval_price}"> 
 		 
 		 
 			 Price Text 
-			<td class="{scraped_display}" valign='top'>{fval_pricetxt} 
+			<div class="{scraped_display}"  >{fval_pricetxt} 
 			 <input name="monitor[pricetxt]" type="hidden" value="1"> <input class="editCkbox {scraped_display}" name="active[pricetxt]" onchange="toggleActive(this, 'pricetxt')" type="checkbox" value="1"> 
 			<textarea cols="40" id="textAreapricetxt" name='pricetxt' rows="5">{eval_pricetxt}</textarea> 
 		 
 		 
 			 Price Unit 
-			<td class="{scraped_display}" valign='top'>{fval_price_unit} 
+			<div class="{scraped_display}"  >{fval_price_unit} 
 			 <input name="monitor[price_unit]" type="hidden" value="1"> <input class="editCkbox {scraped_display}" name="active[price_unit]" onchange="toggleActive(this, 'price_unit')" type="checkbox" value="1"> 
 			<textarea cols="40" id="textAreaprice_unit" name='price_unit' rows="5">{eval_price_unit}</textarea> 
 		 
 		 
 			 Address 
-			<td class="{scraped_display}" valign='top'>
+			<div class="{scraped_display}"  >
 				<pre>{fval_address}</pre>
 			 
 			 <input name="monitor[address]" type="hidden" value="1"> <input class="editCkbox {scraped_display}" name="active[address]" onchange="toggleActive(this, 'address')" type="checkbox" value="1"> 
@@ -252,13 +251,13 @@ function submitImage(e)
 		 
 		 
 			 Description 
-			<td class="{scraped_display}" valign='top'>{fval_description} 
+			<div class="{scraped_display}"  >{fval_description} 
 			 <input name="monitor[description]" type="hidden" value="1"> <input class="editCkbox {scraped_display}" name="active[description]" onchange="toggleActive(this, 'description')" type="checkbox" value="1"> 
 			<textarea cols="40" id="textAreadescription" name='description' rows="5">{eval_description}</textarea> 
 		 
 		 
 			 Stock 
-			<td class="{scraped_display}" valign='top'>{fval_stock} 
+			<div class="{scraped_display}"  >{fval_stock} 
 			 <input name="monitor[stock]" type="hidden" value="1"> <input class="editCkbox {scraped_display}" name="active[stock]" onchange="toggleActive(this, 'stock')" type="checkbox" value="1"> <input id="textAreastock" max="1000000" min="0" name='stock' type="number" value="{eval_stock}"> 
 		 
 		 
@@ -281,25 +280,10 @@ function submitImage(e)
 			<textarea cols="40" id="textArea{field}" name='{field}' rows="5">{eval}</textarea> 
 		 <!-- END Fields -->
 	 
-	
-		 
-			 
-				<h4>Current Image</h4>
-			 
-
-			 
-				<h4>Replace Image From</h4>
-			 
-		 
-		 
-
 			   
-			<td   valign="top" >File on disk: 
+			
 			 <input accept="image/*" name="disk" onchange="submitImageProduct(this);" type="file"> 
 		 
-		 
-			   
-			 Camera: 
 			 <input accept="image/*" capture="camera" name="camera" onchange="submitImageProduct(this);" type="file"> 
 		 
 	 <input name="action[saveProduct]" type="hidden" value="Save"> <input formmethod="post" type="submit" value="Save">
@@ -550,8 +534,8 @@ function submitImage(e)
 	 
 		 
 			  
-			<td class="{scraped_display}">
-			<td colspan="3">
+			<div class="{scraped_display}">
+			
 				<h3> Manage Farmer Account </h3>
 			 
 		 
@@ -559,13 +543,13 @@ function submitImage(e)
 			 
 				Field
 			 
-			<td class="{scraped_display}">
+			<div class="{scraped_display}">
 				Scraped
 			 
-			<td class="editCkBoxCol">
+			
 				
 			 
-			<td class="{scraped_display}">
+			<div class="{scraped_display}">
 				Edit
 			 
 		 
@@ -574,10 +558,10 @@ function submitImage(e)
 			 
 				{ftitle}
 			 
-			<td class="{scraped_display}">
+			<div class="{scraped_display}">
 				{sc_value}
 			 
-			<td class="editCkBoxCol">
+			
 				<input {checked} name="active[{field}]"
 					class="editCkbox {scraped_display}" type="checkbox"
 					onchange="toggleActive(this, '{field}')" value="1" />
@@ -597,10 +581,10 @@ function submitImage(e)
 			 
 				Address
 			 
-			<td class="{scraped_display}">
+			<div class="{scraped_display}">
 				{sc_address}
 			 
-			<td class="editCkBoxCol">
+			
 				<input {checked_address} name="active[address]"
 					class="editCkbox {scraped_display}" type="checkbox"
 					onchange="toggleActive(this, 'address')" value="1" />
@@ -614,10 +598,10 @@ function submitImage(e)
 			 
 				General Info
 			 
-			<td class="{scraped_display}">
+			<div class="{scraped_display}">
 				{sc_general_info}
 			 
-			<td class="editCkBoxCol">
+			
 				<input {checked_general_info} name="active[general_info]"
 					class="editCkbox {scraped_display}" type="checkbox"
 					onchange="toggleActive(this, 'general_info')" value="1" />
@@ -631,9 +615,9 @@ function submitImage(e)
 			 
 				Delete/Hide Account
 			 
-			<td class="{scraped_display}">
+			<div class="{scraped_display}">
 			 
-			<td class="editCkBoxCol">
+			 
 			 
 				<input type="checkbox" name="deleted" value="1" {deleted_checked} />
 			 
@@ -642,14 +626,14 @@ function submitImage(e)
 			 
 				Vanity Address<br/>
 			 
-			<td class="{scraped_display}">
+			<div class="{scraped_display}">
 			 
-			<td class="editCkBoxCol"> 
+			  
 			 
 				<input type="text" name="url" value="{url}" onkeyup="updateShortAddress(this, '{domain}');" onchange="updateShortAddress(this, '{domain}');"
 							 pattern="[a-zA-Z0-9]*" />
 			 
-			<td colspan="1">
+			 
 				<span id="shortAddress">https://{domain}/{url}</span>
 			 
 		 
@@ -714,7 +698,7 @@ function submitImage(e)
 		 
 			Field
 		 
-		<td class="{scraped_display}">
+		<div class="{scraped_display}">
 			Scraped
 		 
 		 
@@ -725,7 +709,7 @@ function submitImage(e)
 		 
 			Name
 		 
-		<td valign='top' class="{scraped_display}">
+		<div class="{scraped_display}">
 			{fval_name}
 		 
 		 
@@ -738,7 +722,7 @@ function submitImage(e)
 		 
 			Price
 		 
-		<td valign='top' class="{scraped_display}">
+		<div class="{scraped_display}">
 			{fval_price}
 		 
 		 
@@ -751,7 +735,7 @@ function submitImage(e)
 		 
 			Price Text
 		 
-		<td valign='top' class="{scraped_display}">
+		<div class="{scraped_display}">
 			{fval_pricetxt}
 		 
 		 
@@ -764,7 +748,7 @@ function submitImage(e)
 		 
 			Price Unit
 		 
-		<td valign='top' class="{scraped_display}">
+		<div class="{scraped_display}">
 			{fval_price_unit}
 		 
 		 
@@ -777,7 +761,7 @@ function submitImage(e)
 		 
 			Address
 		 
-		<td valign='top' class="{scraped_display}">
+		<div class="{scraped_display}">
 			<pre>{fval_address}</pre>
 		 
 		 
@@ -790,7 +774,7 @@ function submitImage(e)
 		 
 			Description
 		 
-		<td valign='top' class="{scraped_display}">
+		<div class="{scraped_display}">
 			{fval_description}
 		 
 		 
@@ -803,7 +787,7 @@ function submitImage(e)
 		 
 			Stock
 		 
-		<td valign='top' class="{scraped_display}">
+		<div class="{scraped_display}">
 			{fval_stock}
 		 
 		 
@@ -816,7 +800,7 @@ function submitImage(e)
 		 
 			Buy Link
 		 
-		<td valign='top' colspan="2">
+		
 			<div 	class="{scraped_display}">
 				{fval_linkcart}<br/><br/>
 			</div>
@@ -829,7 +813,7 @@ function submitImage(e)
 		 
 			Delete / Hide Product
 		 
-		<td valign='top' colspan="2">
+		
 			<input type="checkbox" value="1" name="deleted" {deleted_checked} />
 		 
 	 

@@ -109,12 +109,12 @@ echo $html . PHP_EOL;
  *   <h1>Volumes of the World's Oceans</h1>
  *
  *       Ocean  Volume (km^3)
- *       Arctic Ocean <td volume="18750000">18,750,000
- *       Atlantic Ocean <td volume="310410900">310,410,900
- *       Indian Ocean <td volume="264000000">264,000,000
- *       Pacific Ocean <td volume="660000000">660,000,000
- *       Souce China Sea <td volume="9880000">9,880,000
- *       Southern Ocean <td volume="71800000">71,800,000
+ *       Arctic Ocean <div class="volume="18750000">18,750,000
+ *       Atlantic Ocean <div class="volume="310410900">310,410,900
+ *       Indian Ocean <div class="volume="264000000">264,000,000
+ *       Pacific Ocean <div class="volume="660000000">660,000,000
+ *       Souce China Sea <div class="volume="9880000">9,880,000
+ *       Southern Ocean <div class="volume="71800000">71,800,000
  *
  * </body>
  * </html>

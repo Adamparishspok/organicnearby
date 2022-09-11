@@ -49,7 +49,7 @@
             <!-- BEGIN SMSBlock -->
 
             {show}
-          </td>
+           
 
             <input
               id="smscode"
@@ -63,7 +63,7 @@
             <!-- BEGIN RememberMe -->
 
             {show}
-          </td>
+           
 
             <input
               type="checkbox"
@@ -76,7 +76,7 @@
             <!-- BEGIN Timezone -->
 
             {show}
-          </td>
+           
 
             <span
               id="browserTz"
