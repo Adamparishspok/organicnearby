@@ -1,4 +1,39 @@
 <!-- BEGIN Prompt -->
+<style>
+  .header-location {
+    color: white;
+    text-decoration: underline;
+    transition: opacity 250ms e ase-in-out;
+  }
+
+  .header-location:hover {
+    opacity: 0.7;
+    color: white;
+  }
+
+  .navbar-search {
+    opacity: 0;
+    transition: all 250ms ease-in-out;
+  }
+
+  .navbar-shrink .navbar-search {
+    opacity: 1;
+  }
+
+  .navbar-search .header-search button {
+    color: #999;
+    top: 9px;
+    right: 14px;
+    transition: all 200ms ease-in-out;
+  }
+
+  .navbar-search .header-search:hover button,
+  .navbar-search .header-search:active button,
+  .navbar-search .header-search:focus button,
+  .navbar-search .header-search:focus-within button {
+    right: 32px;
+  }
+</style>
 <div
   class="carousel slide"
   data-bs-keyboard="false"
@@ -25,7 +60,7 @@
           style="max-width: 580px; margin-bottom: 16px; width: 100%"
         >
           Local produce and products near
-          <a href="/location.php">{locAddress}</a>
+          <a href="/location.php" class="header-location">{locAddress}</a>
         </h1>
 
         <div class="text-white" style="max-width: 500px; width: 100%">
@@ -37,15 +72,24 @@
             <div class="searchDiv" id="searchDiv">
               <input id="lat" name="lat" type="hidden" />
               <input id="lon" name="lon" type="hidden" />
-              <input
-                class="searchInput"
-                id="search"
-                name="search"
-                placeholder="Products"
-                type="text"
-                value="{search}"
-              />
-              <!-- input type="submit" onclick="return lookForFood();" value="Browse" class="searchButton" name="action[search]"/ -->
+              <div class="header-search">
+                <input
+                  class="form-control form-control-lg border-end-0 border rounded-pill searchInput"
+                  id="search"
+                  name="search"
+                  placeholder="Products"
+                  type="text"
+                  value="{search}"
+                />
+                <button
+                  type="submit"
+                  onclick="return lookForFood();"
+                  value="Browse"
+                  name="action[search]"
+                >
+                  <i data-feather="search"></i>
+                </button>
+              </div>
             </div>
           </form>
         </div>

@@ -1,55 +1,179 @@
 <!-- BEGIN Prompt -->
-<form action="?" id="orderbyForm" name="orderbyForm">
-  <h3>Farmers List</h3>
-  {show}
-  <input
-    name="search"
-    onblur="doUpdateFarmers();"
-    placeholder="Search Farmers ..."
-    value="{search}"
-  />
-  <input
-    id="orderName"
-    name="order"
-    onchange="updateFarmers(this);"
-    type="radio"
-    value="name"
-  /><label for="orderName">Name</label>
-  <input
-    id="orderDistance"
-    name="order"
-    onchange="updateFarmers(this);"
-    type="radio"
-    value="distance"
-  /><label for="orderDistance">Distance</label>
-  <input id="lat" name="lat" type="hidden" value="null" />
-  <input id="lon" name="lon" type="hidden" value="null" />
-  <!-- BEGIN Sources -->
-  <select name="sc_sources_id" onchange="updateFarmers(this);">
-    <option value="">--All--</option>
-    <!-- BEGIN Source -->
-
-    <option value="{id}">{count} : {source}</option>
-    <!-- END Source -->
-  </select>
-  <!-- END Sources -->
-</form>
-<!-- BEGIN NextLink -->
-<a href="?{vars}" style="float: right">Next {perPage} &gt;&gt;&gt;</a>
-<!-- END NextLink -->
-<!-- BEGIN PrevLink -->
-<a href="?{vars}">Prev {perPage}</a>
-<!-- END PrevLink -->
-Showing {start} to {count} of {numRows}
-<!-- BEGIN Companies -->
-{count} <img src="/img.php/{image}" />
-<a href="/farmer.php/{table}/{table_id}/{urlname}?action[farm]=1">{name}</a>
-<!-- BEGIN MapLink -->
-<a href="https://www.google.com/maps/place/{lat},{lon}" target="_blank"
-  ><!-- END MapLink -->
-  {address} <i>{distance}</i></a
+<style>
+  .sortby-row label {
+    color: white;
+  }
+  .header-search button {
+    top: 7px;
+    right: 14px;
+  }
+</style>
+<section
+  class="p-4 farmer-page-hero"
+  style="background: url('assets/img/bg.jpg') center / cover no-repeat"
 >
-<a href="/contact.php/{table}/{table_id}/{urlname}">Contact Farmer</a>
-{sanitized_email}
-<!-- END Companies -->
+  <h2 class="text-white">
+    <strong>Meet our farmers</strong>
+  </h2>
+
+  <form action="?" id="orderbyForm" name="orderbyForm">
+    {show}
+
+    <div class="header-search">
+      <input
+        class="form-control border-end-0 border rounded-pill searchInput"
+        onblur="doUpdateFarmers();"
+        name="search"
+        placeholder="Search Farmers..."
+        type="text"
+        value="{search}"
+      />
+      <button
+        type="submit"
+        onclick="return lookForFood();"
+        value="Browse"
+        name="action[search]"
+      >
+        <i data-feather="search"></i>
+      </button>
+    </div>
+
+    <div class="mt-2 d-flex align-items-center sortby-row">
+      <p class="text-white m-0 me-2">Order by:</p>
+      <div class="me-3">
+        <input
+          id="orderName"
+          name="order"
+          onchange="updateFarmers(this);"
+          type="radio"
+          value="name"
+          class="form-check-input me-1"
+        />
+        <label for="orderName">Name</label>
+      </div>
+
+      <div class="me-3">
+        <input
+          id="orderDistance"
+          name="order"
+          onchange="updateFarmers(this);"
+          type="radio"
+          value="distance"
+          class="form-check-input me-1"
+        />
+        <label for="orderDistance">Distance</label>
+      </div>
+    </div>
+
+    <input id="lat" name="lat" type="hidden" value="null" />
+    <input id="lon" name="lon" type="hidden" value="null" />
+    <!-- BEGIN Sources -->
+    <select name="sc_sources_id" onchange="updateFarmers(this);">
+      <option value="">--All--</option>
+      <!-- BEGIN Source -->
+
+      <option value="{id}">{count} : {source}</option>
+      <!-- END Source -->
+    </select>
+    <!-- END Sources -->
+  </form>
+</section>
+<section class="p-4">
+  <div class="d-flex mb-2 align-items-center justify-content-between">
+    Showing {start} to {count} of {numRows}
+    <div class="d-flex align-items-center">
+      <!-- BEGIN PrevLink -->
+      <a href="?{vars}" class="d-flex align-items-center me-4"
+        ><i data-feather="chevron-left"></i> Prev {perPage}</a
+      >
+      <!-- END PrevLink -->
+      <!-- BEGIN NextLink -->
+      <a href="?{vars}" class="d-flex align-items-center"
+        >Next {perPage} <i data-feather="chevron-right"></i
+      ></a>
+      <!-- END NextLink -->
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- BEGIN Companies -->
+    <div class="col-lg-3 col-xxl-2">
+      <div
+        class="card border-light border-1 shadow-sm"
+        style="border-radius: 16px"
+      >
+        <div class="card-body p-4">
+          <div class="farmer-profile">
+            <div class="logo"><img src="/img.php/{image}" /></div>
+            <a href="/farmer.php/{table}/{table_id}/{urlname}?action[farm]=1">
+              <h5 class="fs-5 fw-bold product-card-name">{name}</h5>
+            </a>
+            <div class="info-row">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icon-tabler-map-pin"
+                style="
+                  width: 24px;
+                  height: 24px;
+                  min-height: 24px;
+                  max-height: 24px;
+                  max-width: 24px;
+                  min-width: 24px;
+                "
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <circle cx="12" cy="11" r="3"></circle>
+                <path
+                  d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+                ></path>
+              </svg>
+              <p class="fs-6">
+                <!-- BEGIN MapLink -->
+                <a
+                  href="https://www.google.com/maps/place/{lat},{lon}"
+                  target="_blank"
+                  ><!-- END MapLink -->
+                  {address} <i>{distance}</i></a
+                >
+              </p>
+            </div>
+            <div class="info-row">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icon-tabler-phone"
+                style="width: 24px; height: 24px"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                ></path>
+              </svg>
+              <a class="ms-1" href="/contact.php/{table}/{table_id}/{urlname}">
+                Contact Farmer
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Companies -->
+  </div>
+</section>
+
 <!-- END Prompt -->

@@ -556,7 +556,7 @@
 </ol>
 <!-- END Claim -->
 
-<section class="position-relative py-4 py-xl-5" style="margin-top: 80px">
+<section class="position-relative py-4 py-xl-5">
   <div class="container">
     <div class="row mb-5">
       <div class="col-md-8 col-xl-6 text-center mx-auto">
@@ -619,7 +619,7 @@
   </div>
 </section>
 
-<section class="position-relative py-4 py-xl-5" style="margin-top: 80px">
+<section class="position-relative py-4 py-xl-5">
   <div class="container">
     <div class="row mb-5">
       <div class="col-md-8 col-xl-6 text-center mx-auto">
