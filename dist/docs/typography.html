@@ -1,0 +1,3058 @@
+<link
+  href="/assets/libs/bootstrap-icons/font/bootstrap-icons.css"
+  rel="stylesheet"
+/>
+<link
+  href="/assets/libs/feather-webfont/dist/feather-icons.css"
+  rel="stylesheet"
+/>
+<link href="/assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="/css/theme.css" />
+
+<link
+  href="/assets/libs/prismjs/themes/prism-okaidia.min.css"
+  rel="stylesheet"
+/>
+<title>Typography</title>
+
+<main class="docs-main-wrapper">
+  <div class="docs-nav-sidebar">
+    <div class="py-2"></div>
+    <div class="docs-nav" data-simplebar>
+      <nav class="navbar navbar-expand-md">
+        <div class="collapse navbar-collapse" id="navbarnav">
+          <ul class="navbar-nav flex-column" id="sidebarnav">
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/typography.html">Typography</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/colors.html">Colors</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/borders.html">Borders</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/shadows.html">Shadows</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/buttons.html">Buttons</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/button-group.html"
+                >Button Group</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/card.html">Cards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/filter.html">Filters</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/table.html">Tables</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/pagination.html">Pagination</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/list.html">Lists</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/list-group.html">List Groups</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/dropdowns.html">Dropdowns</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/input-group.html">Input Groups</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/form.html">Forms</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/accordions.html">Accordions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/collapse.html">Collapse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/alerts.html">Alerts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/badge.html">Badge</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/modal.html">Modal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/navs-tabs.html">Navs and Tabs</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/offcanvas.html">Offcanvas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/placeholders.html"
+                >Placeholders</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/docs/tooltips.html" class="nav-link"> tooltips </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/popovers.html">Popovers</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/spinners.html">Spinners</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/toasts.html">Toasts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/docs/sidebar.html">Sidebar</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="docs-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          class="offset-xxl-2 col-xxl-6 offset-xl-1 col-xl-7 col-md-12 col-sm-12 col-12"
+        >
+          <div class="docs-content mx-xxl-9">
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="mb-8" id="intro">
+                  <h1 class="mb-2 display-3 fw-bold">Typography</h1>
+                  <p class="mb-0 lead text-muted">
+                    Documentation and examples for Bootstrap typography,
+                    including global settings, headings, body text, lists, and
+                    more.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Headings -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div id="headings" class="mb-4">
+                  <h2 class="fw-semi-bold mb-1">Headings</h2>
+                  <p>
+                    All HTML headings,
+                    <code class="highlighter-rouge">&lt;h1&gt;</code> through
+                    <code class="highlighter-rouge">&lt;h6&gt;</code>, are
+                    available.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-headings"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-headings-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-headings-design"
+                        role="tab"
+                        aria-controls="pills-headings-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-headings-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-headings-html"
+                        role="tab"
+                        aria-controls="pills-headings-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-headings">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-headings-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-headings-design-tab"
+                    >
+                      <table class="table">
+                        <thead class="table-light">
+                          <tr>
+                            <th>Heading</th>
+                            <th>Example</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <p>
+                                <code class="highlighter-rouge"
+                                  >&lt;h1&gt;&lt;/h1&gt;</code
+                                >
+                              </p>
+                            </td>
+                            <td>
+                              <span class="h1">h1. Bootstrap heading</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>
+                                <code class="highlighter-rouge"
+                                  >&lt;h2&gt;&lt;/h2&gt;</code
+                                >
+                              </p>
+                            </td>
+                            <td>
+                              <span class="h2">h2. Bootstrap heading</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>
+                                <code class="highlighter-rouge"
+                                  >&lt;h3&gt;&lt;/h3&gt;</code
+                                >
+                              </p>
+                            </td>
+                            <td>
+                              <span class="h3">h3. Bootstrap heading</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>
+                                <code class="highlighter-rouge"
+                                  >&lt;h4&gt;&lt;/h4&gt;</code
+                                >
+                              </p>
+                            </td>
+                            <td>
+                              <span class="h4">h4. Bootstrap heading</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>
+                                <code class="highlighter-rouge"
+                                  >&lt;h5&gt;&lt;/h5&gt;</code
+                                >
+                              </p>
+                            </td>
+                            <td>
+                              <span class="h5">h5. Bootstrap heading</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p>
+                                <code class="highlighter-rouge"
+                                  >&lt;h6&gt;&lt;/h6&gt;</code
+                                >
+                              </p>
+                            </td>
+                            <td>
+                              <span class="h6">h6. Bootstrap heading</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-headings-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-headings-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"><span class="token comment">&lt;!-- headings --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>h1. Bootstrap heading<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>h2. Bootstrap heading<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>h3. Bootstrap heading<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">&gt;</span></span>h4. Bootstrap heading<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h5</span><span class="token punctuation">&gt;</span></span>h5. Bootstrap heading<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h5</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span><span class="token punctuation">&gt;</span></span>h6. Bootstrap heading<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Headings -->
+
+            <div>
+              <div class="mb-4">
+                <h2 class="fw-semi-bold mb-1">Customizing headings</h2>
+                <p>
+                  Use the included utility classes to recreate the small
+                  secondary heading text from Bootstrap 3.
+                </p>
+              </div>
+              <div class="mb-10">
+                <ul
+                  class="nav nav-line-bottom mb-3"
+                  id="pills-tab-custom-headings"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link active"
+                      id="pills-custom-headings-design-tab"
+                      data-bs-toggle="pill"
+                      href="#pills-custom-headings-design"
+                      role="tab"
+                      aria-controls="pills-custom-headings-design"
+                      aria-selected="true"
+                      >Design</a
+                    >
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link"
+                      id="pills-custom-headings-html-tab"
+                      data-bs-toggle="pill"
+                      href="#pills-custom-headings-html"
+                      role="tab"
+                      aria-controls="pills-custom-headings-html"
+                      aria-selected="false"
+                      tabindex="-1"
+                      >HTML</a
+                    >
+                  </li>
+                </ul>
+                <!-- Tab content -->
+                <div class="tab-content" id="pills-tabContent-custom-headings">
+                  <div
+                    class="tab-pane tab-example-design fade show active"
+                    id="pills-custom-headings-design"
+                    role="tabpanel"
+                    aria-labelledby="pills-custom-headings-design-tab"
+                  >
+                    <h3>
+                      Fancy display heading
+                      <small class="text-muted"
+                        >With faded secondary text</small
+                      >
+                    </h3>
+                  </div>
+                  <div
+                    class="tab-pane tab-example-html fade"
+                    id="pills-custom-headings-html"
+                    role="tabpanel"
+                    aria-labelledby="pills-custom-headings-html-tab"
+                  >
+                    <div class="code-toolbar">
+                      <pre
+                        class="language-markup"
+                        tabindex="0"
+                      ><code class="language-markup"> <span class="token comment">&lt;!-- Customizing headings --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">&gt;</span></span>
+   Fancy display heading
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-muted<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>With faded secondary text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span></code></pre>
+                      <div class="toolbar">
+                        <div class="toolbar-item">
+                          <button
+                            class="copy-to-clipboard-button"
+                            type="button"
+                            data-copy-state="copy"
+                          >
+                            <span>Copy</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Display headings -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div id="display-headings" class="mb-4">
+                  <h2 class="fw-semi-bold mb-1">Display headings</h2>
+                  <p>
+                    Traditional heading elements are designed to work best in
+                    the meat of your page content. When you need a heading to
+                    stand out, consider using a
+                    <strong>display heading</strong>—a larger, slightly more
+                    opinionated heading style. Keep in mind these headings are
+                    not responsive by default, but it’s possible to enable
+                    <a href="#">responsive font sizes</a>.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-display-headings"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-display-headings-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-display-headings-design"
+                        role="tab"
+                        aria-controls="pills-display-headings-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-display-headings-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-display-headings-html"
+                        role="tab"
+                        aria-controls="pills-display-headings-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div
+                    class="tab-content"
+                    id="pills-tabContent-display-headings"
+                  >
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-display-headings-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-display-headings-design-tab"
+                    >
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td class="border-top-0 ps-0">
+                              <span class="display-1">Display 1</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="ps-0">
+                              <span class="display-2">Display 2</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="ps-0">
+                              <span class="display-3">Display 3</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="ps-0">
+                              <span class="display-4">Display 4</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="ps-0">
+                              <span class="display-5">Display 5</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="ps-0 border-bottom-0">
+                              <span class="display-6">Display 6</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-display-headings-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-display-headings-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"> <span class="token comment">&lt;!-- display headings --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>display-1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Display 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>display-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Display 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>display-3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Display 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>display-4<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Display 4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>display-5<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Display 5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>display-6<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Display 6<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Display headings -->
+
+            <!-- Body Text -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div id="body" class="mb-4">
+                  <h2 class="fw-semi-bold mb-1">Body text</h2>
+                  <p>
+                    The body text or body copy is the text forming the main
+                    content.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-body-text"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-body-text-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-body-text-design"
+                        role="tab"
+                        aria-controls="pills-body-text-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-body-text-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-body-text-html"
+                        role="tab"
+                        aria-controls="pills-body-text-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-body-text">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-body-text-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-body-text-design-tab"
+                    >
+                      <p>
+                        In ultricies fermentum aliquet. Pellentesque dui magna,
+                        condimentum non ullamcorper at, cursus in sem. Nunc
+                        condimentum, purus ac sagittis ultricies, metus leo
+                        pharetra mi, non vehicula felis elit et nisi. Etiam
+                        venenatis commodo libero, vel ullamcorper nibh lobortis
+                        vel. Aliquam auctor porta tortor, nec consequat nibh
+                        finibus a. Sed ultrices risus eget iaculis luctus.
+                        Mauris vel gravida magna.
+                      </p>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-body-text-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-body-text-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"><span class="token comment">&lt;!-- body text --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>In ultricies fermentum aliquet. Pellentesque dui magna, condimentum non ullamcorper at, cursus in sem. Nunc condimentum, purus ac sagittis ultricies, metus leo pharetra mi, non vehicula felis elit et nisi. Etiam venenatis commodo libero, vel ullamcorper nibh lobortis vel. Aliquam auctor porta tortor, nec consequat nibh finibus a. Sed ultrices risus eget iaculis luctus. Mauris vel gravida magna.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Body Text -->
+
+            <!-- Lead Text -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div id="lead" class="mb-4">
+                  <h2 class="fw-semi-bold mb-1">Lead text</h2>
+                  <p>
+                    Make a paragraph stand out by adding
+                    <code class="highlighter-rouge">.lead</code>.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-lead-text"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-lead-text-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-lead-text-design"
+                        role="tab"
+                        aria-controls="pills-lead-text-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-lead-text-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-lead-text-html"
+                        role="tab"
+                        aria-controls="pills-lead-text-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-lead-text">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-lead-text-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-lead-text-design-tab"
+                    >
+                      <p class="lead">
+                        This is a lead paragraph. It stands out from regular
+                        paragraphs.
+                      </p>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-lead-text-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-lead-text-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"> <span class="token comment">&lt;!-- lead text --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lead<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Lead Text -->
+
+            <!-- Inline text elements -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div id="inline-text-elements" class="mb-4">
+                  <h2 class="fw-semi-bold mb-1">Inline text elements</h2>
+                  <p>Styling for common inline HTML5 elements.</p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-inline-text-elements"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-inline-text-elements-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-inline-text-elements-design"
+                        role="tab"
+                        aria-controls="pills-inline-text-elements-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-inline-text-elements-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-inline-text-elements-html"
+                        role="tab"
+                        aria-controls="pills-inline-text-elements-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div
+                    class="tab-content"
+                    id="pills-tabContent-inline-text-elements"
+                  >
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-inline-text-elements-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-inline-text-elements-design-tab"
+                    >
+                      <p>
+                        You can use the mark tag to <mark>highlight</mark> text.
+                      </p>
+                      <p>
+                        <del
+                          >This line of text is meant to be treated as deleted
+                          text.</del
+                        >
+                      </p>
+                      <p>
+                        <s
+                          >This line of text is meant to be treated as no longer
+                          accurate.</s
+                        >
+                      </p>
+                      <p>
+                        <ins
+                          >This line of text is meant to be treated as an
+                          addition to the document.</ins
+                        >
+                      </p>
+                      <p><u>This line of text will render as underlined</u></p>
+                      <p>
+                        <small
+                          >This line of text is meant to be treated as fine
+                          print.</small
+                        >
+                      </p>
+                      <p><strong>This line rendered as bold text.</strong></p>
+                      <p><em>This line rendered as italicized text.</em></p>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-inline-text-elements-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-inline-text-elements-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"> <span class="token comment">&lt;!-- inline text --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>You can use the mark tag to <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mark</span><span class="token punctuation">&gt;</span></span>highlight<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mark</span><span class="token punctuation">&gt;</span></span> text.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>del</span><span class="token punctuation">&gt;</span></span>This line of text is meant to be treated as deleted text.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>del</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>s</span><span class="token punctuation">&gt;</span></span>This line of text is meant to be treated as no longer accurate.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>s</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ins</span><span class="token punctuation">&gt;</span></span>This line of text is meant to be treated as an addition to the document.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ins</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>u</span><span class="token punctuation">&gt;</span></span>This line of text will render as underlined<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>u</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>small</span><span class="token punctuation">&gt;</span></span>This line of text is meant to be treated as fine print.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>small</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>This line rendered as bold text.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span>This line rendered as italicized text.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Inline text elements -->
+
+            <!-- Blockquotes -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div id="blockquotes" class="mb-4">
+                  <h2 class="fw-semi-bold mb-1">Blockquotes</h2>
+                  <p>
+                    For quoting blocks of content from another source within
+                    your document. Wrap
+                    <code class="highlighter-rouge"
+                      >&lt;blockquote class="blockquote"&gt;</code
+                    >
+                    around any
+                    <abbr title="HyperText Markup Language">HTML</abbr> as the
+                    quote.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-blockquotes"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-blockquotes-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-blockquotes-design"
+                        role="tab"
+                        aria-controls="pills-blockquotes-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-blockquotes-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-blockquotes-html"
+                        role="tab"
+                        aria-controls="pills-blockquotes-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+
+                  <div class="tab-content" id="pills-tabContent-blockquotes">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-blockquotes-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-blockquotes-design-tab"
+                    >
+                      <blockquote class="blockquote">
+                        <p>
+                          A well-known quote, contained in a blockquote element.
+                        </p>
+                      </blockquote>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-blockquotes-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-blockquotes-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"> <span class="token comment">&lt;!-- blockquote --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blockquote<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>A well-known quote, contained in a blockquote element.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Blockquotes -->
+            <!-- Naming a source -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div id="naming-a-source" class="mb-4">
+                  <h3 class="fw-semi-bold mb-1">Naming a source</h3>
+                  <p>
+                    Add a
+                    <code class="highlighter-rouge"
+                      >&lt;footer class="blockquote-footer"&gt;</code
+                    >
+                    for identifying the source. Wrap the name of the source work
+                    in <code class="highlighter-rouge">&lt;cite&gt;</code>.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-naming-a-source"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-naming-a-source-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-naming-a-source-design"
+                        role="tab"
+                        aria-controls="pills-naming-a-source-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-naming-a-source-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-naming-a-source-html"
+                        role="tab"
+                        aria-controls="pills-naming-a-source-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+
+                  <div
+                    class="tab-content"
+                    id="pills-tabContent-naming-a-source"
+                  >
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-naming-a-source-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-naming-a-source-design-tab"
+                    >
+                      <figure>
+                        <blockquote class="blockquote">
+                          <p>
+                            A well-known quote, contained in a blockquote
+                            element.
+                          </p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                          Someone famous in
+                          <cite title="Source Title">Source Title</cite>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-naming-a-source-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-naming-a-source-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"> <span class="token comment">&lt;!-- naming a source --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>figure</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blockquote<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>A well-known quote, contained in a blockquote element.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>figcaption</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blockquote-footer<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    Someone famous in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cite</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Source Title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Source Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cite</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>figcaption</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>figure</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Naming a source -->
+            <!-- Alignment -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div id="alignment" class="mb-4">
+                  <h3 class="fw-semi-bold mb-1">Alignment</h3>
+                  <p>
+                    Use text utilities as needed to change the alignment of your
+                    blockquote.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-alignment"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-alignment-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-alignment-design"
+                        role="tab"
+                        aria-controls="pills-alignment-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-alignment-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-alignment-html"
+                        role="tab"
+                        aria-controls="pills-alignment-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+
+                  <div class="tab-content" id="pills-tabContent-alignment">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-alignment-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-alignment-design-tab"
+                    >
+                      <figure class="text-center">
+                        <blockquote class="blockquote">
+                          <p>
+                            A well-known quote, contained in a blockquote
+                            element.
+                          </p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                          Someone famous in
+                          <cite title="Source Title">Source Title</cite>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-alignment-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-alignment-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"> <span class="token comment">&lt;!-- alignment --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>figure</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-center<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blockquote<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>A well-known quote, contained in a blockquote element.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>figcaption</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blockquote-footer<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+   Someone famous in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cite</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Source Title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Source Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cite</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>figcaption</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>figure</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Alignment -->
+            <!-- Alignment-right -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-alignment-right"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-alignment-right-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-alignment-right-design"
+                        role="tab"
+                        aria-controls="pills-alignment-right-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-alignment-right-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-alignment-right-html"
+                        role="tab"
+                        aria-controls="pills-alignment-right-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div
+                    class="tab-content"
+                    id="pills-tabContent-alignment-right"
+                  >
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-alignment-right-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-alignment-right-design-tab"
+                    >
+                      <figure class="text-end">
+                        <blockquote class="blockquote">
+                          <p>
+                            A well-known quote, contained in a blockquote
+                            element.
+                          </p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                          Someone famous in
+                          <cite title="Source Title">Source Title</cite>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-alignment-right-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-alignment-right-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"> <span class="token comment">&lt;!-- alignment --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>figure</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-end<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blockquote<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>A well-known quote, contained in a blockquote element.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>figcaption</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blockquote-footer<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+   Someone famous in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cite</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Source Title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Source Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>cite</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>figcaption</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>figure</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Alignment-right -->
+
+            <!-- Lists -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div id="lists" class="mb-4">
+                  <h2 class="fw-semi-bold mb-1">Lists</h2>
+                  <div class="mt-4" id="unstyled">
+                    <h3 class="fw-semi-bold">Unstyled</h3>
+                    <p>
+                      Remove the default
+                      <code class="highlighter-rouge">list-style</code> and left
+                      margin on list items (immediate children only).
+                      <strong
+                        >This only applies to immediate children list
+                        items</strong
+                      >, meaning you will need to add the class for any nested
+                      lists as well.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-unstyled-list"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-unstyled-list-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-unstyled-list-design"
+                        role="tab"
+                        aria-controls="pills-unstyled-list-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-unstyled-list-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-unstyled-list-html"
+                        role="tab"
+                        aria-controls="pills-unstyled-list-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- tab Content -->
+                  <div class="tab-content" id="pills-tabContent-unstyled-list">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-unstyled-list-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-unstyled-list-design-tab"
+                    >
+                      <ul class="list-unstyled">
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Consectetur adipiscing elit</li>
+                        <li>Integer molestie lorem at massa</li>
+                        <li>Facilisis in pretium nisl aliquet</li>
+                        <li>
+                          Nulla volutpat aliquam velit
+                          <ul>
+                            <li>Phasellus iaculis neque</li>
+                            <li>Purus sodales ultricies</li>
+                            <li>Vestibulum laoreet porttitor sem</li>
+                            <li>Ac tristique libero volutpat at</li>
+                          </ul>
+                        </li>
+                        <li>Faucibus porta lacus fringilla vel</li>
+                        <li>Aenean sit amet erat nunc</li>
+                        <li>Eget porttitor lorem</li>
+                      </ul>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-unstyled-list-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-unstyled-list-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"> <span class="token comment">&lt;!-- lists --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-unstyled<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Lorem ipsum dolor sit amet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Consectetur adipiscing elit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Integer molestie lorem at massa<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Facilisis in pretium nisl aliquet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Nulla volutpat aliquam velit
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Phasellus iaculis neque<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Purus sodales ultricies<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Vestibulum laoreet porttitor sem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Ac tristique libero volutpat at<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Faucibus porta lacus fringilla vel<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Aenean sit amet erat nunc<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Eget porttitor lorem<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Lists -->
+
+            <!-- Inline -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div id="inline" class="mb-4">
+                  <h2 class="fw-semi-bold mb-1">Inline</h2>
+                  <p>
+                    Remove a list’s bullets and apply some light
+                    <code class="highlighter-rouge">margin</code> with a
+                    combination of two classes,
+                    <code class="highlighter-rouge">.list-inline</code> and
+                    <code class="highlighter-rouge">.list-inline-item</code>.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-inline-list"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-inline-list-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-inline-list-design"
+                        role="tab"
+                        aria-controls="pills-inline-list-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-inline-list-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-inline-list-html"
+                        role="tab"
+                        aria-controls="pills-inline-list-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-inline-list">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-inline-list-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-inline-list-design-tab"
+                    >
+                      <ul class="list-inline">
+                        <li class="list-inline-item">Lorem ipsum</li>
+                        <li class="list-inline-item">Phasellus iaculis</li>
+                        <li class="list-inline-item">Nulla volutpat</li>
+                      </ul>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-inline-list-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-inline-list-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"> <span class="token comment">&lt;!-- list inline --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-inline<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-inline-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Lorem ipsum<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-inline-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Phasellus iaculis<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>list-inline-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Nulla volutpat<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Inline -->
+
+            <!-- Description list alignment -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div id="description-list-alignment" class="mb-4">
+                  <h2 class="fw-semi-bold mb-1">Description list alignment</h2>
+                  <p>
+                    Align terms and descriptions horizontally by using our grid
+                    system’s predefined classes (or semantic mixins). For longer
+                    terms, you can optionally add a
+                    <code class="highlighter-rouge">.text-truncate</code> class
+                    to truncate the text with an ellipsis.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-description-list-alignment"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-description-list-alignment-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-description-list-alignment-design"
+                        role="tab"
+                        aria-controls="pills-description-list-alignment-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-description-list-alignment-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-description-list-alignment-html"
+                        role="tab"
+                        aria-controls="pills-description-list-alignment-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div
+                    class="tab-content"
+                    id="pills-tabContent-description-list-alignment"
+                  >
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-description-list-alignment-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-description-list-alignment-design-tab"
+                    >
+                      <dl class="row">
+                        <dt class="col-sm-3">Description lists</dt>
+                        <dd class="col-sm-9">
+                          A description list is perfect for defining terms.
+                        </dd>
+                        <dt class="col-sm-3">Euismod</dt>
+                        <dd class="col-sm-9">
+                          <p>
+                            Vestibulum id ligula porta felis euismod semper eget
+                            lacinia odio sem nec elit.
+                          </p>
+                          <p>
+                            Donec id elit non mi porta gravida at eget metus.
+                          </p>
+                        </dd>
+                        <dt class="col-sm-3">Malesuada porta</dt>
+                        <dd class="col-sm-9">
+                          Etiam porta sem malesuada magna mollis euismod.
+                        </dd>
+                        <dt class="col-sm-3 text-truncate">
+                          Truncated term is truncated
+                        </dt>
+                        <dd class="col-sm-9">
+                          Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                          condimentum nibh, ut fermentum massa justo sit amet
+                          risus.
+                        </dd>
+                        <dt class="col-sm-3">Nesting</dt>
+                        <dd class="col-sm-9">
+                          <dl class="row">
+                            <dt class="col-sm-4">Nested definition list</dt>
+                            <dd class="col-sm-8">
+                              Aenean posuere, tortor sed cursus feugiat, nunc
+                              augue blandit nunc.
+                            </dd>
+                          </dl>
+                        </dd>
+                      </dl>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-description-list-alignment-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-description-list-alignment-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"> <span class="token comment">&lt;!-- list alignment --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dl</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col-sm-3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Description lists<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col-sm-9<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>A description list is perfect for defining terms.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col-sm-3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Euismod<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col-sm-9<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Donec id elit non mi porta gravida at eget metus.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col-sm-3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Malesuada porta<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col-sm-9<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Etiam porta sem malesuada magna mollis euismod.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col-sm-3 text-truncate<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Truncated term is truncated<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col-sm-9<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col-sm-3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Nesting<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col-sm-9<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dl</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col-sm-4<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Nested definition list<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col-sm-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dl</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dl</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Description list alignment -->
+
+            <!-- Letter Space-->
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div id="letterspace" class="mb-4">
+                  <h2 class="fw-semi-bold mb-1">Letter Spacing</h2>
+                  <p>
+                    Change the letter spacing with <code>.ls-*</code> utilities.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-letterspace"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-letterspace-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-letterspace-design"
+                        role="tab"
+                        aria-controls="pills-letterspace-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-letterspace-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-letterspace-html"
+                        role="tab"
+                        aria-controls="pills-letterspace-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-letterspace">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-letterspace-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-letterspace-design-tab"
+                    >
+                      <div>
+                        <h3 class="ls-xs mb-3">
+                          Heading Title of Letter space
+                        </h3>
+                        <h3 class="ls-sm mb-3">
+                          Heading Title of Letter space
+                        </h3>
+                        <h3 class="ls-base mb-3">
+                          Heading Title of Letter space
+                        </h3>
+                        <h3 class="ls-md mb-3">
+                          Heading Title of Letter space
+                        </h3>
+                        <h3 class="ls-lg mb-3">
+                          Heading Title of Letter space
+                        </h3>
+                        <h3 class="ls-xl mb-3">
+                          Heading Title of Letter space
+                        </h3>
+                        <h3 class="ls-xxl mb-3">
+                          Heading Title of Letter space
+                        </h3>
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-letterspace-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-letterspace-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        > <span class="token comment">&lt;!-- letter spacing --&gt;</span>
+  <code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ls-xs<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Heading Title of Letter space<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ls-sm<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Heading Title of Letter space<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ls-base<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Heading Title of Letter space<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ls-md<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Heading Title of Letter space<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ls-lg<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Heading Title of Letter space<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ls-xl<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Heading Title of Letter space<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ls-xxl<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Heading Title of Letter space<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Description list alignment -->
+
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="mb-4" id="text-alignment">
+                  <h2 class="fw-semi-bold mb-1">Text alignment</h2>
+
+                  <p>
+                    Easily realign text to components with text alignment
+                    classes. For start, end, and center alignment, responsive
+                    classes are available that use the same viewport width
+                    breakpoints as the grid system.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-text-alignment"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-text-alignment-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-text-alignment-design"
+                        role="tab"
+                        aria-controls="pills-text-alignment-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-text-alignment-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-text-alignment-html"
+                        role="tab"
+                        aria-controls="pills-text-alignment-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-text-alignment">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-text-alignment-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-text-alignment-design-tab"
+                    >
+                      <p class="text-start">
+                        Start aligned text on all viewport sizes.
+                      </p>
+                      <p class="text-center">
+                        Center aligned text on all viewport sizes.
+                      </p>
+                      <p class="text-end">
+                        End aligned text on all viewport sizes.
+                      </p>
+
+                      <p class="text-sm-start">
+                        Start aligned text on viewports sized SM (small) or
+                        wider.
+                      </p>
+                      <p class="text-md-start">
+                        Start aligned text on viewports sized MD (medium) or
+                        wider.
+                      </p>
+                      <p class="text-lg-start">
+                        Start aligned text on viewports sized LG (large) or
+                        wider.
+                      </p>
+                      <p class="text-xl-start">
+                        Start aligned text on viewports sized XL (extra-large)
+                        or wider.
+                      </p>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-text-alignment-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-text-alignment-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"><span class="token comment">&lt;!-- text alignment --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-start<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Start aligned text on all viewport sizes.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-center<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Center aligned text on all viewport sizes.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-end<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>End aligned text on all viewport sizes.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-sm-start<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Start aligned text on viewports sized SM (small) or wider.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-md-start<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Start aligned text on viewports sized MD (medium) or wider.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-lg-start<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Start aligned text on viewports sized LG (large) or wider.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-xl-start<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Start aligned text on viewports sized XL (extra-large) or wider.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="mb-4" id="text-wrapping-and-overflow">
+                  <h2 class="fw-semi-bold mb-1">Text wrapping and overflow</h2>
+                  <p>Wrap text with a <code>.text-wrap</code>class.</p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-twrap"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-twrap-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-twrap-design"
+                        role="tab"
+                        aria-controls="pills-twrap-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-twrap-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-twrap-html"
+                        role="tab"
+                        aria-controls="pills-twrap-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-twrap">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-twrap-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-twrap-design-tab"
+                    >
+                      <div
+                        class="badge bg-primary text-wrap"
+                        style="width: 6rem"
+                      >
+                        This text should wrap.
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-twrap-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-twrap-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"><span class="token comment">&lt;!-- text wrapping and overflow --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge bg-primary text-wrap<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> 6rem<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>
+   This text should wrap.
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-10">
+                  <p>
+                    Prevent text from wrapping with a
+                    <code>.text-nowrap</code>class.
+                  </p>
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-tnowrap"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-tnowrap-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-tnowrap-design"
+                        role="tab"
+                        aria-controls="pills-tnowrap-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-tnowrap-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-tnowrap-html"
+                        role="tab"
+                        aria-controls="pills-tnowrap-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-tnowrap">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-tnowrap-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-tnowrap-design-tab"
+                    >
+                      <div
+                        class="text-nowrap bg-light border"
+                        style="width: 8rem"
+                      >
+                        This text should overflow the parent.
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-tnowrap-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-tnowrap-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"><span class="token comment">&lt;!-- text no wrapping --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-nowrap<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> 8rem<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>
+   This text should overflow the parent.
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="mb-4" id="word-break">
+                  <h2 class="fw-semi-bold mb-1">Word break</h2>
+                  <p>
+                    Prevent long strings of text from breaking your components'
+                    layout by using <code>.text-break</code> to set
+                    <code>word-wrap: break-word</code> and
+                    <code>word-break: break-word</code>. We use
+                    <code>word-wrap</code> instead of the more common
+                    <code>overflow-wrap</code> for wider browser support, and
+                    add the deprecated <code>word-break: break-word</code> to
+                    avoid issues with flex containers.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-wordbreak"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-wordbreak-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-wordbreak-design"
+                        role="tab"
+                        aria-controls="pills-wordbreak-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-wordbreak-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-wordbreak-html"
+                        role="tab"
+                        aria-controls="pills-wordbreak-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-wordbreak">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-wordbreak-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-wordbreak-design-tab"
+                    >
+                      <p class="text-break">
+                        mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+                      </p>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-wordbreak-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-wordbreak-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"><span class="token comment">&lt;!-- word break --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-break<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="mb-4" id="text-transform">
+                  <h2 class="fw-semi-bold mb-1">Text transform</h2>
+                  <p>
+                    Transform text in components with text capitalization
+                    classes.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-texttransform"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-texttransform-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-texttransform-design"
+                        role="tab"
+                        aria-controls="pills-texttransform-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-texttransform-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-texttransform-html"
+                        role="tab"
+                        aria-controls="pills-texttransform-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-texttransform">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-texttransform-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-texttransform-design-tab"
+                    >
+                      <p class="text-lowercase">Lowercased text.</p>
+                      <p class="text-uppercase">Uppercased text.</p>
+                      <p class="text-capitalize">CapiTaliZed text.</p>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-texttransform-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-texttransform-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"><span class="token comment">&lt;!-- text transform --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-lowercase<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Lowercased text.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-uppercase<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Uppercased text.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-capitalize<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>CapiTaliZed text.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="mb-4" id="font-size">
+                  <h2 class="fw-semi-bold mb-1">Font size</h2>
+                  <p>
+                    Quickly change the <code>font-size</code> of text. While our
+                    heading classes (e.g., <code>.h1</code>–<code>.h6</code>)
+                    apply <code>font-size</code>, <code>font-weight</code>, and
+                    <code>line-height</code>, these utilities
+                    <em>only</em> apply <code>font-size</code>. Sizing for these
+                    utilities matches HTML’s heading elements, so as the number
+                    increases, their size decreases.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-fontsize"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-fontsize-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-fontsize-design"
+                        role="tab"
+                        aria-controls="pills-fontsize-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-fontsize-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-fontsize-html"
+                        role="tab"
+                        aria-controls="pills-fontsize-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-fontsize">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-fontsize-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-fontsize-design-tab"
+                    >
+                      <p class="fs-1">.fs-1 text</p>
+                      <p class="fs-2">.fs-2 text</p>
+                      <p class="fs-3">.fs-3 text</p>
+                      <p class="fs-4">.fs-4 text</p>
+                      <p class="fs-5">.fs-5 text</p>
+                      <p class="fs-6">.fs-6 text</p>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-fontsize-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-fontsize-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"><span class="token comment">&lt;!-- font size --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fs-1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.fs-1 text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fs-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.fs-2 text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fs-3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.fs-3 text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fs-4<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.fs-4 text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fs-5<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.fs-5 text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fs-6<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>.fs-6 text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="mb-4" id="font-weight-and-italics">
+                  <h2 class="fw-semi-bold mb-1">Font weight and italics</h2>
+                  <p>
+                    Quickly change the <code>font-weight</code> or
+                    <code>font-style</code> of text with these utilities.
+                    <code>font-style</code> utilities are abbreviated as
+                    <code>.fst-*</code> and <code>font-weight</code> utilities
+                    are abbreviated as <code>.fw-*</code>.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-fw-italic"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-fw-italic-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-fw-italic-design"
+                        role="tab"
+                        aria-controls="pills-fw-italic-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-fw-italic-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-fw-italic-html"
+                        role="tab"
+                        aria-controls="pills-fw-italic-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-fw-italic">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-fw-italic-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-fw-italic-design-tab"
+                    >
+                      <p class="fw-bold">Bold text.</p>
+                      <p class="fw-bolder">
+                        Bolder weight text (relative to the parent element).
+                      </p>
+                      <p class="fw-normal">Normal weight text.</p>
+                      <p class="fw-light">Light weight text.</p>
+                      <p class="fw-lighter">
+                        Lighter weight text (relative to the parent element).
+                      </p>
+                      <p class="fst-italic">Italic text.</p>
+                      <p class="fst-normal">Text with normal font style</p>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-fw-italic-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-fw-italic-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"><span class="token comment">&lt;!-- font weight and italics --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fw-bold<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Bold text.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fw-bolder<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Bolder weight text (relative to the parent element).<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fw-normal<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Normal weight text.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fw-light<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Light weight text.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fw-lighter<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Lighter weight text (relative to the parent element).<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fst-italic<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Italic text.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fst-normal<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Text with normal font style<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="mb-4" id="line-height">
+                  <h2 class="fw-semi-bold mb-1">Line height</h2>
+                  <p>
+                    Change the line height with <code>.lh-*</code> utilities.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-lineheight"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-lineheight-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-lineheight-design"
+                        role="tab"
+                        aria-controls="pills-lineheight-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-lineheight-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-lineheight-html"
+                        role="tab"
+                        aria-controls="pills-lineheight-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-lineheight">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-lineheight-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-lineheight-design-tab"
+                    >
+                      <p class="lh-1">
+                        This is a long paragraph written to show how the
+                        line-height of an element is affected by our utilities.
+                        Classes are applied to the element itself or sometimes
+                        the parent element. These classes can be customized as
+                        needed with our utility API.
+                      </p>
+                      <p class="lh-sm">
+                        This is a long paragraph written to show how the
+                        line-height of an element is affected by our utilities.
+                        Classes are applied to the element itself or sometimes
+                        the parent element. These classes can be customized as
+                        needed with our utility API.
+                      </p>
+                      <p class="lh-base">
+                        This is a long paragraph written to show how the
+                        line-height of an element is affected by our utilities.
+                        Classes are applied to the element itself or sometimes
+                        the parent element. These classes can be customized as
+                        needed with our utility API.
+                      </p>
+                      <p class="lh-lg">
+                        This is a long paragraph written to show how the
+                        line-height of an element is affected by our utilities.
+                        Classes are applied to the element itself or sometimes
+                        the parent element. These classes can be customized as
+                        needed with our utility API.
+                      </p>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-lineheight-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-lineheight-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"><span class="token comment">&lt;!-- line height --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lh-1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lh-sm<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lh-base<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lh-lg<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="mb-4" id="monospace">
+                  <h2 class="fw-semi-bold mb-1">Monospace</h2>
+                  <p>
+                    Change a selection to our monospace font stack with
+                    <code>.font-monospace</code>.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-fontmono"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-fontmono-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-fontmono-design"
+                        role="tab"
+                        aria-controls="pills-fontmono-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-fontmono-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-fontmono-html"
+                        role="tab"
+                        aria-controls="pills-fontmono-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-fontmono">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-fontmono-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-fontmono-design-tab"
+                    >
+                      <p class="font-monospace">This is in monospace</p>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-fontmono-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-fontmono-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"><span class="token comment">&lt;!-- font monospace --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>font-monospace<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is in monospace<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="mb-4" id="reset-color">
+                  <h2 class="fw-semi-bold mb-1">Reset color</h2>
+                  <p>
+                    Reset a text or link’s color with <code>.text-reset</code>,
+                    so that it inherits the color from its parent.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-resetlink"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-resetlink-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-resetlink-design"
+                        role="tab"
+                        aria-controls="pills-resetlink-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-resetlink-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-resetlink-html"
+                        role="tab"
+                        aria-controls="pills-resetlink-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-resetlink">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-resetlink-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-resetlink-design-tab"
+                    >
+                      <p class="text-muted">
+                        Muted text with a
+                        <a href="#" class="text-reset">reset link</a>.
+                      </p>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-resetlink-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-resetlink-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"><span class="token comment">&lt;!-- reset link --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-muted<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  Muted text with a <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-reset<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>reset link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="mb-4" id="text-decoration">
+                  <h2 class="fw-semi-bold mb-1">Text decoration</h2>
+                  <p>
+                    Decorate text in components with text decoration classes.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-textdecoration"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-textdecoration-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-textdecoration-design"
+                        role="tab"
+                        aria-controls="pills-textdecoration-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-textdecoration-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-textdecoration-html"
+                        role="tab"
+                        aria-controls="pills-textdecoration-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-textdecoration">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-textdecoration-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-textdecoration-design-tab"
+                    >
+                      <p class="text-decoration-underline">
+                        This text has a line underneath it.
+                      </p>
+                      <p class="text-decoration-line-through">
+                        This text has a line going through it.
+                      </p>
+                      <a href="#" class="text-decoration-none"
+                        >This link has its text decoration removed</a
+                      >
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-textdecoration-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-textdecoration-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"><span class="token comment">&lt;!-- text decoration --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-decoration-underline<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This text has a line underneath it.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-decoration-line-through<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This text has a line going through it.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-decoration-none<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This link has its text decoration removed<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="mb-8" id="intro">
+                  <h1 class="mb-2 fw-bold display-3">Colored links</h1>
+                  <p class="mb-0 lead text-muted">
+                    Colored links with hover states
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div id="links" class="mb-4">
+                  <p>
+                    You can use the <code>.link-*</code> classes to colorize
+                    links. Unlike the <code>.text-*</code> classes, these
+                    classes have a <code>:hover</code> and
+                    <code>:focus</code> state.
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-links"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-links-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-links-design"
+                        role="tab"
+                        aria-controls="pills-links-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-links-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-links-html"
+                        role="tab"
+                        aria-controls="pills-links-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div class="tab-content" id="pills-tabContent-links">
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-links-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-links-design-tab"
+                    >
+                      <a href="#" class="link-primary">Primary link</a><br />
+                      <a href="#" class="link-secondary">Secondary link</a
+                      ><br />
+                      <a href="#" class="link-success">Success link</a><br />
+                      <a href="#" class="link-danger">Danger link</a><br />
+                      <a href="#" class="link-warning">Warning link</a><br />
+                      <a href="#" class="link-info">Info link</a><br />
+                      <a href="#" class="link-light">Light link</a><br />
+                      <a href="#" class="link-dark">Dark link</a>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-links-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-links-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"><span class="token comment">&lt;!-- primary link--&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>link-primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Primary link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- secondary link--&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>link-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Secondary link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- success link--&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>link-success<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Success link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- danger link--&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>link-danger<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Danger link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- warning link--&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>link-warning<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Warning link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- info link--&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>link-info<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Info link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- light link--&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>link-light<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Light link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- dark link--&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>link-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Dark link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="mb-8" id="intro">
+                  <h1 class="mb-2 fw-bold display-3">Text truncation</h1>
+                  <p class="mb-0 lead text-muted">
+                    Truncate long strings of text with an ellipsis.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- vstack -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="mb-4">
+                  <p>
+                    For longer content, you can add a
+                    <code>.text-truncate</code> class to truncate the text with
+                    an ellipsis.
+                    <strong
+                      >Requires <code>display: inline-block</code> or
+                      <code>display: block</code>.</strong
+                    >
+                  </p>
+                </div>
+
+                <div class="mb-10">
+                  <ul
+                    class="nav nav-line-bottom mb-3"
+                    id="pills-tab-text-truncation"
+                    role="tablist"
+                  >
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link active"
+                        id="pills-text-truncation-design-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-text-truncation-design"
+                        role="tab"
+                        aria-controls="pills-text-truncation-design"
+                        aria-selected="true"
+                        >Design</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        class="nav-link"
+                        id="pills-text-truncation-html-tab"
+                        data-bs-toggle="pill"
+                        href="#pills-text-truncation-html"
+                        role="tab"
+                        aria-controls="pills-text-truncation-html"
+                        aria-selected="false"
+                        tabindex="-1"
+                        >HTML</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- Tab content -->
+                  <div
+                    class="tab-content"
+                    id="pills-tabContent-text-truncation"
+                  >
+                    <div
+                      class="tab-pane tab-example-design fade show active"
+                      id="pills-text-truncation-design"
+                      role="tabpanel"
+                      aria-labelledby="pills-text-truncation-design-tab"
+                    >
+                      <!-- Block level -->
+                      <div class="row">
+                        <div class="col-2 text-truncate">
+                          This text is quite long, and will be truncated once
+                          displayed.
+                        </div>
+                      </div>
+
+                      <!-- Inline level -->
+                      <span
+                        class="d-inline-block text-truncate"
+                        style="max-width: 150px"
+                      >
+                        This text is quite long, and will be truncated once
+                        displayed.
+                      </span>
+                    </div>
+                    <div
+                      class="tab-pane tab-example-html fade"
+                      id="pills-text-truncation-html"
+                      role="tabpanel"
+                      aria-labelledby="pills-text-truncation-html-tab"
+                    >
+                      <div class="code-toolbar">
+                        <pre
+                          class="language-markup"
+                          tabindex="0"
+                        ><code class="language-markup"><span class="token comment">&lt;!-- text truncation--&gt;</span>
+ <span class="token comment">&lt;!-- Block level --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>col-2 text-truncate<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+     This text is quite long, and will be truncated once displayed.
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+ <span class="token comment">&lt;!-- Inline level --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>d-inline-block text-truncate<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">max-width</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>
+   This text is quite long, and will be truncated once displayed.
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        <div class="toolbar">
+                          <div class="toolbar-item">
+                            <button
+                              class="copy-to-clipboard-button"
+                              type="button"
+                              data-copy-state="copy"
+                            >
+                              <span>Copy</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Additive -->
+          </div>
+        </div>
+
+        <div
+          class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 d-none d-xl-block position-fixed end-0"
+        >
+          <!-- Sidebar nav fixed -->
+          <div class="sidebar-nav-fixed">
+            <span
+              class="px-4 mb-2 d-block text-uppercase ls-md fw-semi-bold fs-6"
+              >Contents</span
+            >
+            <ul class="list-unstyled">
+              <li><a href="#intro" class="active">Introduction</a></li>
+              <li></li>
+              <li><a href="#headings">Headings</a></li>
+              <li>
+                <a href="#display-headings">Display headings</a>
+              </li>
+              <li><a href="#body">Body</a></li>
+              <li><a href="#lead">Lead</a></li>
+              <li><a href="#inline-text-elements">Inline text elements</a></li>
+              <li>
+                <a href="#blockquotes">Blockquotes</a>
+                <ul>
+                  <li><a href="#naming-a-source">Naming a source</a></li>
+                  <li><a href="#alignment">Alignment</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#lists">Lists</a>
+                <ul>
+                  <li><a href="#unstyled">Unstyled</a></li>
+                  <li><a href="#inline">Inline</a></li>
+                  <li>
+                    <a href="#description-list-alignment"
+                      >Description list alignment</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#letterspace">Letter Spacing</a></li>
+              <li><a href="#intro">Introduction</a></li>
+              <li><a href="#text-alignment">Text alignment</a></li>
+              <li>
+                <a href="#text-wrapping-and-overflow"
+                  >Text wrapping and overflow</a
+                >
+              </li>
+              <li><a href="#word-break">Word break</a></li>
+              <li><a href="#text-transform">Text transform</a></li>
+              <li><a href="#font-size">Font size</a></li>
+              <li>
+                <a href="#font-weight-and-italics">Font weight and italics</a>
+              </li>
+              <li><a href="#line-height">Line height</a></li>
+              <li><a href="#monospace">Monospace</a></li>
+              <li><a href="#reset-color">Reset color</a></li>
+              <li><a href="#text-decoration">Text decoration</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="/assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/libs/simplebar/dist/simplebar.min.js"></script>
+<script src="/js/main.js"></script>
+
+<script src="/assets/libs/prismjs/prism.js"></script>
+<script src="/assets/libs/prismjs/components/prism-scss.min.js"></script>
+<script src="/assets/libs/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+<script src="/assets/libs/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+<script src="/js/vendors/sidebarMenu.js"></script>
