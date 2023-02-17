@@ -1,0 +1,107 @@
+<link
+  href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
+  rel="stylesheet"
+/>
+<link
+  href="/node_modules/feather-webfont/dist/feather-icons.css"
+  rel="stylesheet"
+/>
+<link href="/node_modules/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="assets/css/theme.css" />
+
+<main>
+  <div class="mb-8">
+    <div class="w-100">
+      <!-- card -->
+      <div
+        class="card bg-light border-0 rounded-0"
+        style="
+          background-image: url(assets/images/slider/slider-image-1.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: right;
+        "
+      >
+        <div class="container">
+          <div class="card-body py-lg-12" data-read-aloud-multi-block="true">
+            <p>Discover amazing local farmers and vendors.</p>
+            <h1>
+              We have <span class="text-primary">36</span> vendors nearby you
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="mt-8 mb-lg-14 mb-8">
+    <div class="container">
+      <div class="row justify-content-between mb-4">
+        <div class="col-lg-4 col-md-6 col-12 mb-2 mb-lg-0">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Search farmers"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+
+        <div class="col-lg-2 col-md-4 col-12">
+          <select class="form-select">
+            <option selected="">Status</option>
+            <option value="1">Active</option>
+            <option value="2">Deactive</option>
+            <option value="3">Draft</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3 g-4 g-lg-4">
+        <!-- col -->
+        <div class="col">
+          <!-- card -->
+          <a href="farmer.html">
+            <div class="card p-6 card-product">
+              <div>
+                <!-- img --><img
+                  src="assets/images/stores-logo/stores-logo-1.svg"
+                  alt=""
+                  class="rounded-circle icon-shape icon-xl"
+                />
+              </div>
+              <div class="mt-4">
+                <!-- content -->
+                <h2 class="mb-1 h5">
+                  <span class="text-inherit">The Grain Shed</span>
+                </h2>
+                <div class="small text-muted">
+                  <span class="me-2">Spokane, WA</span>
+                </div>
+                <div class="py-3">
+                  <ul class="list-unstyled mb-0 small">
+                    <li>Delivery</li>
+                    <li>Pickup available</li>
+                  </ul>
+                </div>
+                <div>
+                  <!-- badge -->
+                  <div class="badge text-bg-light border">7.5 mi away</div>
+                  <!-- badge -->
+                  <div class="badge text-bg-light border">In-store prices</div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/node_modules/simplebar/dist/simplebar.min.js"></script>
+<script src="assets/js/main.js"></script>
