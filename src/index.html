@@ -12,7 +12,7 @@
 
 <!-- Theme CSS -->
 <!-- build:css @@webRoot/assets/css/theme.min.css -->
-<link rel="stylesheet" href="assets/css/theme.css" />
+<link rel="stylesheet" href="../assets/css/theme.css" />
 <!-- endbuild -->
 
 <main>
@@ -25,39 +25,6 @@
             <a class="navbar-brand d-none d-lg-block" href="index.html">
               <img src="assets/images/logo/organicnearby-logo.svg" />
             </a>
-            <div class="w-100 ms-4 d-none d-lg-block">
-              <form action="#">
-                <div class="input-group">
-                  <input
-                    class="form-control rounded"
-                    type="search"
-                    placeholder="Search for products"
-                  />
-                  <span class="input-group-append">
-                    <button
-                      class="btn bg-white border border-start-0 ms-n10 rounded-0 rounded-end"
-                      type="button"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="feather feather-search"
-                      >
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                      </svg>
-                    </button>
-                  </span>
-                </div>
-              </form>
-            </div>
           </div>
           <div
             class="d-flex justify-content-between align-items-center w-100 d-lg-none"
@@ -388,44 +355,35 @@
   >
     <div class="container">
       <div class="row">
-        <div class="col-xl-4 col-lg-6 col-md-7">
-          <div class="card border-0 shadow">
-            <div class="card-body p-6">
-              <div class="mb-4">
-                <h1 class="mt-3 mb-0 h2">
-                  Local produce and products near
+        <div class="col-6">
+          <h1 class="mt-3 mb-4 h2">
+            Local produce and products <br />
+            near
 
-                  <a
-                    href="#"
-                    class="text-primary"
-                    data-bs-toggle="modal"
-                    data-bs-target="#locationSecondModal"
-                  >
-                    <u>Spokane</u>
-                  </a>
-                </h1>
+            <a
+              href="#"
+              class="text-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#locationSecondModal"
+            >
+              <u>Spokane</u>
+            </a>
+          </h1>
+          <form>
+            <div class="row g-3">
+              <div class="col">
+                <label for="postcod" class="visually-hidden">Postcode</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search products"
+                />
               </div>
-              <form>
-                <div class="row g-3">
-                  <div class="col">
-                    <label for="postcod" class="visually-hidden"
-                      >Postcode</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Search products"
-                    />
-                  </div>
-                  <div class="col-auto">
-                    <button type="submit" class="btn btn-primary">
-                      Search
-                    </button>
-                  </div>
-                </div>
-              </form>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Search</button>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
@@ -470,6 +428,346 @@
           >
             <div class="col">
               <a href="product.html">
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative">
+                      <img
+                        alt="Grocery Ecommerce Template"
+                        class="mb-3 rounded img-fluid"
+                        src="assets/images/products/product-img-1.jpg"
+                      />
+                    </div>
+                    <h2 class="fs-5 mb-0">
+                      <span class="text-inherit text-decoration-none"
+                        >New INW IPA</span
+                      >
+                    </h2>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="text-dark">$4.50</span>
+                        <span class="text-muted">per can</span>
+                      </div>
+                    </div>
+                    <div class="d-flex mt-2">
+                      <div>
+                        <p
+                          class="text-black-50 mb-0 product-card-farmer-location"
+                        >
+                          The Grain Shed
+                        </p>
+                        <p class="fw-normal mb-0 product-card-farmer">
+                          4.6 miles away
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative">
+                      <img
+                        alt="Grocery Ecommerce Template"
+                        class="mb-3 rounded img-fluid"
+                        src="assets/images/products/product-img-1.jpg"
+                      />
+                    </div>
+                    <h2 class="fs-5 mb-0">
+                      <span class="text-inherit text-decoration-none"
+                        >New INW IPA</span
+                      >
+                    </h2>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="text-dark">$4.50</span>
+                        <span class="text-muted">per can</span>
+                      </div>
+                    </div>
+                    <div class="d-flex mt-2">
+                      <div>
+                        <p
+                          class="text-black-50 mb-0 product-card-farmer-location"
+                        >
+                          The Grain Shed
+                        </p>
+                        <p class="fw-normal mb-0 product-card-farmer">
+                          4.6 miles away
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="product.html">
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative">
+                      <img
+                        alt="Grocery Ecommerce Template"
+                        class="mb-3 rounded img-fluid"
+                        src="assets/images/products/product-img-1.jpg"
+                      />
+                    </div>
+                    <h2 class="fs-5 mb-0">
+                      <span class="text-inherit text-decoration-none"
+                        >New INW IPA</span
+                      >
+                    </h2>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="text-dark">$4.50</span>
+                        <span class="text-muted">per can</span>
+                      </div>
+                    </div>
+                    <div class="d-flex mt-2">
+                      <div>
+                        <p
+                          class="text-black-50 mb-0 product-card-farmer-location"
+                        >
+                          The Grain Shed
+                        </p>
+                        <p class="fw-normal mb-0 product-card-farmer">
+                          4.6 miles away
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative">
+                      <img
+                        alt="Grocery Ecommerce Template"
+                        class="mb-3 rounded img-fluid"
+                        src="assets/images/products/product-img-1.jpg"
+                      />
+                    </div>
+                    <h2 class="fs-5 mb-0">
+                      <span class="text-inherit text-decoration-none"
+                        >New INW IPA</span
+                      >
+                    </h2>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="text-dark">$4.50</span>
+                        <span class="text-muted">per can</span>
+                      </div>
+                    </div>
+                    <div class="d-flex mt-2">
+                      <div>
+                        <p
+                          class="text-black-50 mb-0 product-card-farmer-location"
+                        >
+                          The Grain Shed
+                        </p>
+                        <p class="fw-normal mb-0 product-card-farmer">
+                          4.6 miles away
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="product.html">
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative">
+                      <img
+                        alt="Grocery Ecommerce Template"
+                        class="mb-3 rounded img-fluid"
+                        src="assets/images/products/product-img-1.jpg"
+                      />
+                    </div>
+                    <h2 class="fs-5 mb-0">
+                      <span class="text-inherit text-decoration-none"
+                        >New INW IPA</span
+                      >
+                    </h2>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="text-dark">$4.50</span>
+                        <span class="text-muted">per can</span>
+                      </div>
+                    </div>
+                    <div class="d-flex mt-2">
+                      <div>
+                        <p
+                          class="text-black-50 mb-0 product-card-farmer-location"
+                        >
+                          The Grain Shed
+                        </p>
+                        <p class="fw-normal mb-0 product-card-farmer">
+                          4.6 miles away
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative">
+                      <img
+                        alt="Grocery Ecommerce Template"
+                        class="mb-3 rounded img-fluid"
+                        src="assets/images/products/product-img-1.jpg"
+                      />
+                    </div>
+                    <h2 class="fs-5 mb-0">
+                      <span class="text-inherit text-decoration-none"
+                        >New INW IPA</span
+                      >
+                    </h2>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="text-dark">$4.50</span>
+                        <span class="text-muted">per can</span>
+                      </div>
+                    </div>
+                    <div class="d-flex mt-2">
+                      <div>
+                        <p
+                          class="text-black-50 mb-0 product-card-farmer-location"
+                        >
+                          The Grain Shed
+                        </p>
+                        <p class="fw-normal mb-0 product-card-farmer">
+                          4.6 miles away
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="product.html">
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative">
+                      <img
+                        alt="Grocery Ecommerce Template"
+                        class="mb-3 rounded img-fluid"
+                        src="assets/images/products/product-img-1.jpg"
+                      />
+                    </div>
+                    <h2 class="fs-5 mb-0">
+                      <span class="text-inherit text-decoration-none"
+                        >New INW IPA</span
+                      >
+                    </h2>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="text-dark">$4.50</span>
+                        <span class="text-muted">per can</span>
+                      </div>
+                    </div>
+                    <div class="d-flex mt-2">
+                      <div>
+                        <p
+                          class="text-black-50 mb-0 product-card-farmer-location"
+                        >
+                          The Grain Shed
+                        </p>
+                        <p class="fw-normal mb-0 product-card-farmer">
+                          4.6 miles away
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative">
+                      <img
+                        alt="Grocery Ecommerce Template"
+                        class="mb-3 rounded img-fluid"
+                        src="assets/images/products/product-img-1.jpg"
+                      />
+                    </div>
+                    <h2 class="fs-5 mb-0">
+                      <span class="text-inherit text-decoration-none"
+                        >New INW IPA</span
+                      >
+                    </h2>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="text-dark">$4.50</span>
+                        <span class="text-muted">per can</span>
+                      </div>
+                    </div>
+                    <div class="d-flex mt-2">
+                      <div>
+                        <p
+                          class="text-black-50 mb-0 product-card-farmer-location"
+                        >
+                          The Grain Shed
+                        </p>
+                        <p class="fw-normal mb-0 product-card-farmer">
+                          4.6 miles away
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col">
+              <a href="product.html">
+                <div class="card card-product">
+                  <div class="card-body">
+                    <div class="text-center position-relative">
+                      <img
+                        alt="Grocery Ecommerce Template"
+                        class="mb-3 rounded img-fluid"
+                        src="assets/images/products/product-img-1.jpg"
+                      />
+                    </div>
+                    <h2 class="fs-5 mb-0">
+                      <span class="text-inherit text-decoration-none"
+                        >New INW IPA</span
+                      >
+                    </h2>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div>
+                        <span class="text-dark">$4.50</span>
+                        <span class="text-muted">per can</span>
+                      </div>
+                    </div>
+                    <div class="d-flex mt-2">
+                      <div>
+                        <p
+                          class="text-black-50 mb-0 product-card-farmer-location"
+                        >
+                          The Grain Shed
+                        </p>
+                        <p class="fw-normal mb-0 product-card-farmer">
+                          4.6 miles away
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="card card-product">
                   <div class="card-body">
                     <div class="text-center position-relative">
@@ -628,5 +926,4 @@
 
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/node_modules/simplebar/dist/simplebar.min.js"></script>
 <script src="../assets/js/main.js"></script>
