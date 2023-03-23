@@ -3,12 +3,12 @@
 // Extended from Bootstrap
 //
 
-@import '../../node_modules/bootstrap/scss/functions';
-@import '../../node_modules/bootstrap/scss/variables';
-@import '../../node_modules/bootstrap/scss/maps';
-@import '../../node_modules/bootstrap/scss/mixins';
-@import '../../node_modules/bootstrap/scss/utilities';
-@import '../../node_modules/bootstrap/scsapi';
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/maps";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/utilities";
+@import "../../../node_modules/bootstrap/scss/utilities/api";
 
 $all-colors: map-merge-multiple(
   $blues,
@@ -28,7 +28,7 @@ $utilities: () !default;
 $utilities: map-merge(
   $utilities,
   (
-    'border': (
+    "border": (
       property: border,
       responsive: true,
       values: (
@@ -37,7 +37,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    'border-start': (
+    "border-start": (
       property: border-left,
       class: border-start,
       responsive: true,
@@ -47,7 +47,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    'border-end': (
+    "border-end": (
       property: border-right,
       class: border-end,
       responsive: true,
@@ -57,7 +57,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    'border-top': (
+    "border-top": (
       property: border-top,
       class: border-top,
       responsive: true,
@@ -67,7 +67,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    'border-bottom': (
+    "border-bottom": (
       property: border-bottom,
       class: border-bottom,
       responsive: true,
@@ -77,7 +77,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    'width': (
+    "width": (
       property: width,
       responsive: true,
       class: w,
@@ -98,34 +98,34 @@ $utilities: map-merge(
         auto: auto,
       ),
     ),
-    'position': (
+    "position": (
       property: position,
       values: static relative absolute fixed sticky,
       responsive: true,
     ),
-    'top': (
+    "top": (
       property: top,
       values: $position-values,
       responsive: true,
     ),
-    'bottom': (
+    "bottom": (
       property: bottom,
       values: $position-values,
       responsive: true,
     ),
-    'start': (
+    "start": (
       property: left,
       class: start,
       values: $position-values,
       responsive: true,
     ),
-    'end': (
+    "end": (
       property: right,
       class: end,
       values: $position-values,
       responsive: true,
     ),
-    'visibility': (
+    "visibility": (
       property: visibility,
       class: visibility,
       responsive: true,
@@ -135,7 +135,7 @@ $utilities: map-merge(
         invisible: hidden,
       ),
     ),
-    'z-index': (
+    "z-index": (
       property: z-index,
       class: z,
       values: (
@@ -148,7 +148,7 @@ $utilities: map-merge(
         5: 5,
       ),
     ),
-    'rounded': (
+    "rounded": (
       property: border-radius,
       responsive: true,
       class: rounded,
@@ -164,7 +164,7 @@ $utilities: map-merge(
         pill: var(--#{$prefix}border-radius-pill),
       ),
     ),
-    'rounded-top': (
+    "rounded-top": (
       property: border-top-left-radius border-top-right-radius,
       responsive: true,
       class: rounded-top,
@@ -180,7 +180,7 @@ $utilities: map-merge(
         pill: var(--#{$prefix}border-radius-pill),
       ),
     ),
-    'rounded-end': (
+    "rounded-end": (
       property: border-top-right-radius border-bottom-right-radius,
       responsive: true,
       class: rounded-end,
@@ -196,7 +196,7 @@ $utilities: map-merge(
         pill: var(--#{$prefix}border-radius-pill),
       ),
     ),
-    'rounded-bottom': (
+    "rounded-bottom": (
       property: border-bottom-right-radius border-bottom-left-radius,
       responsive: true,
       class: rounded-bottom,
@@ -212,7 +212,7 @@ $utilities: map-merge(
         pill: var(--#{$prefix}border-radius-pill),
       ),
     ),
-    'rounded-start': (
+    "rounded-start": (
       property: border-bottom-left-radius border-top-left-radius,
       responsive: true,
       class: rounded-start,
@@ -228,57 +228,57 @@ $utilities: map-merge(
         pill: var(--#{$prefix}border-radius-pill),
       ),
     ),
-    'color': (
+    "color": (
       map-merge(
-        map-get($utilities, 'color'),
+        map-get($utilities, "color"),
         (
           values:
             map-merge(
-              map-get(map-get($utilities, 'color'), 'values'),
+              map-get(map-get($utilities, "color"), "values"),
               ($all-colors)
             ),
         )
       ),
     ),
-    'background-color': (
+    "background-color": (
       property: background-color,
       class: bg,
       local-vars: (
-        'bg-opacity': 1,
+        "bg-opacity": 1,
       ),
       values:
         map-merge(
           $all-colors,
           (
-            'transparent': transparent,
-            'body-secondary':
+            "transparent": transparent,
+            "body-secondary":
               rgba(
                 var(--#{$prefix}secondary-bg-rgb),
                 var(--#{$prefix}bg-opacity)
               ),
-            'body-tertiary':
+            "body-tertiary":
               rgba(
                 var(--#{$prefix}tertiary-bg-rgb),
                 var(--#{$prefix}bg-opacity)
               ),
-            'body-emphasis':
+            "body-emphasis":
               rgba(
                 var(--#{$prefix}emphasis-bg-rgb),
                 var(--#{$prefix}bg-opacity)
               ),
-            'gray-100': $gray-100,
-            'gray-200': $gray-200,
-            'gray-300': $gray-300,
-            'gray-400': $gray-400,
-            'gray-500': $gray-500,
-            'gray-600': $gray-600,
-            'gray-700': $gray-700,
-            'gray-800': $gray-800,
-            'gray-900': $gray-900,
+            "gray-100": $gray-100,
+            "gray-200": $gray-200,
+            "gray-300": $gray-300,
+            "gray-400": $gray-400,
+            "gray-500": $gray-500,
+            "gray-600": $gray-600,
+            "gray-700": $gray-700,
+            "gray-800": $gray-800,
+            "gray-900": $gray-900,
           )
         ),
     ),
-    'bg-opacity': (
+    "bg-opacity": (
       css-var: true,
       class: bg-opacity,
       values: (
@@ -289,7 +289,7 @@ $utilities: map-merge(
         100: 1,
       ),
     ),
-    'subtle-background-color': (
+    "subtle-background-color": (
       property: background-color,
       class: bg,
       values: $utilities-bg-subtle,
