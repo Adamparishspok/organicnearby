@@ -36396,8 +36396,7 @@ input::-webkit-inner-spin-button {
   top: 0px;
   outline: 0px;
   left: 0px;
-  border-right: 1px dashed var(--fc-gray-300);
-  z-index: 1200;
+  z-index: 0;
   width: 280px;
   background-color: var(--fc-white);
 }
@@ -37745,6 +37744,23 @@ table tr:last-child td {
 }
 .product-details-page .mapBox {
   height: 300px;
+}
+
+.contentPage-section {
+  margin-left: 280px;
+  height: 100vh !important;
+  max-height: 100vh !important;
+  overflow: scroll;
+  position: fixed;
+  border-left: 1px solid #001e2b;
+  border-top: 1px solid #001e2b;
+  width: 100%;
+}
+.contentPage-row {
+  background: #EAEFF3;
+  border-left: 20px solid white;
+  border-top: 20px solid white;
+  min-height: 100%;
 }
 
 .slick-slider .slick-slide {

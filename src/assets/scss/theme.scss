@@ -345,6 +345,26 @@ table tr:last-child td {
   }
 }
 
+.contentPage {
+  &-section {
+    margin-left: 280px;
+    height: calc(100vh) !important;
+    max-height: calc(100vh) !important;
+    overflow: scroll;
+    position: fixed;
+    border-left: 1px solid $dark;
+    border-top: 1px solid $dark;
+    width: 100%;
+  }
+
+  &-row {
+    background: #EAEFF3;
+    border-left: 20px solid white;
+    border-top: 20px solid white;
+    min-height: 100%;
+  }
+}
+
 // vendor classes
 @import "vendor/slick-slider/_slick-slider.scss";
 @import "vendor/nouislider/_nouislider.scss";
