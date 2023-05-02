@@ -4,11 +4,12 @@
 // Bootstrap functions
 @import "../../../node_modules/bootstrap/scss/functions";
 
-@import "variables";
-@import "utilities";
+@import "_variables.scss";
+@import "_utilities.scss";
 
-// Bootstrap
 @import "../../../node_modules/bootstrap/scss/bootstrap";
+
+
 
 @import "_navbar.scss";
 @import "_nav.scss";
@@ -345,25 +346,26 @@ table tr:last-child td {
   }
 }
 
-.contentPage {
-  &-section {
-    margin-left: 280px;
-    height: calc(100vh) !important;
-    max-height: calc(100vh) !important;
-    overflow: scroll;
-    position: fixed;
-    border-left: 1px solid $dark;
-    border-top: 1px solid $dark;
-    width: 100%;
-  }
 
-  &-row {
-    background: #EAEFF3;
-    border-left: 20px solid white;
-    border-top: 20px solid white;
-    min-height: 100%;
-  }
+.contentPage-section {
+  margin-left: 280px;
+  height: calc(100vh) !important;
+  max-height: calc(100vh) !important;
+  overflow: scroll;
+  position: fixed;
+  border-left: 1px solid $dark;
+  border-top: 1px solid $dark;
+  width: calc(100% - 280px);
 }
+
+.contentPage-row {
+  border-left: 20px solid white;
+  border-top: 20px solid white;
+  min-height: 100%;
+  background: url(../images/section-bg.jpg) no-repeat right top, #EAEFF3;
+}
+
+
 
 // vendor classes
 @import "vendor/slick-slider/_slick-slider.scss";
