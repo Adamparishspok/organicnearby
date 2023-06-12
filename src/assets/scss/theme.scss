@@ -1,14 +1,12 @@
-// Inter Fonts
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
-
 // Bootstrap functions
 @import "../../../node_modules/bootstrap/scss/functions";
 
-@import "variables";
-@import "utilities";
+@import "_variables.scss";
+@import "_utilities.scss";
 
-// Bootstrap
 @import "../../../node_modules/bootstrap/scss/bootstrap";
+
+
 
 @import "_navbar.scss";
 @import "_nav.scss";
@@ -343,6 +341,68 @@ table tr:last-child td {
   .mapBox {
     height: 300px;
   }
+}
+
+
+.contentPage-section {
+  margin-left: 280px;
+  height: calc(100vh) !important;
+  max-height: calc(100vh) !important;
+  overflow: scroll;
+  position: fixed;
+  border-left: 1px solid $dark;
+  border-top: 1px solid $dark;
+  width: calc(100% - 280px);
+}
+
+.contentPage-row {
+  border-left: 20px solid white;
+  border-top: 20px solid white;
+  min-height: 100%;
+  background: url(../images/section-bg.jpg) no-repeat right top, #EAEFF3;
+  background-size: 35%;
+}
+
+.card-product-img {
+  background-size: cover;
+  width: 100%;
+  height: 240px;
+  max-height: 60%;
+  min-width: 60%;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-toggler {
+      display: block !important;
+  }
+}
+
+.form-control:focus {
+  color: $orange !important;
+  background-color: #fff;
+  border-color:  $primary-500 !important;
+  border-width: 1px !important;
+  outline: 1px solid $primary-500 !important;
+  outline: 0;
+  box-shadow: none !important;
+}
+
+@media (min-width: 992px) {
+  .desktop-links {
+    display: flex !important;
+  }
+}
+
+
+.navbar-collapse .navbar-nav {
+      flex-direction: column !important;
+  }
+
+
+
+
+.navbar-toggler-icon {
+  filter: invert(47%) sepia(76%) saturate(360%) hue-rotate(93deg) brightness(87%) contrast(80%);
 }
 
 // vendor classes

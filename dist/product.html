@@ -17,78 +17,65 @@
 <link rel="stylesheet" href="./assets/css/theme.min.css">
 
 <main>
-  <section class="mt-8">
-    <div class="container">
+  <section class="mt-8 product-details-page">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-md-6">
-          <div class="slider slider-for slick-initialized slick-slider">
-            <div class="slick-list draggable">
-              <div class="slick-track" style="opacity: 1; width: 3180px">
-                <div
-                  class="slick-slide"
-                  data-slick-index="0"
-                  aria-hidden="true"
-                  tabindex="0"
-                  style="
-                    width: 620px;
-                    position: relative;
-                    left: 0px;
-                    top: 0px;
-                    z-index: 999;
-                    opacity: 1;
-                  "
-                >
-                  <div
-                    class="zoom"
-                    onmousemove="zoom(event)"
-                    style="
-                      background-image: url('images/products/product-single-img-1.jpg');
-                      background-position: 83.7097% 94.3289%;
-                    "
-                  >
-                    <!-- img -->
-                    <!-- img --><img
-                      src="assets/images/products/product-single-img-1.jpg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div
+            class="rounded w-100 mb-6 product-image"
+            style="
+              background-image: url('assets/images/products/product-single-img-1.jpg');
+            "
+          ></div>
+          <iframe
+            class="mapBox rounded w-100"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            id="gmap_canvas"
+            origsrc="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=100%20Esplanade%20Chico+(Foobar)&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            fixedsrc="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=100%20Esplanade%20Chico+(Foobar)&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            addrsrc="https://maps.google.com/maps?q=2100%20Esplanade%20Chico+(Copy+Cat)&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            src="https://maps.google.com/maps?q=47.649275816327,-117.39482559184&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          ></iframe>
         </div>
 
         <div class="col-md-6">
-          <div class="ps-lg-10 mt-6 mt-md-0">
+          <div
+            class="ps-10 border-dark pt-10 mt-6 mt-md-0 border-start border-top"
+          >
             <!-- content -->
 
             <!-- heading -->
-            <p class="mb-4 d-block">In-stock</p>
+
             <h1 class="mb-1">New INW IPA</h1>
             <p class="">The Freshest edition of The Grain Shed INWIPA</p>
 
-            <div class="fs-4 mb-4">
-              <!-- price --><span class="fw-bold text-dark">$32</span>
-              <span class="text-muted">per can</span>
+            <div class="fs-5 mb-4">
+              <p class="ds-block mb-0 text-primary">In-stock</p>
+              <span class="text-dark">$32</span>
+              <span class="text-dark">per can</span>
             </div>
             <button type="button" class="btn btn-primary mb-6">
               <i class="feather-icon icon-shopping-bag me-2"></i>Buy Online
             </button>
 
-            <hr class="py-4" />
-
-            <div class="d-flex flex-column">
+            <div class="d-flex flex-column mt-4">
               <div>
-                <!-- img -->
-                <!-- img -->
+                <h4 class="text-primary fs-5 fw-normal">
+                  Connect with producer
+                </h4>
                 <img
-                  src="assets/images/stores-logo/stores-logo-1.svg"
+                  src="/assets/images/stores-logo/stores-logo-1.svg"
                   alt=""
                   class="rounded-circle icon-shape icon-xxl"
                 />
               </div>
               <div class="mt-4">
-                <h1 class="mb-1 h4">The Grain Shed</h1>
+                <a href="/farmer.html">
+                  <h1 class="mb-1 text-primary h4 fw-normal">The Grain Shed</h1>
+                </a>
 
                 <div class="mt-2">
                   <p class="mb-1 lh-lg">
@@ -96,10 +83,12 @@
                     joel.williamson@thegrainshed.coop<br />
                     (509) 241-3853
                   </p>
-                  <a href="/farmer.html">View Storefront</a>
-                  <div class="small text-muted mt-4">
-                    <span>ABOUT</span>
-                  </div>
+
+                  <p class="mb-1 lh-lg">
+                    <a href="/farmer.html">Website</a>
+                  </p>
+
+                  <h4 class="text-primary fs-5 fw-normal mt-6">About</h4>
                   <p>
                     We specialize in exceptional beers made exclusively from
                     rare grains and ingredients that are locally grown and
@@ -108,18 +97,6 @@
                     to craft styles of beer unique to this magical grain-growing
                     utopia we call the Inland Northwest.
                   </p>
-                  <iframe
-                    class="mapBox rounded mt-2"
-                    frameborder="0"
-                    scrolling="no"
-                    marginheight="0"
-                    marginwidth="0"
-                    id="gmap_canvas"
-                    origsrc="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=100%20Esplanade%20Chico+(Foobar)&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                    fixedsrc="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=100%20Esplanade%20Chico+(Foobar)&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                    addrsrc="https://maps.google.com/maps?q=2100%20Esplanade%20Chico+(Copy+Cat)&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                    src="https://maps.google.com/maps?q=47.649275816327,-117.39482559184&amp;t=h&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                  ></iframe>
                 </div>
               </div>
             </div>
@@ -131,7 +108,7 @@
 </main>
 
 <script src="assets/libs/slick-carousel/slick/slick.min.js"></script>
-<script src="assets/js/vendors/slick-slider.js"></script>
+<script src="/assets/js/vendors/slick-slider.js"></script>
 <script src="assets/libs/tiny-slider/dist/min/tiny-slider.js"></script>
-<script src="assets/js/vendors/tns-slider.js"></script>
-<script src="assets/js/vendors/zoom.js"></script>
+<script src="/assets/js/vendors/tns-slider.js"></script>
+<script src="/assets/js/vendors/zoom.js"></script>

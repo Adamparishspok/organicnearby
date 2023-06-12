@@ -8,7 +8,7 @@
 />
 <link href="/assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
 
-<link rel="stylesheet" href="/css/theme.css" />
+<link rel="stylesheet" href="../assets/css/theme.css" />
 
 <link
   href="/assets/libs/prismjs/themes/prism-okaidia.min.css"
@@ -393,85 +393,6 @@
               </div>
             </div>
             <!-- Simple Alert -->
-
-            <!-- Live Alert -->
-            <div class="row">
-              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <div id="live-alert" class="mb-4">
-                  <h2 class="fw-semi-bold mb-1">Live Alert</h2>
-                  <p>
-                    Click the button below to show an alert (hidden with inline
-                    styles to start), then dismiss (and destroy) it with the
-                    built-in close button.
-                  </p>
-                </div>
-
-                <div class="mb-10">
-                  <ul
-                    class="nav nav-line-bottom mb-3"
-                    id="pills-tab-alert-live"
-                    role="tablist"
-                  >
-                    <li class="nav-item">
-                      <a
-                        class="nav-link active"
-                        id="pills-alert-live-design-tab"
-                        data-bs-toggle="pill"
-                        href="#pills-alert-live-design"
-                        role="tab"
-                        aria-controls="pills-alert-live-design"
-                        aria-selected="true"
-                        >Design</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a
-                        class="nav-link"
-                        id="pills-alert-live-html-tab"
-                        data-bs-toggle="pill"
-                        href="#pills-alert-live-html"
-                        role="tab"
-                        aria-controls="pills-alert-live-html"
-                        aria-selected="false"
-                        >HTML</a
-                      >
-                    </li>
-                  </ul>
-                  <!-- Tab content -->
-                  <div class="tab-content" id="pills-tabContent-alert-live">
-                    <div
-                      class="tab-pane tab-example-design fade show active"
-                      id="pills-alert-live-design"
-                      role="tabpanel"
-                      aria-labelledby="pills-alert-live-design-tab"
-                    >
-                      <div id="liveAlertPlaceholder"></div>
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        id="liveAlertBtn"
-                      >
-                        Show live alert
-                      </button>
-                    </div>
-                    <div
-                      class="tab-pane tab-example-html fade"
-                      id="pills-alert-live-html"
-                      role="tabpanel"
-                      aria-labelledby="pills-alert-live-html-tab"
-                    >
-                      <pre><code class="language-markup" data-copy-state="copy"><span class="token comment">&lt;!-- Live Alert --&gt;</span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>liveAlertBtn<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Show live alert<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert alert-primary alert-dismissible<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>liveAlert<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>Nice!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span> You've triggered this alert.
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-close<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-dismiss</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alert<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Close<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <!-- Link Alert -->
             <div class="row">
@@ -1024,11 +945,10 @@
 
 <script src="/assets/libs/jquery/dist/jquery.min.js"></script>
 <script src="/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/assets/libs/simplebar/dist/simplebar.min.js"></script>
-<script src="/js/main.js"></script>
+
+<script src="../assets/js/main.js"></script>
 
 <script src="/assets/libs/prismjs/prism.js"></script>
 <script src="/assets/libs/prismjs/components/prism-scss.min.js"></script>
 <script src="/assets/libs/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
 <script src="/assets/libs/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
-<script src="/js/vendors/sidebarMenu.js"></script>

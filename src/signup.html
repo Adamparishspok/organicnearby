@@ -10,84 +10,99 @@
 
 <!-- Theme CSS -->
 <!-- build:css @@webRoot/assets/css/theme.min.css -->
-<link rel="stylesheet" href="../assets/css/theme.css" />
+<link rel="stylesheet" href="/assets/css/theme.css" />
 <!-- endbuild -->
+
 <main>
-  <section class="my-lg-14 my-8">
-    <div class="container">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-md-6 col-lg-4 order-lg-1 order-2">
-          <img
-            src="assets/images/svg-graphics/signup-g.svg"
-            alt=""
-            class="img-fluid"
-          />
-        </div>
-
-        <div class="col-12 col-md-6 offset-lg-1 col-lg-4 order-lg-2 order-1">
-          <div class="mb-lg-9 mb-5">
-            <h1 class="mb-1 h2 fw-bold">Create your farm/vendor account</h1>
-            <p>Welcome to OrganicNearby! Enter your email to get started.</p>
+  <div class="mb-8">
+    <div class="w-100">
+      <!-- card -->
+      <div
+        class="card bg-light border-0 rounded-0"
+        style="
+          background-image: url(assets/images/banner/farmer-bg.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: right;
+        "
+      >
+        <div class="container">
+          <div
+            class="card-body py-lg-12 text-center"
+            data-read-aloud-multi-block="true"
+          >
+            <h1 class="mb-4 h2 fw-bold text-primary bg-white w-20 p-2 m-auto">
+              Farmer Sign Up
+            </h1>
           </div>
-          <!-- form -->
-          <form>
-            <div class="row g-3">
-              <div class="col">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="First name"
-                  aria-label="First name"
-                  required
-                />
-              </div>
-              <div class="col">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Last name"
-                  aria-label="Last name"
-                  required
-                />
-              </div>
-              <div class="col-12">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="inputEmail4"
-                  placeholder="Email"
-                  required
-                />
-              </div>
-              <div class="col-12">
-                <div class="password-field position-relative">
-                  <input
-                    type="password"
-                    id="fakePassword"
-                    placeholder="Enter Password"
-                    class="form-control"
-                    required
-                  />
-                  <span
-                    ><i id="passwordToggler" class="bi bi-eye-slash"></i
-                  ></span>
-                </div>
-              </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-              <div class="col-12 d-grid">
-                <button type="submit" class="btn btn-primary">Register</button>
+  <section class="mt-8 mb-lg-14 mb-8">
+    <div class="container">
+      <div class="col-6 mx-auto">
+        <form>
+          <div class="row g-3">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="First name"
+                aria-label="First name"
+                required=""
+              />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Last name"
+                aria-label="Last name"
+                required=""
+              />
+            </div>
+            <div class="col-12">
+              <input
+                type="email"
+                class="form-control"
+                id="inputEmail4"
+                placeholder="Email"
+                required=""
+              />
+            </div>
+            <div class="col-12">
+              <div class="password-field position-relative">
+                <input
+                  type="password"
+                  id="fakePassword"
+                  placeholder="Enter Password"
+                  class="form-control"
+                  required=""
+                />
+                <span
+                  ><i id="passwordToggler" class="bi bi-eye-slash"></i
+                ></span>
               </div>
+            </div>
 
-              <p>
+            <div class="col-12 d-grid">
+              <p class="mt-2">
                 <small
                   >By continuing, you agree to our
-                  <a href="#!"> Terms of Service</a> &
+                  <a href="#!"> Terms of Service</a> &amp;
                   <a href="#!">Privacy Policy</a></small
                 >
               </p>
+              <button type="submit" class="btn btn-primary">Sign Up</button>
             </div>
-          </form>
-        </div>
+            <div class="mt-8">
+              Already have an account?
+              <a href="signin.html">Sign In</a>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </section>
@@ -96,4 +111,4 @@
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>

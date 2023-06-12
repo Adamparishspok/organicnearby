@@ -10,53 +10,67 @@
 
 <!-- Theme CSS -->
 <!-- build:css @@webRoot/assets/css/theme.min.css -->
-<link rel="stylesheet" href="../assets/css/theme.css" />
+<link rel="stylesheet" href="/assets/css/theme.css" />
 <!-- endbuild -->
 
 <main>
-  <section class="my-lg-14 my-8">
-    <div class="container">
-      <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-md-6 col-lg-4 order-lg-1 order-2">
-          <img
-            src="assets/images/svg-graphics/fp-g.svg"
-            alt=""
-            class="img-fluid"
-          />
-        </div>
-        <div
-          class="col-12 col-md-6 offset-lg-1 col-lg-4 order-lg-2 order-1 d-flex align-items-center"
-        >
-          <div>
-            <div class="mb-lg-9 mb-5">
-              <h1 class="mb-2 h2 fw-bold">Forgot your password?</h1>
-              <p>
-                Please enter the email address associated with your account and
-                We will email you a link to reset your password.
-              </p>
-            </div>
-            <!-- form -->
-            <form>
-              <div class="row g-3">
-                <div class="col-12">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="inputEmail4"
-                    placeholder="Email"
-                    required
-                  />
-                </div>
-
-                <div class="col-12 d-grid gap-2">
-                  <button type="submit" class="btn btn-primary">
-                    Reset Password
-                  </button>
-                  <a href="signup.html" class="btn btn-light">Back</a>
-                </div>
-              </div>
-            </form>
+  <div class="mb-8">
+    <div class="w-100">
+      <!-- card -->
+      <div
+        class="card bg-light border-0 rounded-0"
+        style="
+          background-image: url(assets/images/banner/farmer-bg.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: right;
+        "
+      >
+        <div class="container">
+          <div
+            class="card-body py-lg-12 text-center"
+            data-read-aloud-multi-block="true"
+          >
+            <h1 class="mb-4 h2 fw-bold text-primary bg-white w-30 p-2 m-auto">
+              Forgot your password?
+            </h1>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="mt-8 mb-lg-14 mb-8">
+    <div class="container">
+      <div class="col-6 mx-auto">
+        <div>
+          <div class="mb-lg-9 mb-5">
+            <p>
+              Please enter the email address associated with your account and We
+              will email you a link to reset your password.
+            </p>
+          </div>
+          <!-- form -->
+          <form>
+            <div class="row g-3">
+              <div class="col-12">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="inputEmail4"
+                  placeholder="Email"
+                  required=""
+                />
+              </div>
+
+              <div class="col-12 d-grid gap-2">
+                <button type="submit" class="btn btn-primary">
+                  Reset Password
+                </button>
+                <a href="signup.html" class="btn btn-light">Back</a>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -66,4 +80,4 @@
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
