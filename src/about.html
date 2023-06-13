@@ -1,58 +1,238 @@
-<link href="/node_modules/slick-carousel/slick/slick.css" rel="stylesheet" />
-<link
-  href="/node_modules/slick-carousel/slick/slick-theme.css"
-  rel="stylesheet"
-/>
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/node_modules/slick-carousel/slick/slick.css" rel="stylesheet" />
+  <link
+    href="/node_modules/slick-carousel/slick/slick-theme.css"
+    rel="stylesheet"
+  />
 
-<link
-  href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
-  rel="stylesheet"
-/>
-<link
-  href="/node_modules/feather-webfont/dist/feather-icons.css"
-  rel="stylesheet"
-/>
-<link href="/node_modules/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+  <link
+    href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/node_modules/feather-webfont/dist/feather-icons.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/node_modules/simplebar/dist/simplebar.min.css"
+    rel="stylesheet"
+  />
 
-<!-- Theme CSS -->
-<!-- build:css @@webRoot/assets/css/theme.min.css -->
-<link rel="stylesheet" href="/assets/css/theme.css" />
-<!-- endbuild -->
+  <!-- Theme CSS -->
+  <!-- build:css @@webRoot/assets/css/theme.min.css -->
+  <link rel="stylesheet" href="/assets/css/theme.css" />
+  <!-- endbuild -->
+</head>
 
-<main>
-  <section class="contentPage-section">
-    <div class="p-8 contentPage-row">
-      <div class="col-6 order-lg-2 order-1">
-        <h1 class="mb-4 h2 fw-bold text-primary">About us</h1>
-        <p class="fs-5 text-primary">
-          <b>Welcome to OrganicNearby,</b><br />your one-stop-shop for
-          discovering fresh, local, and organic food products. As a community
-          focused search engine, <b>OrganicNearby</b> creates a Food-Hub in any
-          community. It connects consumers with local farmers and producers,
-          while promoting transparency within the consumers chosen travel
-          distance. <br /><br />
-          <b
-            >OrganicNearby is unique in that we host multiple food hubs in one
-            place,</b
+<body>
+  <style>
+    .navbar-expand-lg .navbar-toggler {
+      display: none !important;
+    }
+    .offcanvas-header {
+      display: none !important;
+    }
+    .offcanvas-body {
+      margin-top: 70px;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("offcanvas").classList.add("show");
+    });
+
+    window.addEventListener("resize", function () {
+      var windowWidth =
+        window.innerWidth || document.documentElement.clientWidth;
+      var element = document.getElementById("offcanvas"); // Replace 'yourElementId' with the actual ID of your element
+
+      if (windowWidth < 900) {
+        element.classList.remove("show"); // Replace 'yourClassName' with the actual class name you want to remove
+      } else {
+        element.classList.add("show"); // Replace 'yourClassName' with the actual class name you want to add
+      }
+    });
+  </script>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="/assets/images/logo/organicnearby-logo.svg" />
+      </a>
+      <div class="desktop-links d-flex justify-content-between">
+        <div class="nav-item mr-2">
+          <a
+            aria-current="page"
+            class="nav-link fs-6 text-info d-lg-block"
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#locationSecondModal"
           >
-          making it easy to find fresh, local, and organic food products in your
-          community. Our platform connects shoppers with farmers, producers, and
-          retailers, making it easy to find local food products sold directly to
-          consumers. You can search for farms or brand by name or by the type of
-          products you want to buy. By shopping with OrganicNearby, you are not
-          only getting fresh, locally-grown organic food products but also
-          supporting local businesses and contributing to the development of a
-          local circular economy.
-        </p>
+            <i class="bi bi-geo-alt-fill"></i> Spokane, WA 99205</a
+          >
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvas"
+          role="button"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
     </div>
+  </nav>
+
+  <aside
+    class="offcanvas offcanvas-start w-20"
+    tabindex="-1"
+    id="offcanvas"
+    data-bs-keyboard="false"
+    data-bs-backdrop="false"
+    style="z-index: 5"
+  >
+    <div class="offcanvas-header" style="margin-top: 70px">
+      <p class="fw-bold m-0">MENU</p>
+
+      <button
+        type="button"
+        class="btn-close text-reset text-primary"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul
+        class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start"
+        id="menu"
+      >
+        <li class="nav-item w-100">
+          <a class="nav-link active" href="../about.html">
+            <div class="d-flex w-100 justify-content-between">
+              <span class="nav-link-text">About us</span>
+              <span class="nav-link-icon">
+                <i class="bi bi-chevron-right"></i
+              ></span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item w-100">
+          <a class="nav-link" href="../farmers.html">
+            <div class="d-flex w-100 justify-content-between" style="">
+              <span class="nav-link-text">Our Farmers</span
+              ><span class="nav-link-icon">
+                <i class="bi bi-chevron-right"></i
+              ></span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item w-100">
+          <a class="nav-link" href="../our-partners.html">
+            <div class="d-flex w-100 justify-content-between" style="">
+              <span class="nav-link-text">Our Partners</span
+              ><span class="nav-link-icon">
+                <i class="bi bi-chevron-right"></i
+              ></span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item w-100">
+          <a class="nav-link" href="../foodhubs.html">
+            <div class="d-flex w-100 justify-content-between" style="">
+              <span class="nav-link-text">Food Hubs</span
+              ><span class="nav-link-icon">
+                <i class="bi bi-chevron-right"></i
+              ></span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item w-100">
+          <a class="nav-link" href="../csa.html">
+            <div class="d-flex w-100 justify-content-between" style="">
+              <span class="nav-link-text">CSA</span
+              ><span class="nav-link-icon">
+                <i class="bi bi-chevron-right"></i
+              ></span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item w-100">
+          <a class="nav-link" href="../farmers-markets.html">
+            <div class="d-flex w-100 justify-content-between" style="">
+              <span class="nav-link-text">Farmers Markets</span
+              ><span class="nav-link-icon">
+                <i class="bi bi-chevron-right"></i
+              ></span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item w-100">
+          <a class="nav-link" href="../contact.html">
+            <div class="d-flex w-100 justify-content-between" style="">
+              <span class="nav-link-text">Contact Us</span
+              ><span class="nav-link-icon">
+                <i class="bi bi-chevron-right"></i
+              ></span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item w-100 mt-8">
+          <div class="d-flex w-100 justify-content-between">
+            <a href="signup.html" class="btn btn-primary w-100 mb-2"
+              >Vendor Signup</a
+            >
+          </div>
+          <div class="d-flex w-100 justify-content-between">
+            <a href="signup.html" class="btn btn-secondary w-100 mb-2"
+              >Vendor Signin</a
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <section class="contentPage-section">
+    <img src="/assets/images/section-bg.webp" class="plant-image-right" />
+    <div class="p-8 contentPage-row">
+      <h1 class="mb-4 h2 fw-bold text-primary">About us</h1>
+      <p class="text-primary contentPage-para">
+        <b>Welcome to OrganicNearby,</b><br />your one-stop-shop for discovering
+        fresh, local, and organic food products. As a community focused search
+        engine, <b>OrganicNearby</b> creates a Food-Hub in any community. It
+        connects consumers with local farmers and producers, while promoting
+        transparency within the consumers chosen travel distance. <br /><br />
+        <b
+          >OrganicNearby is unique in that we host multiple food hubs in one
+          place,</b
+        >
+        making it easy to find fresh, local, and organic food products in your
+        community. Our platform connects shoppers with farmers, producers, and
+        retailers, making it easy to find local food products sold directly to
+        consumers. You can search for farms or brand by name or by the type of
+        products you want to buy. By shopping with OrganicNearby, you are not
+        only getting fresh, locally-grown organic food products but also
+        supporting local businesses and contributing to the development of a
+        local circular economy.
+      </p>
+    </div>
   </section>
-</main>
 
-<script src="/node_modules/jquery/dist/jquery.min.js"></script>
-<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="/assets/js/main.js"></script>
+  <script src="/assets/js/main.js"></script>
 
-<script src="/node_modules/slick-carousel/slick/slick.min.js"></script>
-<script src="/assets/js/vendors/slick-slider.js"></script>
+  <script src="/node_modules/slick-carousel/slick/slick.min.js"></script>
+  <script src="/assets/js/vendors/slick-slider.js"></script>
+</body>

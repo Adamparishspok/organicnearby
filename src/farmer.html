@@ -1,19 +1,26 @@
-<link
-  href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
-  rel="stylesheet"
-/>
-<link
-  href="/node_modules/feather-webfont/dist/feather-icons.css"
-  rel="stylesheet"
-/>
-<link href="/node_modules/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/node_modules/feather-webfont/dist/feather-icons.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/node_modules/simplebar/dist/simplebar.min.css"
+    rel="stylesheet"
+  />
 
-<!-- Theme CSS -->
-<!-- build:css @@webRoot/assets/css/theme.min.css -->
-<link rel="stylesheet" href="/assets/css/theme.css" />
-<!-- endbuild -->
+  <!-- Theme CSS -->
+  <!-- build:css @@webRoot/assets/css/theme.min.css -->
+  <link rel="stylesheet" href="/assets/css/theme.css" />
+  <!-- endbuild -->
+</head>
 
-<main>
+<body>
   <div class="mb-8">
     <div class="w-100">
       <!-- card -->
@@ -52,10 +59,31 @@
                   alt=""
                   class="rounded-3 w-100"
                 />
-                <a href="signup.html" class="btn btn-primary w-100 my-4"
+                <div class="dropdown w-100 my-4">
+                  <button
+                    class="btn btn-primary dropdown-toggle w-100"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Where to buy our products
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+                <a href="signup.html" class="btn btn-secondary w-100"
                   >Contact Business</a
                 >
-                <a href="signup.html" class="btn btn-light w-100"
+
+                <a href="signup.html" class="btn btn-light w-100 my-4"
                   >Claim Business</a
                 >
               </div>
@@ -66,34 +94,7 @@
                     <span>NAME</span>
                   </div>
                   <div class="col-md-10">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <h1 class="h4 text-primary">The Grain Shed</h1>
-                      <!-- collapse -->
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-secondary dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          Where to buy our products
-                        </button>
-                        <div
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton"
-                        >
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#"
-                            >Something else here</a
-                          >
-                        </div>
-                      </div>
-                    </div>
+                    <h1 class="h4 text-primary">The Grain Shed</h1>
                   </div>
                 </div>
 
@@ -301,9 +302,9 @@
       </div>
     </div>
   </section>
-</main>
 
-<script src="/node_modules/jquery/dist/jquery.min.js"></script>
-<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="/assets/js/main.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>

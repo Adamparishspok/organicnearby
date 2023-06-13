@@ -344,22 +344,72 @@ table tr:last-child td {
 }
 
 
+.homepage-header {
+  background-image: url(/assets/images/banner/banner-5.jpg);
+  background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border: solid white;
+      background-color: #e7ecf0;
+
+      
+
+      .input-group {
+        max-width: 540px;
+    width: 100%;
+      }
+
+      @media (max-width: 1145px) {
+        background-position: -15vw;
+      }
+
+    @media(max-width: 991px) {
+      background-position: -5vw;
+    }
+
+    @media (max-width: 560) {
+      
+      
+    }
+
+     @media(max-width: 400px) {
+      background-position: -24vw;
+    }
+
+     @media(max-width: 360px) {
+      background-position: -24vw;
+    }
+}
+
 .contentPage-section {
-  margin-left: 280px;
+  margin-left: 20%;
   height: calc(100vh) !important;
   max-height: calc(100vh) !important;
   overflow: scroll;
   position: fixed;
   border-left: 1px solid $dark;
   border-top: 1px solid $dark;
-  width: calc(100% - 280px);
+  width: 80%;
+
+  .contentPage-para {
+    font-size: 18px;
+    max-width: 70%;
+
+    @media (min-width: 1200px) {
+      max-width: 50%;
+    }
+
+    @media(max-width: 900px) {
+      font-size: 16px;
+    }
+  }
 }
 
 .contentPage-row {
   border-left: 20px solid white;
   border-top: 20px solid white;
   min-height: 100%;
-  background: url(../images/section-bg.jpg) no-repeat right top, #EAEFF3;
+  background: #EAEFF3;
   background-size: 35%;
 }
 
@@ -369,6 +419,75 @@ table tr:last-child td {
   height: 240px;
   max-height: 60%;
   min-width: 60%;
+}
+
+
+.navbar {
+background: white;
+position: sticky;
+top: 0;
+z-index: 15
+}
+
+.stickysearch {
+  /* Add the styles you want when the class is added */
+
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transform: translateY(-100%); /* Transforms the search bar offscreen */
+  /* Add any other desired styles */
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 10px;
+  background: white;
+  position: fixed;
+  z-index: 24;
+  left: 0 !important;
+  top: 60px;
+
+  @media (max-width: 483px) {
+    top: 80px;
+  }
+
+  input {
+    left: 16px;
+  }
+  }
+
+  .searchbar-col {
+    height: 55px;
+
+    .input-group {
+  /* Add your existing styles here */
+  transition: transform 0.3s ease; /* Add transition property */
+  transform: translateY(0); /* Initial transform value */
+  z-index: 4;
+}
+  }
+
+.navbar-brand img {
+      width: 200px;
+}
+
+@media (max-width: 483px) {
+  .navbar {
+    .navbar-brand {
+      margin: 0 auto;
+      margin-bottom: 8px;
+
+       img {
+      width: 100%;
+}
+    }
+    .desktop-links {
+      width: 100%;
+    }
+  }
+}
+
+.navbar-expand-lg .navbar-toggler {
+  margin-left: 16px;
 }
 
 @media (min-width: 992px) {
@@ -403,6 +522,53 @@ table tr:last-child td {
 
 .navbar-toggler-icon {
   filter: invert(47%) sepia(76%) saturate(360%) hue-rotate(93deg) brightness(87%) contrast(80%);
+}
+
+.offcanvas.offcanvas-start {
+    width: 20%;
+}
+
+@media(max-width: 900px) {
+    .navbar-expand-lg .desktop-links .navbar-toggler {
+        display: inline !important;
+    }
+
+    .contentPage-section {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .offcanvas.offcanvas-start {
+      min-width: 300px;
+    }
+
+    .offcanvas .offcanvas-header {
+      display: flex !important;
+          margin: 0 !important;
+    padding: 24px 24px 0px 24px;
+    }
+
+    .offcanvas {
+      z-index: 20 !important;
+      margin: 0;
+    }
+
+     .offcanvas .offcanvas-body {
+      margin-top: 0px;
+    }
+}
+
+.plant-image-right {
+      width: 40vw;
+    float: right;
+    margin-top: 20px;
+    max-width: 370px;
+    shape-outside: url(/assets/images/section-bg.webp);
+    shape-margin: 20px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  border: none !important;
 }
 
 // vendor classes

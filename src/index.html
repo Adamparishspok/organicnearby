@@ -26,100 +26,152 @@
   <link rel="stylesheet" href="/assets/css/theme.css" />
   <!-- endbuild -->
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg static-top">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
-        <img
-          src="/assets/images/logo/organicnearby-logo.svg"
-          style="width: 200px"
-        />
+        <img src="/assets/images/logo/organicnearby-logo.svg" />
       </a>
-      <div class="desktop-links">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a
-              aria-current="page"
-              class="nav-link fs-5 text-info d-lg-block"
-              href="#"
-              data-bs-toggle="modal"
-              data-bs-target="#locationSecondModal"
-            >
-              Location</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              href="farmers.html"
-              class="nav-link fs-5 text-info"
-              class="text-info"
-            >
-              Our farmers
-            </a>
-          </li>
-          <li class="nav-item d-lg-none">
-            <a
-              href="farmers.html"
-              class="nav-link fs-5 text-info"
-              class="text-info"
-            >
-              Our farmers
-            </a>
-          </li>
-        </ul>
-      </div>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-
-    <div
-      class="container-fluid collapse navbar-collapse"
-      id="navbarSupportedContent"
-    >
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
+      <div class="desktop-links d-flex justify-content-between">
+        <div class="nav-item mr-2">
           <a
             aria-current="page"
-            class="nav-link fs-5 text-info d-lg-block"
+            class="nav-link fs-6 text-info d-lg-block"
             href="#"
             data-bs-toggle="modal"
             data-bs-target="#locationSecondModal"
           >
-            Location</a
+            <i class="bi bi-geo-alt-fill"></i> Spokane, WA 99205</a
           >
-        </li>
-        <li class="nav-item">
-          <a
-            href="farmers.html"
-            class="nav-link fs-5 text-info"
-            class="text-info"
-          >
-            Our farmers
-          </a>
-        </li>
-        <li class="nav-item d-lg-none">
-          <a
-            href="farmers.html"
-            class="nav-link fs-5 text-info"
-            class="text-info"
-          >
-            Our farmers
-          </a>
-        </li>
-      </ul>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvas"
+          role="button"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
     </div>
   </nav>
 
-  <!-- Location Modal -->
+    <aside
+    class="offcanvas offcanvas-start w-20"
+    tabindex="-1"
+    id="offcanvas"
+    data-bs-keyboard="false"
+    data-bs-backdrop="false"
+    style="z-index: 5"
+  >
+    <div class="offcanvas-header" style="margin-top: 70px">
+      <p class="fw-bold m-0">MENU</p>
+
+      <button
+        type="button"
+        class="btn-close text-reset text-primary"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul
+        class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start"
+        id="menu"
+      >
+        <li class="nav-item w-100">
+          <a class="nav-link active" href="../about.html">
+            <div class="d-flex w-100 justify-content-between">
+              <span class="nav-link-text">About us</span>
+              <span class="nav-link-icon">
+                <i class="bi bi-chevron-right"></i
+              ></span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item w-100">
+          <a class="nav-link" href="../farmers.html">
+            <div class="d-flex w-100 justify-content-between" style="">
+              <span class="nav-link-text">Our Farmers</span
+              ><span class="nav-link-icon">
+                <i class="bi bi-chevron-right"></i
+              ></span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item w-100">
+          <a class="nav-link" href="../our-partners.html">
+            <div class="d-flex w-100 justify-content-between" style="">
+              <span class="nav-link-text">Our Partners</span
+              ><span class="nav-link-icon">
+                <i class="bi bi-chevron-right"></i
+              ></span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item w-100">
+          <a class="nav-link" href="../foodhubs.html">
+            <div class="d-flex w-100 justify-content-between" style="">
+              <span class="nav-link-text">Food Hubs</span
+              ><span class="nav-link-icon">
+                <i class="bi bi-chevron-right"></i
+              ></span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item w-100">
+          <a class="nav-link" href="../csa.html">
+            <div class="d-flex w-100 justify-content-between" style="">
+              <span class="nav-link-text">CSA</span
+              ><span class="nav-link-icon">
+                <i class="bi bi-chevron-right"></i
+              ></span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item w-100">
+          <a class="nav-link" href="../farmers-markets.html">
+            <div class="d-flex w-100 justify-content-between" style="">
+              <span class="nav-link-text">Farmers Markets</span
+              ><span class="nav-link-icon">
+                <i class="bi bi-chevron-right"></i
+              ></span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item w-100">
+          <a class="nav-link" href="../contact.html">
+            <div class="d-flex w-100 justify-content-between" style="">
+              <span class="nav-link-text">Contact Us</span
+              ><span class="nav-link-icon">
+                <i class="bi bi-chevron-right"></i
+              ></span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item w-100 mt-8">
+          <div class="d-flex w-100 justify-content-between">
+            <a href="signup.html" class="btn btn-primary w-100 mb-2"
+              >Vendor Signup</a
+            >
+          </div>
+          <div class="d-flex w-100 justify-content-between">
+            <a href="signup.html" class="btn btn-secondary w-100 mb-2"
+              >Vendor Signin</a
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
   <div
     class="modal fade"
     id="locationSecondModal"
@@ -156,18 +208,14 @@
           >
           </iframe>
           <!-- begin FValues -->
-          <form>
-            <div>
-              <div class="input-group">
-                <input
-                  class="form-control"
-                  type="search"
-                  id="example-search-input"
-                  placeholder="Enter Zip code, city, or address"
-                />
-              </div>
-            </div>
-          </form>
+          <div class="input-group">
+            <input
+              class="form-control"
+              type="search"
+              id="example-search-input"
+              placeholder="Enter Zip code, city, or address"
+            />
+          </div>
         </div>
         <div class="modal-footer border-top-0">
           <input
@@ -185,19 +233,31 @@
     </div>
   </div>
 
+  <script>
+  window.addEventListener("scroll", function () {
+    var scrollPosition =
+      window.pageYOffset || document.documentElement.scrollTop;
+    var headerElement = document.getElementById("header");
+    var inputGroupElement = document.getElementById("searchbar"); // Target the input-group element
+
+    if (scrollPosition > headerElement.offsetHeight) {
+      inputGroupElement.classList.add("stickysearch"); // Add the class to the input-group element
+    } else {
+      inputGroupElement.classList.remove("stickysearch"); // Remove the class from the input-group element
+    }
+  });
+</script>
+
+   
+  </script>
   <section
-    class="py-lg-14 py-10 border border-white mx-xs-4 mx-sm-8"
-    style="
-      background: url(assets/images/banner/banner-5.jpg) no-repeat;
-      background-position: center;
-      background-size: cover;
-      border: solid white;
-    "
+    class="py-lg-14 py-10 border border-white mx-xs-4 mx-sm-8 homepage-header"
+    id="header"
   >
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 px-xs-4 px-sm-8">
-          <h1 class="mt-3 mb-4 h1 text-primary fw-normal">
+          <h1 class="mt-3 mb-4 h1 text-primary fw-normal header-title">
             Local produce <br />
             and products near
             <a
@@ -211,8 +271,8 @@
           </h1>
           <form>
             <div class="row">
-              <div class="col">
-                <div class="input-group mb-3 w-50">
+              <div class="col searchbar-col">
+                <div class="input-group mb-3" id="searchbar">
                   <input
                     type="text"
                     class="form-control border text-info rounded-3 fs-5"
@@ -262,7 +322,7 @@
     </div>
   </section>
 
-  <section class="mt-8 mb-lg-4 mb-2">
+  <section class="mt-8 mb-lg-4 mb-2 px-5">
     <div class="container-fluid">
       <div class="row g-4">
         <div class="col-12 col-md-12 m-0">
@@ -280,6 +340,39 @@
                 <h4 class="h1 fs-3 mb-0 text-info fw-normal">
                   we connect you with farmers and grocers
                 </h4>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div
+                class="row g-0 border rounded overflow-hidden flex-md-row mb-md-4 mb-sm-2 shadow-sm position-relative"
+              >
+                <div
+                  class="col-md-4"
+                  style="
+                    background-image: url(/assets/images/products/product-img-1.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-color: #f7f7f7;
+                    background-size: cover;
+                    min-height: 180px;
+                  "
+                ></div>
+                <div
+                  class="col d-flex p-4 flex-column position-static justify-content-center"
+                >
+                  <strong class="d-inline-block mb-2 text-primary small"
+                    >PROMOTED</strong
+                  >
+                  <h3 class="mb-1">Featured post</h3>
+
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content.
+                  </p>
+                  <a href="#" class="stretched-link"><u>View</u></a>
+                </div>
               </div>
             </div>
           </div>
@@ -403,7 +496,7 @@
             </li>
             <li class="list-inline-item me-1">
               <span class="small text-muted"
-                ><a class="btn btn-xs btn-social btn-icon" href="#!"
+                ><a class="btn btn-xs btn-social border-primary text-primary btn-icon" href="#!"
                   ><svg
                     class="bi bi-facebook"
                     fill="currentColor"
@@ -419,7 +512,7 @@
             </li>
             <li class="list-inline-item me-1">
               <span class="small text-muted"
-                ><a class="btn btn-xs btn-social btn-icon" href="#!"
+                ><a class="btn btn-xs btn-social border-primary text-primary  btn-icon" href="#!"
                   ><svg
                     class="bi bi-twitter"
                     fill="currentColor"
@@ -435,7 +528,7 @@
             </li>
             <li class="list-inline-item">
               <span class="small text-muted"
-                ><a class="btn btn-xs btn-social btn-icon" href="#!"
+                ><a class="btn btn-xs btn-social border-primary text-primary  btn-icon" href="#!"
                   ><svg
                     class="bi bi-instagram"
                     fill="currentColor"
