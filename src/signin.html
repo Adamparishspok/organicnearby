@@ -10,274 +10,37 @@
 
 <!-- Theme CSS -->
 <!-- build:css @@webRoot/assets/css/theme.min.css -->
-<link rel="stylesheet" href="assets/css/theme.css" />
+<link rel="stylesheet" href="/assets/css/theme.css" />
 <!-- endbuild -->
 
 <main>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg static-top z-5 bg-white">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img
-          src="assets/images/logo/organicnearby-logo.svg"
-          style="width: 200px"
-        />
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+  <div class="mb-8">
+    <div class="w-100">
+      <!-- card -->
+      <div
+        class="card bg-light border-0 rounded-0"
+        style="
+          background-image: url(assets/images/banner/farmer-bg.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: right;
+        "
       >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a
-              aria-current="page"
-              class="nav-link fs-5 text-info d-lg-block"
-              href="#"
-              data-bs-toggle="modal"
-              data-bs-target="#locationSecondModal"
-            >
-              Location</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              href="farmers.html"
-              class="nav-link fs-5 text-info"
-              class="text-info"
-            >
-              Our farmers
-            </a>
-          </li>
-          <li class="nav-item d-lg-none">
-            <a
-              href="farmers.html"
-              class="nav-link fs-5 text-info"
-              class="text-info"
-            >
-              Our farmers
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <nav class="navbar-vertical-nav d-none d-xl-block z-4">
-    <div class="navbar-vertical">
-      <div class="navbar-vertical-content flex-grow-1" data-simplebar="init">
-        <div class="simplebar-wrapper" style="margin: -20px 0px 0px">
-          <div class="simplebar-height-auto-observer-wrapper">
-            <div class="simplebar-height-auto-observer"></div>
+        <div class="container">
+          <div
+            class="card-body py-lg-8 text-center"
+            data-read-aloud-multi-block="true"
+          >
+            <h1 class="farmbg-heading">Vendor Sign-In</h1>
           </div>
-          <div class="simplebar-mask">
-            <div class="simplebar-offset" style="right: 0px; bottom: 0px">
-              <div
-                class="simplebar-content-wrapper"
-                tabindex="0"
-                role="region"
-                aria-label="scrollable content"
-                style="height: 100%; overflow: hidden"
-              >
-                <div class="simplebar-content" style="margin-top: 80px">
-                  <ul class="navbar-nav flex-column" id="sideNavbar">
-                    <li class="nav-item">
-                      <a class="nav-link active" href="../about.html">
-                        <div class="d-flex w-100 justify-content-between">
-                          <span class="nav-link-text">About us</span>
-                          <span class="nav-link-icon">
-                            <i class="bi bi-chevron-right"></i
-                          ></span>
-                        </div>
-                      </a>
-                    </li>
-
-                    <li class="nav-item">
-                      <a class="nav-link" href="../farmers.html">
-                        <div
-                          class="d-flex w-100 justify-content-between"
-                          style=""
-                        >
-                          <span class="nav-link-text">Our farmers</span
-                          ><span class="nav-link-icon">
-                            <i class="bi bi-chevron-right"></i
-                          ></span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../foodhubs.html">
-                        <div
-                          class="d-flex w-100 justify-content-between"
-                          style=""
-                        >
-                          <span class="nav-link-text">Food Hubs</span
-                          ><span class="nav-link-icon">
-                            <i class="bi bi-chevron-right"></i
-                          ></span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../csa.html">
-                        <div
-                          class="d-flex w-100 justify-content-between"
-                          style=""
-                        >
-                          <span class="nav-link-text">CSA</span
-                          ><span class="nav-link-icon">
-                            <i class="bi bi-chevron-right"></i
-                          ></span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../our-partners.html">
-                        <div
-                          class="d-flex w-100 justify-content-between"
-                          style=""
-                        >
-                          <span class="nav-link-text">Our Partners</span
-                          ><span class="nav-link-icon">
-                            <i class="bi bi-chevron-right"></i
-                          ></span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../signin.html">
-                        <div
-                          class="d-flex w-100 justify-content-between"
-                          style=""
-                        >
-                          <span class="nav-link-text"
-                            >Farmer Sign-in / Sign-up</span
-                          ><span class="nav-link-icon">
-                            <i class="bi bi-chevron-right"></i
-                          ></span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../privacy.html">
-                        <div
-                          class="d-flex w-100 justify-content-between"
-                          style=""
-                        >
-                          <span class="nav-link-text">Privacy</span
-                          ><span class="nav-link-icon">
-                            <i class="bi bi-chevron-right"></i
-                          ></span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../grocery-stores.html">
-                        <div
-                          class="d-flex w-100 justify-content-between"
-                          style=""
-                        >
-                          <span class="nav-link-text">Grocery Stores</span
-                          ><span class="nav-link-icon">
-                            <i class="bi bi-chevron-right"></i
-                          ></span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../contact.html">
-                        <div
-                          class="d-flex w-100 justify-content-between"
-                          style=""
-                        >
-                          <span class="nav-link-text">Contact Us</span
-                          ><span class="nav-link-icon">
-                            <i class="bi bi-chevron-right"></i
-                          ></span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../farmers-markets.html">
-                        <div
-                          class="d-flex w-100 justify-content-between"
-                          style=""
-                        >
-                          <span class="nav-link-text">Farmers Markets</span
-                          ><span class="nav-link-icon">
-                            <i class="bi bi-chevron-right"></i
-                          ></span>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../farmer-locations.html">
-                        <div
-                          class="d-flex w-100 justify-content-between"
-                          style=""
-                        >
-                          <span class="nav-link-text">Farm Location Map</span
-                          ><span class="nav-link-icon">
-                            <i class="bi bi-chevron-right"></i
-                          ></span>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="simplebar-placeholder"
-            style="width: auto; height: 124px"
-          ></div>
-        </div>
-        <div
-          class="simplebar-track simplebar-horizontal"
-          style="visibility: hidden"
-        >
-          <div
-            class="simplebar-scrollbar"
-            style="width: 0px; display: none"
-          ></div>
-        </div>
-        <div
-          class="simplebar-track simplebar-vertical"
-          style="visibility: hidden"
-        >
-          <div
-            class="simplebar-scrollbar"
-            style="
-              height: 0px;
-              transform: translate3d(0px, 0px, 0px);
-              display: none;
-            "
-          ></div>
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 
-  <section class="contentPage-section">
-    <div class="p-8 contentPage-row">
-      <div class="col-6 order-lg-2 order-1">
-        <h1 class="mb-1 h2 fw-bold">Sign in to your vendor profile</h1>
-
-        <img
-          src="assets/images/svg-graphics/signin-g.svg"
-          alt=""
-          class="img-fluid"
-          style="max-width: 240px"
-        />
-
+  <section class="mt-8 mb-lg-14 mb-8">
+    <div class="container">
+      <div class="col-6 mx-auto">
         <form>
           <div class="row g-3">
             <div class="col-12">
@@ -286,7 +49,7 @@
                 class="form-control"
                 id="inputEmail4"
                 placeholder="Email"
-                required
+                required=""
               />
             </div>
             <div class="col-12">
@@ -296,7 +59,7 @@
                   id="fakePassword"
                   placeholder="Password"
                   class="form-control"
-                  required
+                  required=""
                 />
                 <span
                   ><i id="passwordToggler" class="bi bi-eye-slash"></i
@@ -327,7 +90,7 @@
               <button type="submit" class="btn btn-primary">Sign In</button>
             </div>
             <!-- link -->
-            <div>
+            <div class="mt-8">
               Don’t have an account?
               <a href="signup.html"> Sign Up</a>
             </div>
@@ -341,4 +104,4 @@
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>

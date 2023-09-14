@@ -1,6 +1,3 @@
-// Inter Fonts
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
-
 // Bootstrap functions
 @import "../../../node_modules/bootstrap/scss/functions";
 
@@ -8,7 +5,6 @@
 @import "_utilities.scss";
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";
-
 
 
 @import "_navbar.scss";
@@ -158,10 +154,14 @@ h3,
   border-top: 2px solid $primary-500;
   margin-bottom: 10px;
   margin-top: 80px;
+  z-index: 99;
+  position: relative;
 }
 
 .footer {
   margin-top: 10px;
+  position: relative;
+  z-index: 99;
   padding: 4rem 0;
   background: $primary-200;
 
@@ -333,6 +333,10 @@ table tr:last-child td {
   grid-gap: 24px;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   grid-auto-flow: row;
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
 }
 
 .product-details-page {
@@ -347,25 +351,254 @@ table tr:last-child td {
 }
 
 
+.homepage-header {
+  background-image: url(/assets/images/banner/banner-5.jpg);
+  background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border: solid white;
+      background-color: #e7ecf0;
+
+      
+
+      .input-group {
+        max-width: 540px;
+    width: 100%;
+      }
+
+      @media (max-width: 1145px) {
+        background-position: -15vw;
+      }
+
+    @media(max-width: 991px) {
+      background-position: -5vw;
+    }
+
+    @media (max-width: 560) {
+      
+      
+    }
+
+     @media(max-width: 400px) {
+      background-position: -24vw;
+    }
+
+     @media(max-width: 360px) {
+      background-position: -24vw;
+    }
+}
+
 .contentPage-section {
-  margin-left: 280px;
+  margin-left: 20%;
   height: calc(100vh) !important;
   max-height: calc(100vh) !important;
   overflow: scroll;
-  position: fixed;
   border-left: 1px solid $dark;
   border-top: 1px solid $dark;
-  width: calc(100% - 280px);
+  width: 80%;
+
+  .contentPage-para {
+    font-size: 18px;
+    max-width: 70%;
+
+    @media (min-width: 1200px) {
+      max-width: 50%;
+    }
+
+    @media(max-width: 900px) {
+      font-size: 16px;
+    }
+  }
 }
 
 .contentPage-row {
   border-left: 20px solid white;
   border-top: 20px solid white;
   min-height: 100%;
-  background: url(../images/section-bg.jpg) no-repeat right top, #EAEFF3;
+  background: #EAEFF3;
+  background-size: 35%;
+}
+
+.card-product-img {
+  background-size: cover;
+  width: 100%;
+  height: 240px;
+  max-height: 60%;
+  min-width: 60%;
+}
+
+.farmbg-heading {
+
+    color: #0E713B;
+    margin: 0;
+    margin-top: 109px;
+    font-size: 48px;
+
 }
 
 
+.navbar {
+background: white;
+position: sticky;
+top: 0;
+z-index: 15
+}
+
+.stickysearch {
+  /* Add the styles you want when the class is added */
+
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transform: translateY(-100%); /* Transforms the search bar offscreen */
+  /* Add any other desired styles */
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 10px;
+  background: white;
+  position: fixed;
+  z-index: 24;
+  left: 0 !important;
+  top: 60px;
+
+  @media (max-width: 483px) {
+    top: 80px;
+  }
+
+  input {
+    left: 16px;
+  }
+  }
+
+  .searchbar-col {
+    height: 55px;
+
+    .input-group {
+  /* Add your existing styles here */
+  transition: transform 0.3s ease; /* Add transition property */
+  transform: translateY(0); /* Initial transform value */
+  z-index: 4;
+}
+  }
+
+.navbar-brand img {
+      width: 200px;
+}
+
+@media (max-width: 483px) {
+  .navbar {
+    .navbar-brand {
+      margin: 0 auto;
+      margin-bottom: 8px;
+
+       img {
+      width: 100%;
+}
+    }
+    .desktop-links {
+      width: 100%;
+    }
+  }
+}
+
+.navbar-expand-lg .navbar-toggler {
+  margin-left: 16px;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-toggler {
+      display: block !important;
+  }
+}
+
+.form-control:focus {
+  color: $orange !important;
+  background-color: #fff;
+  border-color:  $primary-500 !important;
+  border-width: 1px !important;
+  outline: 1px solid $primary-500 !important;
+  outline: 0;
+  box-shadow: none !important;
+}
+
+@media (min-width: 992px) {
+  .desktop-links {
+    display: flex !important;
+  }
+}
+
+
+.navbar-collapse .navbar-nav {
+      flex-direction: column !important;
+  }
+
+
+
+
+.navbar-toggler-icon {
+  filter: invert(47%) sepia(76%) saturate(360%) hue-rotate(93deg) brightness(87%) contrast(80%);
+}
+
+.offcanvas.offcanvas-start {
+    width: 20%;
+}
+
+@media(max-width: 900px) {
+    .navbar-expand-lg .desktop-links .navbar-toggler {
+        display: inline !important;
+    }
+
+    .contentPage-section {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .offcanvas.offcanvas-start {
+      min-width: 300px;
+    }
+
+    .offcanvas .offcanvas-header {
+      display: flex !important;
+          margin: 0 !important;
+    padding: 24px 24px 0px 24px;
+    }
+
+    .offcanvas {
+      z-index: 20 !important;
+      margin: 0;
+    }
+
+     .offcanvas .offcanvas-body {
+      margin-top: 0px;
+    }
+}
+
+.plant-image-right {
+      width: 40vw;
+    float: right;
+    margin-top: 20px;
+    max-width: 370px;
+    shape-outside: url(/assets/images/section-bg.webp);
+    shape-margin: 20px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  border: none !important;
+}
+
+.grid-page-header {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        background-image: url(/assets/images/banner/farmer-bg.jpg);
+}
+
+.searbar-icon {
+      height: 56px;
+    position: absolute;
+    right: 0;
+    top: -4px;
+}
 
 // vendor classes
 @import "vendor/slick-slider/_slick-slider.scss";

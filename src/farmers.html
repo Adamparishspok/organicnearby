@@ -1,37 +1,44 @@
-<link
-  href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
-  rel="stylesheet"
-/>
-<link
-  href="/node_modules/feather-webfont/dist/feather-icons.css"
-  rel="stylesheet"
-/>
-<link href="/node_modules/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/node_modules/feather-webfont/dist/feather-icons.css"
+    rel="stylesheet"
+  />
+  <link
+    href="/node_modules/simplebar/dist/simplebar.min.css"
+    rel="stylesheet"
+  />
 
-<!-- Theme CSS -->
-<!-- build:css @@webRoot/assets/css/theme.min.css -->
-<link rel="stylesheet" href="assets/css/theme.css" />
-<!-- endbuild -->
+  <!-- Theme CSS -->
+  <!-- build:css @@webRoot/assets/css/theme.min.css -->
+  <link rel="stylesheet" href="/assets/css/theme.css" />
+  <!-- endbuild -->
+</head>
 
-<main>
+<body>
   <div class="mb-8">
     <div class="w-100">
       <!-- card -->
       <div
         class="card bg-light border-0 rounded-0"
         style="
-          background-image: url(assets/images/slider/slider-image-1.jpg);
+          background-image: url(assets/images/banner/farmer-bg.jpg);
           background-repeat: no-repeat;
           background-size: cover;
           background-position: right;
         "
       >
         <div class="container">
-          <div class="card-body py-lg-12" data-read-aloud-multi-block="true">
-            <p>Discover amazing local farmers and vendors.</p>
-            <h1>
-              We have <span class="text-primary">36</span> vendors nearby you
-            </h1>
+          <div
+            class="card-body py-lg-8 text-center"
+            data-read-aloud-multi-block="true"
+          >
+            <h1 class="farmbg-heading">Our Farmers</h1>
           </div>
         </div>
       </div>
@@ -54,10 +61,9 @@
 
         <div class="col-lg-2 col-md-4 col-12">
           <select class="form-select">
-            <option selected="">Status</option>
-            <option value="1">Active</option>
-            <option value="2">Deactive</option>
-            <option value="3">Draft</option>
+            <option selected="">Sort by</option>
+            <option value="1">Name</option>
+            <option value="2">Distance</option>
           </select>
         </div>
       </div>
@@ -67,10 +73,10 @@
         <div class="col">
           <!-- card -->
           <a href="farmer.html">
-            <div class="card p-6 card-product">
+            <div class="card p-6 card-product rounded-0">
               <div>
                 <!-- img --><img
-                  src="assets/images/stores-logo/stores-logo-1.svg"
+                  src="/assets/images/stores-logo/stores-logo-1.svg"
                   alt=""
                   class="rounded-circle icon-shape icon-xl"
                 />
@@ -83,17 +89,12 @@
                 <div class="small text-muted">
                   <span class="me-2">Spokane, WA</span>
                 </div>
-                <div class="py-3">
-                  <ul class="list-unstyled mb-0 small">
-                    <li>Delivery</li>
-                    <li>Pickup available</li>
-                  </ul>
-                </div>
-                <div>
+
+                <div class="mt-4">
                   <!-- badge -->
                   <div class="badge text-bg-light border">7.5 mi away</div>
                   <!-- badge -->
-                  <div class="badge text-bg-light border">In-store prices</div>
+                  <div class="badge text-bg-light border">83 products</div>
                 </div>
               </div>
             </div>
@@ -102,9 +103,7 @@
       </div>
     </div>
   </section>
-</main>
 
-<script src="/node_modules/jquery/dist/jquery.min.js"></script>
-<script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="assets/js/main.js"></script>
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>

@@ -12,17 +12,33 @@
 <link rel="stylesheet" href="./assets/css/theme.min.css">
 
 <main>
-  <section class="contentPage-section">
-    <div class="p-8 contentPage-row">
-      <div class="col-6 order-lg-2 order-1">
-        <h1 class="mb-4 h2 fw-bold text-primary">
-          Create your farm/vendor account
-        </h1>
-        <img
-          src="assets/images/svg-graphics/signup-g.svg"
-          alt=""
-          class="img-fluid"
-        />
+  <div class="mb-8">
+    <div class="w-100">
+      <!-- card -->
+      <div
+        class="card bg-light border-0 rounded-0"
+        style="
+          background-image: url(assets/images/banner/farmer-bg.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: right;
+        "
+      >
+        <div class="container">
+          <div
+            class="card-body py-lg-8 text-center"
+            data-read-aloud-multi-block="true"
+          >
+            <h1 class="farmbg-heading">Vendor Sign-Up</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="mt-8 mb-lg-14 mb-8">
+    <div class="container">
+      <div class="col-6 mx-auto">
         <form>
           <div class="row g-3">
             <div class="col">
@@ -31,7 +47,7 @@
                 class="form-control"
                 placeholder="First name"
                 aria-label="First name"
-                required
+                required=""
               />
             </div>
             <div class="col">
@@ -40,7 +56,7 @@
                 class="form-control"
                 placeholder="Last name"
                 aria-label="Last name"
-                required
+                required=""
               />
             </div>
             <div class="col-12">
@@ -49,7 +65,7 @@
                 class="form-control"
                 id="inputEmail4"
                 placeholder="Email"
-                required
+                required=""
               />
             </div>
             <div class="col-12">
@@ -59,7 +75,7 @@
                   id="fakePassword"
                   placeholder="Enter Password"
                   class="form-control"
-                  required
+                  required=""
                 />
                 <span
                   ><i id="passwordToggler" class="bi bi-eye-slash"></i
@@ -68,16 +84,19 @@
             </div>
 
             <div class="col-12 d-grid">
-              <button type="submit" class="btn btn-primary">Register</button>
+              <p class="mt-2">
+                <small
+                  >By continuing, you agree to our
+                  <a href="#!"> Terms of Service</a> &amp;
+                  <a href="#!">Privacy Policy</a></small
+                >
+              </p>
+              <button type="submit" class="btn btn-primary">Sign Up</button>
             </div>
-
-            <p>
-              <small
-                >By continuing, you agree to our
-                <a href="#!"> Terms of Service</a> &
-                <a href="#!">Privacy Policy</a></small
-              >
-            </p>
+            <div class="mt-8">
+              Already have an account?
+              <a href="signin.html">Sign In</a>
+            </div>
           </div>
         </form>
       </div>
@@ -88,4 +107,4 @@
 <script src="/assets/libs/jquery/dist/jquery.min.js"></script>
 <script src="/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="assets/js/main.js"></script>
+<script src="/assets/js/main.js"></script>
