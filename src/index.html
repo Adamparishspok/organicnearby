@@ -56,7 +56,7 @@
     </div>
   </nav>
 
-    <aside
+  <aside
     class="offcanvas offcanvas-start w-20"
     tabindex="-1"
     id="offcanvas"
@@ -181,8 +181,11 @@
   >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header border-bottom-0">
-          <h5 class="modal-title" id="staticBackdropLabel">
+        <div class="modal-header m-0 border-bottom-0">
+          <h5
+            class="modal-title text-info text-center"
+            id="staticBackdropLabel"
+          >
             Set your location
           </h5>
           <button
@@ -233,23 +236,6 @@
     </div>
   </div>
 
-  <script>
-  window.addEventListener("scroll", function () {
-    var scrollPosition =
-      window.pageYOffset || document.documentElement.scrollTop;
-    var headerElement = document.getElementById("header");
-    var inputGroupElement = document.getElementById("searchbar"); // Target the input-group element
-
-    if (scrollPosition > headerElement.offsetHeight) {
-      inputGroupElement.classList.add("stickysearch"); // Add the class to the input-group element
-    } else {
-      inputGroupElement.classList.remove("stickysearch"); // Remove the class from the input-group element
-    }
-  });
-</script>
-
-   
-  </script>
   <section
     class="py-lg-14 py-10 border border-white mx-xs-4 mx-sm-8 homepage-header"
     id="header"
@@ -307,7 +293,7 @@
                   </span>
                 </div>
               </div>
-              <div class="text-primary fs-6">
+              <div class="text-primary fs-6 m-2">
                 <input
                   class="form-check-input me-1"
                   type="checkbox"
@@ -381,15 +367,21 @@
     </div>
   </section>
 
+  <!-- Product Grid -->
+  <!-- BEGIN Search -->
   <div class="products px-8">
-    <div class="card card-product rounded-0 border-0">
+    <!-- BEGIN Products -->
+    <a
+      href="/product.php/{source}/{id}/{linkDescription}"
+      class="card card-product rounded-0 border-0"
+    >
       <div
         class="card-body d-flex flex-column p-0 text-center text-primary border-0"
       >
         <div
           class="mb-3 card-product-img"
           style="
-            background-image: url(/assets/images/products/product-img-1.jpg);
+            background-image: url(/img.php/{image});
             background-repeat: no-repeat;
             background-position: center;
             background-color: #f7f7f7;
@@ -400,69 +392,35 @@
           class="fs-4 mb-1 text-primary fst-normal"
           style="font-family: Charm"
         >
-          <span>New INW IPA</span>
+          <span><!--New INW IPA  -->{name}</span>
         </h2>
 
         <p class="fw-normal mb-0 product-card-farmer">
-          4.6 miles from Liberty Lake
+          {distance}
+          <!-- 4.6 miles from Liberty Lake -->
         </p>
         <div
           class="dt-flex flex-grow-1 text-center mt-2 border border-2 border-primary p-2"
         >
           <div>
-            <span>$4.50</span>
-            <span>per can lb. box</span>
+            <span>{price}</span>
+            <span>{price_unit}<!-- per can lb. box --></span>
           </div>
-          <p class="mb-0">Fresh Raspberries Organic Process</p>
+          <p class="mb-0">
+            {description}<!-- Fresh Raspberries Organic Process -->
+          </p>
           <p class="mb-0 product-card-farmer-location text-info">
-            The Grain Shed
+            <!-- The Grain Shed -->{farmername}
           </p>
         </div>
       </div>
-    </div>
-    <div class="card card-product rounded-0 border-0">
-      <div
-        class="card-body d-flex flex-column p-0 text-center text-primary border-0"
-      >
-        <div
-          class="mb-3 card-product-img"
-          style="
-            background-image: url(https://placehold.co/200x100);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-color: #f7f7f7;
-            background-size: cover;
-          "
-        ></div>
-        <h2
-          class="fs-4 mb-1 text-primary fst-normal"
-          style="font-family: Charm"
-        >
-          <span>New INW IPA</span>
-        </h2>
-
-        <p class="fw-normal mb-0 product-card-farmer">
-          4.6 miles from Liberty Lake
-        </p>
-        <div
-          class="dt-flex flex-grow-1 text-center mt-2 border border-2 border-primary p-2"
-        >
-          <div>
-            <span>$4.50</span>
-            <span>per can lb. box</span>
-          </div>
-          <p class="mb-0">Fresh Raspberries Organic Process</p>
-          <p class="mb-0 product-card-farmer-location text-info">
-            The Grain Shed
-          </p>
-        </div>
-      </div>
-    </div>
+    </a>
+    <!-- END Products -->
   </div>
-
-  <hr class="footer-top-border" />
+  <!-- END Search -->
 
   <!-- footer -->
+  <hr class="footer-top-border" />
   <footer class="footer mt-4 py-10">
     <div class="container-fluid">
       <div class="row px-8">
@@ -496,7 +454,9 @@
             </li>
             <li class="list-inline-item me-1">
               <span class="small text-muted"
-                ><a class="btn btn-xs btn-social border-primary text-primary btn-icon" href="#!"
+                ><a
+                  class="btn btn-xs btn-social border-primary text-primary btn-icon"
+                  href="#!"
                   ><svg
                     class="bi bi-facebook"
                     fill="currentColor"
@@ -512,7 +472,9 @@
             </li>
             <li class="list-inline-item me-1">
               <span class="small text-muted"
-                ><a class="btn btn-xs btn-social border-primary text-primary  btn-icon" href="#!"
+                ><a
+                  class="btn btn-xs btn-social border-primary text-primary btn-icon"
+                  href="#!"
                   ><svg
                     class="bi bi-twitter"
                     fill="currentColor"
@@ -528,7 +490,9 @@
             </li>
             <li class="list-inline-item">
               <span class="small text-muted"
-                ><a class="btn btn-xs btn-social border-primary text-primary  btn-icon" href="#!"
+                ><a
+                  class="btn btn-xs btn-social border-primary text-primary btn-icon"
+                  href="#!"
                   ><svg
                     class="bi bi-instagram"
                     fill="currentColor"
@@ -579,6 +543,20 @@
     </div>
   </footer>
 
+  <script>
+    window.addEventListener("scroll", function () {
+      var scrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop;
+      var headerElement = document.getElementById("header");
+      var inputGroupElement = document.getElementById("searchbar"); // Target the input-group element
+
+      if (scrollPosition > headerElement.offsetHeight) {
+        inputGroupElement.classList.add("stickysearch"); // Add the class to the input-group element
+      } else {
+        inputGroupElement.classList.remove("stickysearch"); // Remove the class from the input-group element
+      }
+    });
+  </script>
   <script src="/node_modules/jquery/dist/jquery.min.js"></script>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/main.js"></script>

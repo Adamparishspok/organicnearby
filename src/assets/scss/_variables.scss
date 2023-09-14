@@ -1,4 +1,5 @@
 // Variables
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap');
 
 // Color system
 $variable-prefix: fc- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
@@ -374,7 +375,7 @@ $component-active-bg: $primary !default;
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: Arial, sans-serif !default;
+$font-family-sans-serif: 'Arimo', sans-serif !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
   "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
